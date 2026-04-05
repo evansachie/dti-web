@@ -52,20 +52,32 @@ export const servicesData = [
 
 export const homeProjectsData = [
   {
-    title: "TFDI Health Walk & Awareness Campaign",
-    category: "Health",
+    title: "Environmental Hygiene Awareness Project",
+    status: "Upcoming",
+    category: "Health & Sanitation",
     description:
-      "A massive health mobilization project that combined physical fitness with theatrical advocacy. This campaign engaged hundreds of community members in healthy living dialogues and secure direct participation from local health authorities.",
-    image: "/gallery/11.jpg",
+      "A pilot project educating communities on proper sanitation through participatory theatre, health walks, and clean-up exercises.",
+    image:
+      "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&q=80",
     categoryBg: "#24a186",
   },
   {
-    title: "Dialogue on the Stage",
-    category: "Advocacy",
+    title: "Love Beyond Romance",
+    status: "Recent",
+    category: "Mental Health",
     description:
-      "A collaborative project featuring multiple theatre groups across Ghana. This platform uses theatrical performances to spark meaningful conversations on national issues, fostering unity, dialogue, and civic responsibility among citizens.",
+      "Exploring Love, Responsibility, and Youth Mental Health through Theatre for Development narratives across Ghana.",
+    image: "/gallery/love-project.jpg",
+    categoryBg: "#eab308",
+  },
+  {
+    title: "Dialogue on the Stage",
+    status: "Previous",
+    category: "Culture & Development",
+    description:
+      "Exploring cultural practices and modern influences in marriage through an award-winning stage playtitled 'The Price of Love'.",
     image: "/gallery/12.jpg",
-    categoryBg: "#24a186",
+    categoryBg: "#a855f7",
   },
 ];
 

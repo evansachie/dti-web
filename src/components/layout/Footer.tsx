@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 
 export function Footer() {
@@ -100,7 +100,17 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-4">
               <Phone className="text-[#24a186] shrink-0" size={20} />
-              <p className="text-zinc-400 text-sm">+233 (0) XXX XXX XXX</p>
+              <p className="text-zinc-400 text-sm">
+                +233 50 994 1591{" "}
+                <span className="text-[10px] opacity-50 ml-1">(Voice)</span>
+              </p>
+            </li>
+            <li className="flex items-center gap-4">
+              <MessageCircle className="text-[#24a186] shrink-0" size={20} />
+              <p className="text-zinc-400 text-sm">
+                0247 134 085{" "}
+                <span className="text-[10px] opacity-50 ml-1">(WhatsApp)</span>
+              </p>
             </li>
             <li className="flex items-center gap-4">
               <Mail className="text-[#24a186] shrink-0" size={20} />
@@ -135,7 +145,16 @@ export function Footer() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-zinc-500 text-sm">
             © {new Date().getFullYear()} Theatre For Development Initiative
-            (TFDI). All Rights Reserved.
+            (TFDI). All Rights Reserved.{" "}
+            <span className="mx-2 text-zinc-700">|</span>
+            <Link
+              href="https://evansdev.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-500 hover:text-[#24a186] text-[11px] uppercase tracking-widest transition-colors font-semibold"
+            >
+              Designed & Developed by Evans Acheampong
+            </Link>
           </p>
           <div className="flex items-center gap-6">
             <Link

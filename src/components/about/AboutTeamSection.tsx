@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Globe, MessageCircle, Mail } from "lucide-react";
 
 export function AboutTeamSection() {
@@ -19,10 +20,13 @@ export function AboutTeamSection() {
         </h2>
 
         <div className="max-w-[400px] mx-auto">
-          <div className="relative w-full aspect-4/5 bg-zinc-200 mb-6 group overflow-hidden shadow-md">
-            <div className="absolute inset-0 bg-[#D9dbdb] flex items-center justify-center text-[#219D80]/50 text-sm font-medium z-0">
-              [Image: Enoch Aggrey]
-            </div>
+          <div className="relative w-full aspect-4/5 bg-zinc-100 mb-6 group overflow-hidden shadow-md">
+            <Image
+              src="/gallery/founder.jpg"
+              alt="Enoch Aggrey"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
 
             <div className="absolute inset-0 bg-[#252A34]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-10">
               <a
