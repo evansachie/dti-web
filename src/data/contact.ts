@@ -41,7 +41,7 @@ export const contactInfo = [
   {
     icon: Share2,
     label: "Follow Us",
-    value: "@TFDI_Ghana",
-    href: "https://instagram.com/tfdi_ghana",
+    value: "TikTok",
+    href: "https://www.tiktok.com/@tfd.initiatives.edu3?_r=1&_t=ZS-95ILLuEzAHM",
   },
 ];
