@@ -1,11 +1,6 @@
-export function StatsSection() {
-  const stats = [
-    { value: "50+", label: "Communities Reached" },
-    { value: "15+", label: "Active Projects" },
-    { value: "10k+", label: "Audience Members" },
-    { value: "20+", label: "Theatre Groups" },
-  ];
+import { statsData } from "@/data/home";
 
+export function StatsSection() {
   return (
     <section className="bg-[#219D80] py-20 px-6 w-full relative overflow-hidden">
       <div
@@ -18,7 +13,7 @@ export function StatsSection() {
       ></div>
 
       <div className="max-w-[1200px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative z-10 divide-x-0 lg:divide-x lg:divide-white/20">
-        {stats.map((stat, index) => (
+        {statsData.map((stat, index) => (
           <div
             key={index}
             className="flex flex-col items-center text-center px-4"

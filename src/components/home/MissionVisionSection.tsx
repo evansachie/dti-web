@@ -1,10 +1,12 @@
+import { missionVisionData } from "@/data/home";
+
 export function MissionVisionSection() {
   return (
     <section className="py-24 px-6 max-w-[1200px] mx-auto w-full flex flex-col md:flex-row gap-16">
       <div className="w-full md:w-1/2">
         <div className="flex items-center gap-4 mb-5">
           <span className="text-zinc-500 text-[13px] font-bold uppercase tracking-wider">
-            Welcome to TFDI
+            {missionVisionData.welcome}
           </span>
           <div className="h-[2px] w-[50px] bg-zinc-200"></div>
         </div>
@@ -12,11 +14,10 @@ export function MissionVisionSection() {
           className="text-4xl md:text-[44px] leading-[1.2] text-[#252A34] font-medium mb-6"
           style={{ fontFamily: "var(--font-playfair-display), serif" }}
         >
-          Let Us Come Together To Make A Difference
+          {missionVisionData.title}
         </h2>
         <p className="text-zinc-600 mb-10 leading-relaxed text-[15px]">
-          We believe in the power of creative expression to communicate complex
-          societal challenges and drive actionable community-led solutions.
+          {missionVisionData.description}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 mb-8">
@@ -38,12 +39,10 @@ export function MissionVisionSection() {
                 <circle cx="12" cy="12" r="6" />
                 <circle cx="12" cy="12" r="2" />
               </svg>
-              Our Mission
+              {missionVisionData.mission.title}
             </h3>
             <p className="text-zinc-600 text-sm leading-relaxed">
-              To educate, empower, and mobilize communities through
-              participatory theatre and creative engagement to address social,
-              cultural, and environmental issues.
+              {missionVisionData.mission.description}
             </p>
           </div>
           <div className="bg-[#EAF5F3] p-8 border-l-2 sm:border-l-0 sm:border-b-2 border-[#219D80] flex-1">
@@ -63,12 +62,10 @@ export function MissionVisionSection() {
                 <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
                 <circle cx="12" cy="12" r="3" />
               </svg>
-              Our Vision
+              {missionVisionData.vision.title}
             </h3>
             <p className="text-zinc-600 text-sm leading-relaxed">
-              To become a leading force in using theatre and creative arts to
-              drive sustainable development and social change across Ghana and
-              beyond.
+              {missionVisionData.vision.description}
             </p>
           </div>
         </div>
@@ -83,22 +80,15 @@ export function MissionVisionSection() {
             Our Core Values
           </h4>
           <ul className="space-y-4">
-            <li className="flex items-start gap-4 text-[15px] font-medium text-zinc-700">
-              <span className="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#219D80]" />{" "}
-              Community Engagement
-            </li>
-            <li className="flex items-start gap-4 text-[15px] font-medium text-zinc-700">
-              <span className="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#219D80]" />{" "}
-              Creativity & Innovation
-            </li>
-            <li className="flex items-start gap-4 text-[15px] font-medium text-zinc-700">
-              <span className="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#219D80]" />{" "}
-              Cultural Respect & Inclusivity
-            </li>
-            <li className="flex items-start gap-4 text-[15px] font-medium text-zinc-700">
-              <span className="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#219D80]" />{" "}
-              Social Impact & Collaboration
-            </li>
+            {missionVisionData.coreValues.map((value, idx) => (
+              <li
+                key={idx}
+                className="flex items-start gap-4 text-[15px] font-medium text-zinc-700"
+              >
+                <span className="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#219D80]" />{" "}
+                {value}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

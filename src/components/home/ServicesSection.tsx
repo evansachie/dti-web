@@ -1,33 +1,6 @@
-import { Theater, Users, Megaphone, Music } from "lucide-react";
+import { servicesData } from "@/data/home";
 
 export function ServicesSection() {
-  const services = [
-    {
-      title: "Community Theatre",
-      description:
-        "We design engaging performances highlighting local realities, encouraging reflective thinking and communual problem-solving.",
-      icon: Theater,
-    },
-    {
-      title: "Workshops & Training",
-      description:
-        "Capacity-building workshops for youth and educators, training them in storytelling, arts, and facilitation skills.",
-      icon: Users,
-    },
-    {
-      title: "Advocacy Campaigns",
-      description:
-        "Targeted localized campaigns on health, environmental sustainability, and human rights through public performances.",
-      icon: Megaphone,
-    },
-    {
-      title: "Cultural Preservation",
-      description:
-        "Promoting Ghanaian heritage by directly integrating traditional music, dance, and vibrant folklore into our plays.",
-      icon: Music,
-    },
-  ];
-
   return (
     <section className="py-24 px-6 max-w-[1200px] mx-auto w-full">
       <div className="flex flex-col items-center text-center mb-16">
@@ -47,7 +20,7 @@ export function ServicesSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {services.map((service, index) => (
+        {servicesData.map((service, index) => (
           <div
             key={index}
             className="group bg-white p-8 border border-zinc-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center hover:-translate-y-2 cursor-default"

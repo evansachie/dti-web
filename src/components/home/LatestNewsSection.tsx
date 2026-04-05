@@ -1,33 +1,10 @@
-import Link from "next/link";
+import { blogPosts } from "@/data/blogs";
 import { ArrowRight, Calendar } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export function LatestNewsSection() {
-  const newsItems = [
-    {
-      title: "TFDI Launches New Health Awareness Campaign in Central Region",
-      category: "Advocacy",
-      date: "Oct 12, 2026",
-      excerpt:
-        "Our newest participatory theatre project aims to combat prevalent localized health issues through interactive storytelling.",
-      imagePlaceholder: "Health Campaign",
-    },
-    {
-      title: "Celebrating Our Cultural Heritage Through Dance & Folklore",
-      category: "Culture",
-      date: "Sep 28, 2026",
-      excerpt:
-        "Highlights from our recent community workshop safely integrating traditional Ghanaian folklore into modern educational plays.",
-      imagePlaceholder: "Cultural Dance",
-    },
-    {
-      title: "How Community Theatre is Bridging The Educational Gap",
-      category: "Education",
-      date: "Aug 15, 2026",
-      excerpt:
-        "A deep dive into our TFDI methodology, showcasing how community participation is reliably driving school retention in rural areas.",
-      imagePlaceholder: "Student Workshop",
-    },
-  ];
+  const newsItems = blogPosts.slice(0, 3);
 
   return (
     <section className="py-24 px-6 bg-white w-full border-t border-zinc-100">
@@ -59,7 +36,16 @@ export function LatestNewsSection() {
                   {news.category}
                 </div>
                 <div className="absolute inset-0 bg-[#eef1f1] flex items-center justify-center text-[#219D80]/60 text-[13px] font-medium group-hover:scale-105 transition-transform duration-500">
-                  [Image: {news.imagePlaceholder}]
+                  {news.image ? (
+                    <Image
+                      src={news.image}
+                      alt={news.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    `[Image: ${news.title}]`
+                  )}
                 </div>
               </div>
 
