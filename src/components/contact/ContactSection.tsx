@@ -1,13 +1,26 @@
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  MessageCircle,
+  Share2,
+} from "lucide-react";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 
 export function ContactSection() {
   const contactInfo = [
     {
       icon: Phone,
-      label: "Phone",
+      label: "Phone (Voice)",
+      value: "+233 50 994 1591",
+      href: "tel:+233509941591",
+    },
+    {
+      icon: MessageCircle,
+      label: "WhatsApp",
       value: "0247 134 085",
-      href: "tel:+233247134085",
+      href: "https://wa.me/233247134085",
     },
     {
       icon: Mail,
@@ -18,7 +31,7 @@ export function ContactSection() {
     {
       icon: MapPin,
       label: "Location",
-      value: "Dept. of Theatre Arts, University of Ghana, Legon",
+      value: "University of Ghana, Legon",
       href: "https://maps.google.com/?q=Department+of+Theatre+Arts+University+of+Ghana+Legon",
     },
     {
@@ -26,6 +39,12 @@ export function ContactSection() {
       label: "Working Hours",
       value: "Mon – Fri: 8:00 AM – 5:00 PM",
       href: null,
+    },
+    {
+      icon: Share2,
+      label: "Follow Us",
+      value: "@TFDI_Ghana",
+      href: "https://instagram.com/tfdi_ghana",
     },
   ];
 

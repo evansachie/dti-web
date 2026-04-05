@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 
 export function Footer() {
@@ -100,7 +100,17 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-4">
               <Phone className="text-[#24a186] shrink-0" size={20} />
-              <p className="text-zinc-400 text-sm">+233 (0) XXX XXX XXX</p>
+              <p className="text-zinc-400 text-sm">
+                +233 50 994 1591{" "}
+                <span className="text-[10px] opacity-50 ml-1">(Voice)</span>
+              </p>
+            </li>
+            <li className="flex items-center gap-4">
+              <MessageCircle className="text-[#24a186] shrink-0" size={20} />
+              <p className="text-zinc-400 text-sm">
+                0247 134 085{" "}
+                <span className="text-[10px] opacity-50 ml-1">(WhatsApp)</span>
+              </p>
             </li>
             <li className="flex items-center gap-4">
               <Mail className="text-[#24a186] shrink-0" size={20} />
