@@ -8,12 +8,12 @@ interface PageHeroProps {
 
 export function PageHero({ title, breadcrumb }: PageHeroProps) {
   return (
-    <div className="relative w-full h-[380px] md:h-[420px] bg-[#252A34]/70 overflow-hidden">
+    <div className="relative w-full h-[400px] md:h-[450px] bg-[#252A34]/70 overflow-hidden">
       <div
-        className="absolute top-0 left-0 bottom-0 w-[65%] bg-[#219D80]/55"
-        style={{ clipPath: "polygon(0 0, 80% 0, 58% 100%, 0 100%)" }}
+        className="absolute top-0 left-0 bottom-0 w-full bg-[#219D80]/55"
+        style={{ clipPath: "polygon(0 0, 55% 0, 35% 100%, 0 100%)" }}
       >
-        <div className="absolute top-16 left-0 bottom-0 w-[250px]">
+        <div className="absolute top-20 left-0 bottom-0 w-[300px]">
           <Image
             src="/illustration-1.svg"
             alt=""
