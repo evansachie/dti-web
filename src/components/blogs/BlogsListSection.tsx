@@ -9,27 +9,31 @@ export function BlogsListSection() {
     category: "Education",
     date: "April 2, 2026",
     readTime: "6 min read",
+    slug: "how-community-theatre-is-bridging-the-educational-gap-in-rural-ghana",
     excerpt:
       "A deep dive into our TFDI methodology, showcasing how community participation is reliably driving school retention, critical thinking, and civic awareness in rural communities across Ghana.",
     image:
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80",
   };
 
+  const featuredTwo = {
+    title: "TFDI Launches New Health Awareness Campaign in Central Region",
+    category: "Advocacy",
+    date: "March 20, 2026",
+    readTime: "4 min read",
+    slug: "tfdi-launches-new-health-awareness-campaign-in-central-region",
+    excerpt:
+      "Our newest participatory theatre project aims to combat prevalent localized health challenges through interactive storytelling and community mobilization across rural districts.",
+    image:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80",
+  };
+
   const posts = [
-    {
-      title: "TFDI Launches New Health Awareness Campaign in Central Region",
-      category: "Advocacy",
-      date: "March 20, 2026",
-      readTime: "4 min read",
-      excerpt:
-        "Our newest participatory theatre project aims to combat prevalent localized health challenges through interactive storytelling and community mobilization.",
-      image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
-    },
     {
       title: "Celebrating Our Cultural Heritage Through Dance & Folklore",
       category: "Culture",
       date: "February 28, 2026",
+      slug: "celebrating-our-cultural-heritage-through-dance-and-folklore",
       readTime: "5 min read",
       excerpt:
         "Highlights from our recent community workshop safely integrating traditional Ghanaian folklore into modern educational plays and social advocacy performances.",
@@ -40,6 +44,7 @@ export function BlogsListSection() {
       title: "The Price of Love: A Reflection on Tradition and Modernity",
       category: "Projects",
       date: "February 10, 2026",
+      slug: "the-price-of-love-a-reflection-on-tradition-and-modernity",
       readTime: "7 min read",
       excerpt:
         "Behind the scenes of our award-winning stage play exploring cultural practices and modern influences in marriage across communities in Ghana.",
@@ -50,6 +55,7 @@ export function BlogsListSection() {
       title: "From Cleanup to Policy: How One Performance Changed Assin Foso",
       category: "Impact",
       date: "January 15, 2026",
+      slug: "from-cleanup-to-policy-how-one-performance-changed-assin-foso",
       readTime: "8 min read",
       excerpt:
         "The remarkable story of how a single TFDI theatre performance on environmental hygiene led to a community-wide cleanup and a municipal government commitment.",
@@ -60,6 +66,7 @@ export function BlogsListSection() {
       title: "Youth Voices: Training the Next Generation of Theatre Advocates",
       category: "Workshops",
       date: "December 12, 2025",
+      slug: "youth-voices-training-the-next-generation-of-theatre-advocates",
       readTime: "5 min read",
       excerpt:
         "How TFDI's educational workshops are equipping young Ghanaians with the storytelling tools to become advocates for change in their own communities.",
@@ -71,11 +78,24 @@ export function BlogsListSection() {
         "Partnering for Impact: TFDI's Approach to Institutional Collaboration",
       category: "Partnerships",
       date: "November 30, 2025",
+      slug: "partnering-for-impact-tfdis-approach-to-institutional-collaboration",
       readTime: "4 min read",
       excerpt:
         "Exploring how TFDI works with NGOs, government agencies, and local institutions to create scalable, sustainable social development programs.",
       image:
         "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&q=80",
+    },
+    {
+      title:
+        "Digital Storytelling: Using Theatre to Drive Change in the Social Media Era",
+      category: "Impact",
+      date: "March 20, 2026",
+      slug: "digital-storytelling-using-theatre-to-drive-change-in-the-social-media-era",
+      readTime: "6 min read",
+      excerpt:
+        "How TFDI is blending traditional theatre with digital platforms to reach wider audiences, amplify social advocacy, and engage Ghana’s youth through storytelling online.",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
     },
   ];
 
@@ -92,59 +112,111 @@ export function BlogsListSection() {
   return (
     <section className="py-24 px-6 bg-white w-full">
       <div className="max-w-[1200px] mx-auto">
-        <div className="mb-20">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="h-[2px] w-[30px] bg-zinc-300"></div>
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
-              Featured Post
-            </span>
+        <div className="mb-24 flex flex-col gap-16">
+          <div>
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-[2px] w-[30px] bg-zinc-300"></div>
+              <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+                Featured Post
+              </span>
+            </div>
+
+            <div className="group grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden border border-zinc-100 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="relative h-[320px] lg:min-h-[450px] overflow-hidden">
+                <Image
+                  src={featured.image}
+                  alt={featured.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-10 lg:p-14 flex flex-col justify-center bg-white">
+                <span
+                  className={`inline-block self-start text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest mb-5 rounded-full ${categoryColors[featured.category]}`}
+                >
+                  {featured.category}
+                </span>
+                <h2
+                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#219D80] transition-colors"
+                  style={{ fontFamily: "var(--font-playfair-display), serif" }}
+                >
+                  {featured.title}
+                </h2>
+                <p className="text-zinc-500 text-[14px] leading-relaxed mb-6">
+                  {featured.excerpt}
+                </p>
+                <div className="flex items-center gap-5 text-zinc-400 text-[12px] font-medium mb-8">
+                  <span className="flex items-center gap-1.5">
+                    <Calendar size={13} />
+                    {featured.date}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock size={13} />
+                    {featured.readTime}
+                  </span>
+                </div>
+                <Link
+                  href={`/blogs/${featured.slug}`}
+                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
+                >
+                  Read Full Article
+                  <ArrowRight
+                    size={16}
+                    strokeWidth={2.5}
+                    className="group-hover/link:translate-x-1 transition-transform"
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
 
-          <div className="group grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden border border-zinc-100 shadow-sm hover:shadow-xl transition-all duration-300">
-            <div className="relative h-[320px] lg:h-full overflow-hidden">
-              <Image
-                src={featured.image}
-                alt={featured.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-            <div className="p-10 lg:p-14 flex flex-col justify-center bg-white">
-              <span
-                className={`inline-block self-start text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest mb-5 rounded-full ${categoryColors[featured.category]}`}
-              >
-                {featured.category}
-              </span>
-              <h2
-                className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#219D80] transition-colors"
-                style={{ fontFamily: "var(--font-playfair-display), serif" }}
-              >
-                {featured.title}
-              </h2>
-              <p className="text-zinc-500 text-[14px] leading-relaxed mb-6">
-                {featured.excerpt}
-              </p>
-              <div className="flex items-center gap-5 text-zinc-400 text-[12px] font-medium mb-8">
-                <span className="flex items-center gap-1.5">
-                  <Calendar size={13} />
-                  {featured.date}
+          <div>
+            <div className="group grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden border border-zinc-100 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="p-10 lg:p-14 flex flex-col justify-center bg-white order-2 lg:order-1">
+                <span
+                  className={`inline-block self-start text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest mb-5 rounded-full ${categoryColors[featuredTwo.category]}`}
+                >
+                  {featuredTwo.category}
                 </span>
-                <span className="flex items-center gap-1.5">
-                  <Clock size={13} />
-                  {featured.readTime}
-                </span>
+                <h2
+                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#219D80] transition-colors"
+                  style={{ fontFamily: "var(--font-playfair-display), serif" }}
+                >
+                  {featuredTwo.title}
+                </h2>
+                <p className="text-zinc-500 text-[14px] leading-relaxed mb-6">
+                  {featuredTwo.excerpt}
+                </p>
+                <div className="flex items-center gap-5 text-zinc-400 text-[12px] font-medium mb-8">
+                  <span className="flex items-center gap-1.5">
+                    <Calendar size={13} />
+                    {featuredTwo.date}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock size={13} />
+                    {featuredTwo.readTime}
+                  </span>
+                </div>
+                <Link
+                  href={`/blogs/${featuredTwo.slug}`}
+                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
+                >
+                  Read Full Article
+                  <ArrowRight
+                    size={16}
+                    strokeWidth={2.5}
+                    className="group-hover/link:translate-x-1 transition-transform"
+                  />
+                </Link>
               </div>
-              <Link
-                href="#"
-                className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
-              >
-                Read Full Article
-                <ArrowRight
-                  size={16}
-                  strokeWidth={2.5}
-                  className="group-hover/link:translate-x-1 transition-transform"
+              <div className="relative h-[320px] lg:min-h-[450px] overflow-hidden order-1 lg:order-2">
+                <Image
+                  src={featuredTwo.image}
+                  alt={featuredTwo.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-              </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -202,7 +274,7 @@ export function BlogsListSection() {
                   </p>
 
                   <Link
-                    href="#"
+                    href={`/blogs/${post.slug}`}
                     className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[12px] uppercase tracking-wider transition-colors mt-auto group/link"
                   >
                     Read More
