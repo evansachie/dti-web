@@ -25,7 +25,7 @@ export default function OpenGraphImage() {
     >
       <div
         style={{
-          display: "inline-flex",
+          display: "flex",
           padding: "12px 24px",
           borderRadius: "999px",
           backgroundColor: "#219D80",
