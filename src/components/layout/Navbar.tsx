@@ -60,30 +60,33 @@ export function Navbar() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-10 text-[14px] font-normal">
-            <Link href="/" className="hover:text-[#219D80] transition-colors">
+            <Link
+              href="/"
+              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
+            >
               Home
             </Link>
             <Link
               href="/about"
-              className="hover:text-[#219D80] transition-colors"
+              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
             >
               About
             </Link>
             <Link
               href="/projects"
-              className="hover:text-[#219D80] transition-colors"
+              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
             >
               Projects
             </Link>
             <Link
               href="/services"
-              className="hover:text-[#219D80] transition-colors"
+              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
             >
               Services
             </Link>
             <Link
               href="/blogs"
-              className="hover:text-[#219D80] transition-colors"
+              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
             >
               Blogs
             </Link>
