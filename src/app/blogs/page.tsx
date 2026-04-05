@@ -4,11 +4,14 @@ import { BlogsListSection } from "@/components/blogs/BlogsListSection";
 import { BlogsNewsletterSection } from "@/components/blogs/BlogsNewsletterSection";
 import { CtaSection } from "@/components/home/CtaSection";
 
-export const metadata: Metadata = {
-  title: "Blog & News | Theatre for Development Initiative",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Blog & News",
   description:
-    "Read the latest stories, project updates, and impact reports from the Theatre for Development Initiative (TFDI) in Ghana.",
-};
+    "Read the latest stories, project updates, and impact reports from the Theatre for Development Initiative (TFDI) in rural Ghana.",
+  path: "/blogs",
+});
 
 export default function BlogsPage() {
   return (

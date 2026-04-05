@@ -6,11 +6,14 @@ import { StatsSection } from "@/components/home/StatsSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { CtaSection } from "@/components/home/CtaSection";
 
-export const metadata: Metadata = {
-  title: "Projects | Theatre for Development Initiative",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Our Impact Projects",
   description:
-    "Explore TFDI's active and completed projects using participatory theatre to drive community education, advocacy, and social change across Ghana.",
-};
+    "Explore TFDI's active participatory theatre projects across Ghana. We drive community education, advocacy, and social change through the arts.",
+  path: "/projects",
+});
 
 export default function ProjectsPage() {
   return (

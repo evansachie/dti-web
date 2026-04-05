@@ -3,11 +3,14 @@ import { PageHero } from "@/components/layout/PageHero";
 import { GalleryGridSection } from "@/components/gallery/GalleryGridSection";
 import { CtaSection } from "@/components/home/CtaSection";
 
-export const metadata: Metadata = {
-  title: "Gallery | Theatre for Development Initiative",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Impact Gallery",
   description:
-    "Explore TFDI's impact through our visual journey. Capturing the power of participatory theatre in rural communities across Ghana.",
-};
+    "Explore TFDI's visual journey through Ghana. Capturing the power of participatory theatre, workshops, and community dialogue in action.",
+  path: "/gallery",
+});
 
 export default function GalleryPage() {
   return (

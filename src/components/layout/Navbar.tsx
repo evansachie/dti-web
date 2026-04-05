@@ -57,14 +57,14 @@ export function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <Image
-              src="/logo.svg"
+              src={isScrolled || isMobileMenuOpen ? "/logo2.svg" : "/logo.svg"}
               alt="TFDI Logo"
-              width={200}
-              height={100}
+              width={250}
+              height={125}
               className={`object-contain transition-all duration-300 ${
                 isScrolled || isMobileMenuOpen
-                  ? "h-[42px] w-auto"
-                  : "h-[65px] w-auto"
+                  ? "h-[48px] w-auto"
+                  : "h-[105px] w-auto"
               }`}
               priority
             />

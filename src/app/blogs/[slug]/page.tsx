@@ -1,41 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 import { PageHero } from "@/components/layout/PageHero";
 import type { Metadata } from "next";
+import { allBlogPosts, categoryColors } from "@/data/blogs";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog Detail | Theatre for Development Initiative",
-  description:
-    "Read the full article from the Theatre for Development Initiative.",
-};
+interface Props {
+  params: Promise<{ slug: string }>;
+}
 
-const relatedPosts = [
-  {
-    title: "TFDI Launches New Health Awareness Campaign in Central Region",
-    category: "Advocacy",
-    date: "March 20, 2026",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80",
-  },
-  {
-    title: "The Price of Love: A Reflection on Tradition and Modernity",
-    category: "Projects",
-    date: "February 10, 2026",
-    image:
-      "https://images.unsplash.com/photo-1598387846148-47e82ee120cc?w=600&q=80",
-  },
-  {
-    title: "Youth Voices: Training the Next Generation of Theatre Advocates",
-    category: "Workshops",
-    date: "December 12, 2025",
-    image:
-      "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&q=80",
-  },
-];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = allBlogPosts.find((p) => p.slug === slug);
 
-export default function BlogDetailPage() {
+  if (!post) {
+    return createPageMetadata({
+      title: "Post Not Found",
+      description: "The requested blog post could not be found.",
+      path: "/blogs",
+    });
+  }
+
+  return createPageMetadata({
+    title: post.title,
+    description: post.excerpt,
+    path: `/blogs/${post.slug}`,
+    image: post.image,
+  });
+}
+
+export default async function BlogDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const post = allBlogPosts.find((p) => p.slug === slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  const relatedPosts = allBlogPosts.filter((p) => p.slug !== slug).slice(0, 3);
+
+  const categories = Array.from(new Set(allBlogPosts.map((p) => p.category)));
+
   return (
     <div className="flex flex-col min-h-screen bg-white font-sans">
       <PageHero title="Blog & News" breadcrumb="Blogs" />
@@ -55,14 +63,16 @@ export default function BlogDetailPage() {
             </Link>
 
             <div className="flex flex-wrap items-center gap-4 mb-6">
-              <span className="bg-teal-100 text-teal-700 text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest rounded-full">
-                Education
+              <span
+                className={`${categoryColors[post.category]} text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest rounded-full`}
+              >
+                {post.category}
               </span>
               <span className="flex items-center gap-1.5 text-zinc-400 text-[13px]">
-                <Calendar size={13} /> April 2, 2026
+                <Calendar size={13} /> {post.date}
               </span>
               <span className="flex items-center gap-1.5 text-zinc-400 text-[13px]">
-                <Clock size={13} /> 6 min read
+                <Clock size={13} /> {post.readTime}
               </span>
             </div>
 
@@ -70,14 +80,13 @@ export default function BlogDetailPage() {
               className="text-[32px] md:text-[42px] leading-[1.2] text-[#252A34] font-medium mb-8"
               style={{ fontFamily: "var(--font-playfair-display), serif" }}
             >
-              How Community Theatre is Bridging The Educational Gap in Rural
-              Ghana
+              {post.title}
             </h1>
 
             <div className="relative w-full aspect-video overflow-hidden mb-10">
               <Image
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80"
-                alt="Community Theatre in Rural Ghana"
+                src={post.image}
+                alt={post.title}
                 fill
                 className="object-cover"
                 priority
@@ -85,13 +94,19 @@ export default function BlogDetailPage() {
             </div>
 
             <div className="prose prose-zinc max-w-none text-[15px] leading-[1.85] text-zinc-600">
+              <p className="text-xl font-medium text-[#252A34] mb-8 leading-relaxed">
+                {post.excerpt}
+              </p>
+
               <p>
                 For many communities across rural Ghana, traditional classroom
                 education has long been inaccessible — limited by underfunded
                 schools, high dropout rates, and a persistent disconnect between
-                formal curricula and lived, local realities. Theatre for
-                Development Initiative (TFDI) is working to bridge that gap, not
-                with textbooks alone, but with the transformative power of
+                formal curricula and lived, local realities.{" "}
+                {post.category === "Education"
+                  ? "TFDI is working to bridge that gap"
+                  : "TFDI works directly with community members"}{" "}
+                — not with textbooks alone, but with the transformative power of
                 participatory theatre.
               </p>
 
@@ -104,45 +119,24 @@ export default function BlogDetailPage() {
                   margin: "2rem 0 1rem",
                 }}
               >
-                The Problem We Set Out to Solve
-              </h2>
-              <p>
-                In communities like Assin Foso in the Central Region, student
-                retention rates remain critically low. Children often leave
-                school early to support family income, and the lessons taught in
-                classrooms feel distant from the challenges they face at home —
-                sanitation, early marriage, environmental degradation. TFDI
-                recognized that education, to be effective, had to meet
-                communities where they actually are.
-              </p>
-
-              <h2
-                style={{
-                  fontFamily: "var(--font-playfair-display), serif",
-                  color: "#252A34",
-                  fontSize: "26px",
-                  fontWeight: "600",
-                  margin: "2rem 0 1rem",
-                }}
-              >
-                Theatre As a Pedagogy
+                Driving Real Community Change
               </h2>
               <p>
                 Using the Theatre for Development (TfD) methodology, TFDI
-                facilitators work directly with community members — not just
-                youth, but also parents, chiefs, healthcare workers, and local
-                leaders — to co-create performances that speak truth to their
-                specific situation. This is not scripted entertainment imposed
-                from outside. It is collaborative storytelling that emerges from
-                the community itself.
+                facilitators work directly with community members — including
+                youth, parents, chiefs, and local leaders — to co-create
+                performances that speak truth to their specific situation. This
+                is not scripted entertainment imposed from outside. It is
+                collaborative storytelling that emerges from the community
+                itself.
               </p>
+
               <p>
-                The results are measurable. After a series of performances
-                focused on environmental hygiene in Assin Foso, the community
-                organized its own cleanup exercise and secured commitments from
-                the Municipal Chief Executive to improve waste management
-                infrastructure. Theatre, in this case, directly catalyzed
-                political will and civic action.
+                The results are measurable. Following our recent interventions,
+                we have seen increased community mobilization and securing
+                direct commitments from local authorities to address the core
+                social issues highlighted during our performances. Theatre, in
+                this case, directly catalyzes political will and civic action.
               </p>
 
               <h2
@@ -154,16 +148,15 @@ export default function BlogDetailPage() {
                   margin: "2rem 0 1rem",
                 }}
               >
-                What&apos;s Next
+                Future Outlook
               </h2>
               <p>
-                TFDI is expanding its educational theatre model to two new
-                community sites in 2026, with funding support from partner
-                institutions. Each site will receive a full six-week programme
-                including needs assessment, performance development, and
-                post-performance dialogue facilitation. We are actively seeking
-                institutional partners and individual donors to scale this work
-                further.
+                TFDI is expanding its participatory models to new community
+                sites in 2026, with funding support from partner institutions.
+                Each site receives a tailored programme including needs
+                assessment, performance development, and post-performance
+                dialogue facilitation. We are actively seeking institutional
+                partners and individual donors to scale this work further.
               </p>
             </div>
 
@@ -196,29 +189,29 @@ export default function BlogDetailPage() {
                 Related Articles
               </h3>
               <div className="flex flex-col gap-6">
-                {relatedPosts.map((post, i) => (
+                {relatedPosts.map((rPost, i) => (
                   <Link
                     key={i}
-                    href="#"
+                    href={`/blogs/${rPost.slug}`}
                     className="flex gap-4 group items-start"
                   >
                     <div className="relative w-20 h-20 shrink-0 overflow-hidden">
                       <Image
-                        src={post.image}
-                        alt={post.title}
+                        src={rPost.image}
+                        alt={rPost.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div>
                       <span className="text-[#24a186] text-[10px] font-bold uppercase tracking-widest">
-                        {post.category}
+                        {rPost.category}
                       </span>
                       <p className="text-[#252A34] text-[13px] font-semibold leading-snug group-hover:text-[#219D80] transition-colors line-clamp-2 mt-0.5">
-                        {post.title}
+                        {rPost.title}
                       </p>
                       <p className="text-zinc-400 text-[12px] mt-1">
-                        {post.date}
+                        {rPost.date}
                       </p>
                     </div>
                   </Link>
@@ -231,18 +224,10 @@ export default function BlogDetailPage() {
                 Categories
               </h3>
               <div className="flex flex-wrap gap-2">
-                {[
-                  "Education",
-                  "Advocacy",
-                  "Culture",
-                  "Projects",
-                  "Impact",
-                  "Workshops",
-                  "Partnerships",
-                ].map((cat) => (
+                {categories.map((cat) => (
                   <Link
                     key={cat}
-                    href="#"
+                    href="/blogs"
                     className="px-4 py-2 border border-zinc-200 text-zinc-600 text-[12px] font-semibold hover:border-[#219D80] hover:text-[#219D80] transition-colors"
                   >
                     {cat}
