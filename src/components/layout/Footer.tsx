@@ -66,6 +66,15 @@ export function Footer() {
             </li>
             <li>
               <Link
+                href="/gallery"
+                className="text-zinc-400 text-sm hover:text-[#24a186] transition-colors flex items-center gap-2"
+              >
+                <span className="w-1 h-1 bg-[#24a186] rounded-full"></span>{" "}
+                Media Gallery
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/contact"
                 className="text-zinc-400 text-sm hover:text-[#24a186] transition-colors flex items-center gap-2"
               >
