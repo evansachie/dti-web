@@ -60,12 +60,13 @@ export const homeProjectsData = [
     categoryBg: "#24a186",
   },
   {
-    title: "Dialogue on the Stage",
-    category: "Advocacy",
+    title: "Love Beyond Romance",
+    subtitle: "A Theatre for Development Initiative",
     description:
-      "A collaborative project featuring multiple theatre groups across Ghana. This platform uses theatrical performances to spark meaningful conversations on national issues, fostering unity, dialogue, and civic responsibility among citizens.",
-    image: "/gallery/12.jpg",
-    categoryBg: "#24a186",
+      "Exploring Love, Responsibility, and Youth Mental Health through Theatre for Development. A participatory project fostering unity and dialogue across Ghana.",
+    category: "Mental Health",
+    categoryBg: "#eab308",
+    image: "/gallery/love-project.jpg",
   },
 ];
 
