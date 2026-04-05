@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface PageHeroProps {
   title: string;
@@ -41,7 +42,9 @@ export function PageHero({ title, breadcrumb }: PageHeroProps) {
           {title}
         </h1>
         <p className="text-[13px] md:text-[14px] text-white/90 font-light flex items-center gap-2">
-          <span className="hover:opacity-80 cursor-pointer">Home</span>
+          <Link href="/" className="hover:opacity-70 transition-opacity">
+            Home
+          </Link>
           <span className="text-white/60">/</span>
           <span>{breadcrumb}</span>
         </p>
