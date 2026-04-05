@@ -5,7 +5,7 @@ import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 import { PageHero } from "@/components/layout/PageHero";
 import type { Metadata } from "next";
-import { blogPosts, categoryColors } from "@/data/blogs";
+import { allBlogPosts, categoryColors } from "@/data/blogs";
 import { createPageMetadata } from "@/lib/seo";
 
 interface Props {
@@ -14,7 +14,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = allBlogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     return createPageMetadata({
@@ -34,15 +34,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = allBlogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const relatedPosts = allBlogPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
-  const categories = Array.from(new Set(blogPosts.map((p) => p.category)));
+  const categories = Array.from(new Set(allBlogPosts.map((p) => p.category)));
 
   return (
     <div className="flex flex-col min-h-screen bg-white font-sans">

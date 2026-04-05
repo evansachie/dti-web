@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/seo";
-import { blogPosts } from "@/data/blogs";
+import { allBlogPosts } from "@/data/blogs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "" ? 1 : 0.8,
   }));
 
-  const blogRoutes = blogPosts.map((post) => ({
+  const blogRoutes = allBlogPosts.map((post) => ({
     url: `${siteConfig.url}/blogs/${post.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,

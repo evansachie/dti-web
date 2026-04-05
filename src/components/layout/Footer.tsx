@@ -6,21 +6,21 @@ import { SocialIcons } from "@/components/ui/SocialIcons";
 export function Footer() {
   return (
     <footer className="bg-[#212529] text-white pt-20 pb-10">
-      <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div>
           <Link href="/" className="inline-block mb-6">
             <Image
               src="/logo.svg"
               alt="TFDI Logo"
-              width={160}
-              height={50}
+              width={140}
+              height={90}
               className="object-contain"
             />
           </Link>
           <p className="text-zinc-400 text-sm leading-relaxed mb-6 pe-4">
             A community-driven organization using participatory theatre and
             creative arts as tools for education, advocacy, and social
-            transformation.
+            transformation in Ghana.
           </p>
           <SocialIcons variant="dark" />
         </div>
@@ -104,7 +104,7 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-4">
               <Mail className="text-[#24a186] shrink-0" size={20} />
-              <p className="text-zinc-400 text-sm">info@tfdiview.org</p>
+              <p className="text-zinc-400 text-sm">info@tfdi-ghana.org</p>
             </li>
           </ul>
         </div>
@@ -132,7 +132,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10 pt-8 mt-10">
-        <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-zinc-500 text-sm">
             © {new Date().getFullYear()} Theatre For Development Initiative
             (TFDI). All Rights Reserved.

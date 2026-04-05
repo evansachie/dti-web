@@ -103,6 +103,12 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
+export const allBlogPosts: BlogPost[] = [
+  featuredPost,
+  featuredPostTwo,
+  ...blogPosts,
+];
+
 export const categoryColors: Record<string, string> = {
   Education: "bg-blue-100 text-blue-700",
   Advocacy: "bg-orange-100 text-orange-700",
