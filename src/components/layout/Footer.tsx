@@ -145,7 +145,16 @@ export function Footer() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-zinc-500 text-sm">
             © {new Date().getFullYear()} Theatre For Development Initiative
-            (TFDI). All Rights Reserved.
+            (TFDI). All Rights Reserved.{" "}
+            <span className="mx-2 text-zinc-700">|</span>
+            <Link
+              href="https://evansdev.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-500 hover:text-[#24a186] text-[11px] uppercase tracking-widest transition-colors font-semibold"
+            >
+              Designed & Developed by Evans Acheampong
+            </Link>
           </p>
           <div className="flex items-center gap-6">
             <Link
