@@ -88,12 +88,24 @@ export function ProjectsListSection() {
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
-              <div className="w-full lg:w-1/2 relative bg-zinc-100 min-h-[380px] group overflow-hidden">
+              <div
+                className={`w-full lg:w-1/2 relative bg-[#f8fafa] flex items-center justify-center group overflow-hidden ${
+                  project.title.includes("Dialogue")
+                    ? "aspect-[16/10]"
+                    : "aspect-square"
+                }`}
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`transition-transform duration-500 ${
+                    project.title.includes("Hygiene") ||
+                    project.title.includes("Romance")
+                      ? "object-contain p-8 lg:p-12"
+                      : "object-cover object-top group-hover:scale-105"
+                  }`}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute top-5 left-5 z-10">
                   <span

@@ -29,9 +29,9 @@ export function ProjectsSection() {
               key={idx}
               className="bg-white border border-zinc-100 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group"
             >
-              <div className="relative h-[250px] w-full bg-zinc-100">
+              <div className="relative aspect-square w-full bg-[#f8fafa] flex items-center justify-center overflow-hidden">
                 <div
-                  className="absolute top-5 left-5 text-white text-xs font-semibold px-4 py-1.5 uppercase tracking-wide z-10 shadow-sm"
+                  className="absolute top-5 left-5 text-white text-[10px] font-bold px-3 py-1.5 uppercase tracking-widest z-10 shadow-sm"
                   style={{ backgroundColor: project.categoryBg }}
                 >
                   {project.category}
@@ -40,7 +40,13 @@ export function ProjectsSection() {
                   src={project.image || "/gallery/1.jpg"}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`transition-transform duration-500 ${
+                    project.title.includes("Hygiene") ||
+                    project.title.includes("Romance")
+                      ? "object-contain p-4"
+                      : "object-cover object-top group-hover:scale-105"
+                  }`}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
 
