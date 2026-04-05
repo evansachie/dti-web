@@ -18,13 +18,13 @@ type PageMetadataInput = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Template Site",
-  title: "Template Site | Reusable Landing Page Starter",
+  name: "TFDI",
+  title: "TFDI | Theatre for Development Initiative",
   description:
-    "Reusable Next.js landing page template with Tailwind and shadcn/ui.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
-  locale: "en_US",
-  twitterHandle: "@example",
+    "Empowering communities in Ghana through participatory theatre, creative arts, and social advocacy for sustainable development.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://tfdi-ghana.org",
+  locale: "en_GH",
+  twitterHandle: "@TFDI_Ghana",
 };
 
 function absoluteUrl(path?: string) {
@@ -70,8 +70,8 @@ export function getSeoDefaults(): Metadata {
       images: [defaultImage],
     },
     icons: {
-      icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-      apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
+      icon: [{ url: "/logo.png", type: "image/png" }],
+      apple: [{ url: "/logo.png", type: "image/png" }],
     },
   };
 }

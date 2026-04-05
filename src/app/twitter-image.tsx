@@ -18,20 +18,20 @@ export default function TwitterImage() {
         flexDirection: "column",
         justifyContent: "space-between",
         padding: "48px 56px",
-        background: "#111827",
+        background: "#219D80",
         color: "#ffffff",
-        fontFamily: "Arial, sans-serif",
+        fontFamily: "sans-serif",
       }}
     >
       <div
         style={{
           fontSize: 24,
-          opacity: 0.9,
-          letterSpacing: "0.04em",
+          fontWeight: 700,
+          letterSpacing: "0.08em",
           textTransform: "uppercase",
         }}
       >
-        Landing Page Starter
+        Theatre for Development Initiative
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         <div style={{ fontSize: 64, fontWeight: 700, lineHeight: 1.05 }}>

@@ -3,11 +3,14 @@ import { PageHero } from "@/components/layout/PageHero";
 import { ContactSection } from "@/components/contact/ContactSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 
-export const metadata: Metadata = {
-  title: "Contact Us | Theatre for Development Initiative",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact Us",
   description:
-    "Get in touch with TFDI. Reach out for partnerships, project collaborations, workshop bookings, or general inquiries.",
-};
+    "Get in touch with TFDI. Reach out for partnerships, project collaborations, workshop bookings, or general enquiries in Ghana.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

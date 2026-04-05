@@ -8,11 +8,14 @@ import { TestimonialSection } from "@/components/home/TestimonialSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { CtaSection } from "@/components/home/CtaSection";
 
-export const metadata: Metadata = {
-  title: "About Us | Theatre for Development Initiative",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "About Us",
   description:
-    "Learn more about TFDI's mission, vision, and the team driving social transformation through participatory theatre.",
-};
+    "Learn more about TFDI's mission, vision, and the team driving social transformation through participatory theatre in Ghana.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

@@ -94,3 +94,11 @@ export const testimonialsData = [
     avatarLetter: "K",
   },
 ];
+
+export const partnersData = [
+  { name: "Partner One" },
+  { name: "Partner Two" },
+  { name: "Partner Three" },
+  { name: "Partner Four" },
+  { name: "Partner Five" },
+];

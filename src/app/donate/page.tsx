@@ -4,11 +4,14 @@ import { DonateFormSection } from "@/components/donate/DonateFormSection";
 import { TestimonialSection } from "@/components/home/TestimonialSection";
 import { CtaSection } from "@/components/home/CtaSection";
 
-export const metadata: Metadata = {
-  title: "Donate | Theatre for Development Initiative",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Support Our Work",
   description:
-    "Support TFDI's mission to use theatre and creative arts for social change. Your donation directly funds community performances, workshops, and advocacy campaigns in Ghana.",
-};
+    "Invest in the power of creative expression. Your support directly funds participatory theatre performances, youth workshops, and social advocacy across Ghana.",
+  path: "/donate",
+});
 
 export default function DonatePage() {
   return (

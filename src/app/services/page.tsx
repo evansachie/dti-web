@@ -5,11 +5,14 @@ import { ServicesApproachSection } from "@/components/services/ServicesApproachS
 import { TestimonialSection } from "@/components/home/TestimonialSection";
 import { CtaSection } from "@/components/home/CtaSection";
 
-export const metadata: Metadata = {
-  title: "Services | Theatre for Development Initiative",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Our Services",
   description:
-    "Explore TFDI's full range of services — from community theatre performances and educational workshops to advocacy campaigns and event production.",
-};
+    "Explore TFDI's range of services: from community theatre performances and educational workshops to advocacy campaigns across Ghana.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
