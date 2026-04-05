@@ -2,88 +2,16 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Maximize2, X } from "lucide-react";
-
-type Category = "All" | "Performances" | "Workshops" | "Community Dialogue";
-
-interface GalleryItem {
-  id: number;
-  src: string;
-  category: Category;
-  title: string;
-  location: string;
-}
-
-const galleryData: GalleryItem[] = [
-  {
-    id: 1,
-    src: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80",
-    category: "Performances",
-    title: "The Price of Love Stage Play",
-    location: "Accra, Ghana",
-  },
-  {
-    id: 2,
-    src: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&q=80",
-    category: "Performances",
-    title: "Annual Community Drama Festival",
-    location: "Kumasi, Ghana",
-  },
-  {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&q=80",
-    category: "Workshops",
-    title: "Youth Advocacy Training",
-    location: "Cape Coast, Ghana",
-  },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
-    category: "Workshops",
-    title: "Facilitator Skills Workshop",
-    location: "Legon, Accra",
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&q=80",
-    category: "Community Dialogue",
-    title: "Sanitation Awareness Dialogue",
-    location: "Assin Foso, Central Region",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&q=80",
-    category: "Community Dialogue",
-    title: "Local Government Accountability Forum",
-    location: "Eastern Region, Ghana",
-  },
-  {
-    id: 7,
-    src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80",
-    category: "Performances",
-    title: "Traditional Dance Showcase",
-    location: "National Theatre, Accra",
-  },
-  {
-    id: 8,
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-    category: "Workshops",
-    title: "Artistic Expression Series",
-    location: "Sunyani, Ghana",
-  },
-  {
-    id: 9,
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
-    category: "Community Dialogue",
-    title: "Health Advocacy Meeting",
-    location: "Northern Region, Ghana",
-  },
-];
+import { X } from "lucide-react";
+import { Pagination } from "@/components/ui/Pagination";
+import { Category, GalleryItem, galleryData } from "@/data/gallery";
 
 export function GalleryGridSection() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
+  const itemsPerPage = 6;
   const categories: Category[] = [
     "All",
     "Performances",
@@ -91,10 +19,21 @@ export function GalleryGridSection() {
     "Community Dialogue",
   ];
 
+  const handleCategoryChange = (cat: Category) => {
+    setActiveCategory(cat);
+    setCurrentPage(1);
+  };
+
   const filteredData =
     activeCategory === "All"
       ? galleryData
       : galleryData.filter((item) => item.category === activeCategory);
+
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const pagedData = filteredData.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   return (
     <section className="py-24 px-6 bg-[#f8fafa] w-full">
@@ -119,7 +58,7 @@ export function GalleryGridSection() {
             {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => handleCategoryChange(cat)}
                 className={`px-6 py-2.5 text-[12px] font-bold uppercase tracking-wider transition-all duration-300 ${
                   activeCategory === cat
                     ? "bg-[#252A34] text-white"
@@ -133,7 +72,7 @@ export function GalleryGridSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredData.map((item) => (
+          {pagedData.map((item) => (
             <div
               key={item.id}
               className="group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
@@ -145,6 +84,7 @@ export function GalleryGridSection() {
                   alt={item.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
 
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
@@ -166,14 +106,19 @@ export function GalleryGridSection() {
                     </p>
                   </div>
                 </div>
-
-                <div className="absolute top-6 right-6 w-10 h-10 bg-[#219D80] text-white flex items-center justify-center -translate-y-12 group-hover:translate-y-0 transition-transform duration-300 delay-100 shadow-lg">
-                  <Maximize2 size={18} />
-                </div>
               </div>
             </div>
           ))}
         </div>
+
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={(page) => {
+            setCurrentPage(page);
+            window.scrollTo({ top: 400, behavior: "smooth" });
+          }}
+        />
 
         {selectedImage && (
           <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-6 sm:p-12 animate-in fade-in duration-300">
