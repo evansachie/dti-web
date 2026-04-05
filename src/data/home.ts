@@ -52,12 +52,11 @@ export const servicesData = [
 
 export const homeProjectsData = [
   {
-    title: "Environmental Hygiene Awareness (Assin Foso)",
-    category: "Environment",
+    title: "TFDI Health Walk & Awareness Campaign",
+    category: "Health",
     description:
-      "A highly successful project that utilized theatre to advocate for improved sanitation. The performance led to tangible community actions, including a massive cleanup exercise and a commitment from the Municipal Chief Executive.",
-    image: null, // Placeholder for future use
-    imageLabel: "[Project Image: Assin Foso]",
+      "A massive health mobilization project that combined physical fitness with theatrical advocacy. This campaign engaged hundreds of community members in healthy living dialogues and secure direct participation from local health authorities.",
+    image: "/gallery/11.jpg",
     categoryBg: "#24a186",
   },
   {
@@ -65,8 +64,7 @@ export const homeProjectsData = [
     category: "Advocacy",
     description:
       "A collaborative project featuring multiple theatre groups across Ghana. This platform uses theatrical performances to spark meaningful conversations on national issues, fostering unity, dialogue, and civic responsibility among citizens.",
-    image: null,
-    imageLabel: "[Project Image: Stage Dialogue]",
+    image: "/gallery/12.jpg",
     categoryBg: "#24a186",
   },
 ];

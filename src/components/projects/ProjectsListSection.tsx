@@ -1,23 +1,24 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, Clock } from "lucide-react";
 
 export function ProjectsListSection() {
   const projects = [
     {
-      title: "Environmental Hygiene Awareness Project",
-      subtitle: "Assin Foso Pilot Phase",
-      category: "Environment",
-      location: "Assin Foso, Central Region",
-      duration: "3 Months",
-      status: "Completed",
+      title: "TFDI Health Walk & Awareness Campaign",
+      subtitle: "Active Health Mobilization",
+      category: "Health",
+      location: "Central Region, Ghana",
+      duration: "Ongoing",
+      status: "Active",
       description:
-        "A three-month pilot project focused on educating communities on proper sanitation practices through theatre performances, health walks, clean-up exercises, and demonstration of proper waste disposal. The performance led to tangible community actions, including a massive cleanup exercise and a commitment from the Municipal Chief Executive.",
-      imagePlaceholder: "Assin Foso Project",
+        "A highly successful mobilization project that combined physical fitness with theatrical advocacy. This campaign engaged hundreds of community members in healthy living dialogues and secured direct participation from local health authorities, turning a simple walk into a powerful platform for social change.",
+      image: "/gallery/11.jpg",
       highlights: [
-        "Community-wide cleanup exercise",
-        "Municipal Chief Executive commitment",
-        "Health walk participation",
-        "Waste disposal demonstrations",
+        "Community-wide health mobilization",
+        "Direct engagement with health authorities",
+        "Participatory fitness dialogues",
+        "Localized health advocacy plays",
       ],
     },
     {
@@ -29,12 +30,29 @@ export function ProjectsListSection() {
       status: "Active",
       description:
         "A Theatre for Development project exploring cultural practices and modern influences in marriage through a stage play titled 'The Price of Love.' This collaborative project features multiple theatre groups across Ghana, sparking meaningful conversations on national issues, fostering unity, dialogue, and civic responsibility.",
-      imagePlaceholder: "Dialogue on the Stage",
+      image: "/gallery/12.jpg",
       highlights: [
         "Stageplay: 'The Price of Love'",
         "Multiple theatre group collaboration",
         "Cross-regional dialogue",
         "Civic responsibility focus",
+      ],
+    },
+    {
+      title: "Community Growth Workshops",
+      subtitle: "Capacity Building through Arts",
+      category: "Training",
+      location: "Rural Districts, Ghana",
+      duration: "Bi-Annual",
+      status: "Scheduled",
+      description:
+        "Specialized sessions focused on equipping community leaders and youth with the necessary storytelling and theatrical tools to identify and address localized challenges. These workshops serve as the foundation for our long-term sustainable development goals.",
+      image: "/gallery/4.jpg",
+      highlights: [
+        "Youth leadership training",
+        "Storytelling & facilitation skills",
+        "Localized problem identification",
+        "Community-led performance design",
       ],
     },
   ];
@@ -71,10 +89,13 @@ export function ProjectsListSection() {
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
-              <div className="w-full lg:w-1/2 relative bg-zinc-200 min-h-[380px] group overflow-hidden">
-                <div className="absolute inset-0 bg-[#d9dbdb] flex items-center justify-center text-[#219D80]/40 text-sm font-medium group-hover:scale-105 transition-transform duration-500">
-                  [Image: {project.imagePlaceholder}]
-                </div>
+              <div className="w-full lg:w-1/2 relative bg-zinc-100 min-h-[380px] group overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 <div className="absolute top-5 left-5 z-10">
                   <span
                     className={`text-white text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest ${
@@ -98,10 +119,10 @@ export function ProjectsListSection() {
                 >
                   {project.title}
                 </h3>
+                ...
                 <p className="text-zinc-400 text-[14px] font-medium italic mb-5">
                   {project.subtitle}
                 </p>
-
                 <div className="flex flex-wrap items-center gap-5 mb-6 text-[13px] text-zinc-500">
                   <span className="flex items-center gap-1.5">
                     <MapPin size={14} className="text-[#24a186]" />
@@ -112,11 +133,9 @@ export function ProjectsListSection() {
                     {project.duration}
                   </span>
                 </div>
-
                 <p className="text-zinc-500 leading-relaxed text-[14px] mb-8">
                   {project.description}
                 </p>
-
                 <div className="mb-8">
                   <p className="text-[#252A34] text-[13px] font-bold uppercase tracking-wider mb-4">
                     Key Highlights
@@ -133,7 +152,6 @@ export function ProjectsListSection() {
                     ))}
                   </ul>
                 </div>
-
                 <Link
                   href="#"
                   className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"

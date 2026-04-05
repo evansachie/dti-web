@@ -7,30 +7,12 @@ import { Pagination } from "@/components/ui/Pagination";
 import { Category, GalleryItem, galleryData } from "@/data/gallery";
 
 export function GalleryGridSection() {
-  const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const itemsPerPage = 6;
-  const categories: Category[] = [
-    "All",
-    "Performances",
-    "Workshops",
-    "Community Dialogue",
-  ];
-
-  const handleCategoryChange = (cat: Category) => {
-    setActiveCategory(cat);
-    setCurrentPage(1);
-  };
-
-  const filteredData =
-    activeCategory === "All"
-      ? galleryData
-      : galleryData.filter((item) => item.category === activeCategory);
-
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-  const pagedData = filteredData.slice(
+  const itemsPerPage = 9;
+  const totalPages = Math.ceil(galleryData.length / itemsPerPage);
+  const pagedData = galleryData.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -54,20 +36,12 @@ export function GalleryGridSection() {
             </h2>
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => handleCategoryChange(cat)}
-                className={`px-6 py-2.5 text-[12px] font-bold uppercase tracking-wider transition-all duration-300 ${
-                  activeCategory === cat
-                    ? "bg-[#252A34] text-white"
-                    : "bg-white text-zinc-500 border border-zinc-200 hover:border-[#219D80] hover:text-[#219D80]"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="max-w-md">
+            <p className="text-zinc-500 text-[14px] leading-relaxed">
+              Explore our visual archive capturing the raw energy of
+              participatory theatre and the deep impact of our community
+              workshops across Ghana.
+            </p>
           </div>
         </div>
 
@@ -121,7 +95,10 @@ export function GalleryGridSection() {
         />
 
         {selectedImage && (
-          <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-6 sm:p-12 animate-in fade-in duration-300">
+          <div
+            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-6 sm:p-12 animate-in fade-in duration-300 cursor-zoom-out"
+            onClick={() => setSelectedImage(null)}
+          >
             <button
               onClick={() => setSelectedImage(null)}
               className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors"
@@ -129,7 +106,10 @@ export function GalleryGridSection() {
               <X size={32} />
             </button>
 
-            <div className="relative w-full max-w-[1000px] max-h-[85vh] flex flex-col items-center">
+            <div
+              className="relative w-full max-w-[1000px] max-h-[85vh] flex flex-col items-center cursor-default"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="relative w-full h-[60vh] sm:h-[75vh]">
                 <Image
                   src={selectedImage.src}
