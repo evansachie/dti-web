@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { homeProjectsData } from "@/data/home";
 
 export function ProjectsSection() {
   return (
@@ -22,65 +23,40 @@ export function ProjectsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-          <div className="bg-white border border-zinc-100 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
-            <div className="relative h-[250px] w-full bg-zinc-200">
-              <div className="absolute top-5 left-5 bg-[#24a186] text-white text-xs font-semibold px-4 py-1.5 uppercase tracking-wide z-10 shadow-sm">
-                Environment
+          {homeProjectsData.map((project, idx) => (
+            <div
+              key={idx}
+              className="bg-white border border-zinc-100 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group"
+            >
+              <div className="relative h-[250px] w-full bg-zinc-200">
+                <div
+                  className="absolute top-5 left-5 text-white text-xs font-semibold px-4 py-1.5 uppercase tracking-wide z-10 shadow-sm"
+                  style={{ backgroundColor: project.categoryBg }}
+                >
+                  {project.category}
+                </div>
+                <div className="absolute inset-0 bg-[#D9dbdb] flex items-center justify-center text-[#219D80]/50 text-sm font-medium">
+                  {project.imageLabel}
+                </div>
               </div>
-              <div className="absolute inset-0 bg-[#D9dbdb] flex items-center justify-center text-[#219D80]/50 text-sm font-medium">
-                [Project Image: Assin Foso]
-              </div>
-            </div>
 
-            <div className="p-8 flex flex-col flex-1">
-              <h3 className="text-xl md:text-2xl font-semibold text-[#252A34] mb-4 leading-snug group-hover:text-[#219D80] transition-colors">
-                Environmental Hygiene Awareness (Assin Foso)
-              </h3>
-              <p className="text-zinc-500 leading-relaxed text-[14px] mb-8 flex-1">
-                A highly successful project that utilized theatre to advocate
-                for improved sanitation. The performance led to tangible
-                community actions, including a massive cleanup exercise and a
-                commitment from the Municipal Chief Executive.
-              </p>
-              <Link
-                href="/projects"
-                className="text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors flex items-center gap-2"
-              >
-                Learn More
-                <ArrowRight size={16} strokeWidth={2.5} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="bg-white border border-zinc-100 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
-            <div className="relative h-[250px] w-full bg-zinc-200">
-              <div className="absolute top-5 left-5 bg-[#24a186] text-white text-xs font-semibold px-4 py-1.5 uppercase tracking-wide z-10 shadow-sm">
-                Advocacy
-              </div>
-              <div className="absolute inset-0 bg-[#d1dad8] flex items-center justify-center text-[#219D80]/50 text-sm font-medium">
-                [Project Image: Stage Dialogue]
+              <div className="p-8 flex flex-col flex-1">
+                <h3 className="text-xl md:text-2xl font-semibold text-[#252A34] mb-4 leading-snug group-hover:text-[#219D80] transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-zinc-500 leading-relaxed text-[14px] mb-8 flex-1">
+                  {project.description}
+                </p>
+                <Link
+                  href="/projects"
+                  className="text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors flex items-center gap-2"
+                >
+                  Learn More
+                  <ArrowRight size={16} strokeWidth={2.5} />
+                </Link>
               </div>
             </div>
-
-            <div className="p-8 flex flex-col flex-1">
-              <h3 className="text-xl md:text-2xl font-semibold text-[#252A34] mb-4 leading-snug group-hover:text-[#219D80] transition-colors">
-                Dialogue on the Stage
-              </h3>
-              <p className="text-zinc-500 leading-relaxed text-[14px] mb-8 flex-1">
-                A collaborative project featuring multiple theatre groups across
-                Ghana. This platform uses theatrical performances to spark
-                meaningful conversations on national issues, fostering unity,
-                dialogue, and civic responsibility among citizens.
-              </p>
-              <Link
-                href="/projects"
-                className="text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors flex items-center gap-2"
-              >
-                Learn More
-                <ArrowRight size={16} strokeWidth={2.5} />
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="mt-16 flex justify-center">

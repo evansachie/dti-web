@@ -25,10 +25,10 @@ export function HomeHero({
   return (
     <div className="relative w-full min-h-screen bg-[#252A34]/70 overflow-hidden flex items-center justify-center">
       <div
-        className="absolute top-0 left-0 bottom-0 w-[65%]"
+        className="absolute top-0 left-0 bottom-0 w-full"
         style={{
           backgroundColor: "rgb(33 157 128 / 55%)",
-          clipPath: "polygon(0 0, 75% 0, 42% 100%, 0 100%)",
+          clipPath: "polygon(0 0, 55% 0, 35% 100%, 0 100%)",
         }}
       >
         <div className="absolute top-24 left-0 bottom-0 w-[300px]">

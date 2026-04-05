@@ -3,11 +3,22 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Services", href: "/services" },
+    { name: "Blogs", href: "/blogs" },
+    { name: "Gallery", href: "/gallery" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,8 +46,8 @@ export function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 w-full text-white transition-all duration-300 ${
           isScrolled || isMobileMenuOpen
-            ? "bg-[#252A34]/95 backdrop-blur-md shadow-lg py-3"
-            : "bg-transparent py-5"
+            ? "bg-[#252A34]/95 backdrop-blur-md shadow-lg py-2"
+            : "bg-transparent py-4"
         }`}
       >
         <div className="flex items-center justify-between px-6 lg:px-8 max-w-[1400px] mx-auto w-full">
@@ -52,58 +63,57 @@ export function Navbar() {
               height={100}
               className={`object-contain transition-all duration-300 ${
                 isScrolled || isMobileMenuOpen
-                  ? "h-[50px] w-auto"
-                  : "h-[85px] w-auto"
+                  ? "h-[42px] w-auto"
+                  : "h-[65px] w-auto"
               }`}
               priority
             />
           </Link>
 
           <div className="hidden lg:flex items-center gap-10 text-[14px] font-normal">
-            <Link
-              href="/"
-              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
-            >
-              About
-            </Link>
-            <Link
-              href="/projects"
-              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
-            >
-              Projects
-            </Link>
-            <Link
-              href="/services"
-              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
-            >
-              Services
-            </Link>
-            <Link
-              href="/blogs"
-              className={`transition-colors ${isScrolled ? "hover:text-[#219D80]" : "hover:text-white/70"}`}
-            >
-              Blogs
-            </Link>
+            {navItems.map((item) => {
+              const isActive =
+                pathname === item.href ||
+                (item.href !== "/" && pathname.startsWith(item.href));
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`transition-all duration-300 relative py-1 ${
+                    isActive
+                      ? "text-white font-semibold"
+                      : "text-white/50 hover:text-white"
+                  }`}
+                >
+                  {item.name}
+                  {isActive && (
+                    <span className="absolute -bottom-1 left-0 w-full h-[1.5px] bg-[#219D80] rounded-full"></span>
+                  )}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/donate"
-              className="border border-white/40 hover:bg-white/10 text-white px-6 py-2.5 text-[14px] font-medium transition-colors"
+              className={`px-6 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors ${
+                pathname === "/donate"
+                  ? "bg-[#24a186] text-white"
+                  : "border border-white/20 hover:bg-white/10 text-white"
+              }`}
             >
               Donate
             </Link>
             <Link
               href="/contact"
-              className="bg-[#24a186] hover:bg-[#1d826c] shadow-sm text-white px-6 py-2.5 text-[14px] font-medium transition-colors"
+              className={`px-6 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors ${
+                pathname === "/contact"
+                  ? "bg-white text-[#252A34]"
+                  : "bg-[#24a186] hover:bg-[#1d826c] text-white"
+              }`}
             >
-              Contact us
+              Contact
             </Link>
           </div>
 
@@ -123,55 +133,45 @@ export function Navbar() {
         }`}
       >
         <div className="flex flex-col gap-6 text-[18px] font-medium tracking-wide overflow-y-auto">
-          <Link
-            href="/"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="hover:text-[#219D80] transition-colors border-b border-white/10 pb-4"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="hover:text-[#219D80] transition-colors border-b border-white/10 pb-4"
-          >
-            About Us
-          </Link>
-          <Link
-            href="/projects"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="hover:text-[#219D80] transition-colors border-b border-white/10 pb-4"
-          >
-            Active Projects
-          </Link>
-          <Link
-            href="/services"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="hover:text-[#219D80] transition-colors border-b border-white/10 pb-4"
-          >
-            Services
-          </Link>
-          <Link
-            href="/blogs"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="hover:text-[#219D80] transition-colors border-b border-white/10 pb-4"
-          >
-            Latest News & Blogs
-          </Link>
+          {navItems.map((item) => {
+            const isActive =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(item.href));
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`transition-colors border-b border-white/10 pb-4 ${
+                  isActive ? "text-[#219D80]" : "hover:text-[#219D80]"
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="mt-8 flex flex-col gap-4">
           <Link
             href="/donate"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="border-2 border-white/30 text-center text-white w-full py-4 text-[15px] font-bold uppercase tracking-wider hover:bg-white/10 transition-colors"
+            className={`text-center w-full py-4 text-[15px] font-bold uppercase tracking-wider transition-colors ${
+              pathname === "/donate"
+                ? "bg-[#24a186] text-white"
+                : "border-2 border-white/30 text-white hover:bg-white/10"
+            }`}
           >
             Donate Now
           </Link>
           <Link
             href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="bg-[#24a186] text-center text-white w-full py-4 text-[15px] font-bold uppercase tracking-wider hover:bg-[#1d826c] transition-colors"
+            className={`text-center w-full py-4 text-[15px] font-bold uppercase tracking-wider transition-colors ${
+              pathname === "/contact"
+                ? "bg-white text-[#252A34]"
+                : "bg-[#24a186] text-white hover:bg-[#1d826c]"
+            }`}
           >
             Contact Us
           </Link>

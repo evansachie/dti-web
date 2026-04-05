@@ -1,23 +1,7 @@
 import { Quote } from "lucide-react";
+import { testimonialsData } from "@/data/home";
 
 export function TestimonialSection() {
-  const testimonials = [
-    {
-      quote:
-        "The environmental hygiene play staged here was an absolute eye-opener. It didn't just entertain us; it directly mobilized our entire community to take action. The massive cleanup exercise that followed is definitive proof of TFDI's remarkable impact.",
-      name: "Municipal Chief Executive",
-      title: "Assin Foso Municipality",
-      avatarLetter: "M",
-    },
-    {
-      quote:
-        "Participating in the 'Dialogue on the Stage' workshops completely transformed how I view civic responsibility. TFDI consistently provides a safe space for youth to tackle complex national issues through the beauty of art and unity.",
-      name: "Kwame Mensah",
-      title: "Community Youth Leader",
-      avatarLetter: "K",
-    },
-  ];
-
   return (
     <section className="py-24 px-6 bg-[#f9fbfb] w-full">
       <div className="max-w-[1200px] mx-auto">
@@ -38,7 +22,7 @@ export function TestimonialSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-          {testimonials.map((testimonial, idx) => (
+          {testimonialsData.map((testimonial, idx) => (
             <div
               key={idx}
               className="bg-white p-10 md:p-12 shadow-sm shadow-[#219D80]/5 border border-[#219D80]/10 flex flex-col relative overflow-hidden group hover:shadow-md transition-shadow"
