@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function AboutStorySection() {
   return (
     <section className="py-24 px-6 bg-white w-full">
@@ -43,31 +45,39 @@ export function AboutStorySection() {
 
         <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
           <div className="flex flex-col gap-4">
-            <div className="bg-[#e4ecea] w-full aspect-[4/5] overflow-hidden flex items-center justify-center text-[#219D80]/40 text-sm font-medium relative group">
-              <span className="relative z-10 transition-transform group-hover:scale-105 duration-500">
-                [Image: Community Play]
-              </span>
-              <div className="absolute inset-0 bg-[#D9dbdb] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="bg-[#e4ecea] w-full aspect-[4/5] overflow-hidden relative group">
+              <Image
+                src="/gallery/3.jpg"
+                alt="Community Play"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
-            <div className="bg-[#e4ecea] w-full aspect-square overflow-hidden flex items-center justify-center text-[#219D80]/40 text-sm font-medium relative group">
-              <span className="relative z-10 transition-transform group-hover:scale-105 duration-500">
-                [Image: Audience Reaction]
-              </span>
-              <div className="absolute inset-0 bg-[#D9dbdb] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="bg-[#e4ecea] w-full aspect-square overflow-hidden relative group">
+              <Image
+                src="/gallery/5.jpg"
+                alt="Audience Reaction"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
           <div className="flex flex-col gap-4 mt-8">
-            <div className="bg-[#e4ecea] w-full aspect-square overflow-hidden flex items-center justify-center text-[#219D80]/40 text-sm font-medium relative group">
-              <span className="relative z-10 transition-transform group-hover:scale-105 duration-500">
-                [Image: Action Prep]
-              </span>
-              <div className="absolute inset-0 bg-[#D9dbdb] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="bg-[#e4ecea] w-full aspect-square overflow-hidden relative group">
+              <Image
+                src="/gallery/6.jpg"
+                alt="Action Prep"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
-            <div className="bg-[#e4ecea] w-full aspect-4/5 overflow-hidden flex items-center justify-center text-[#219D80]/40 text-sm font-medium relative group">
-              <span className="relative z-10 transition-transform group-hover:scale-105 duration-500">
-                [Image: Team Highlight]
-              </span>
-              <div className="absolute inset-0 bg-[#D9dbdb] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="bg-[#e4ecea] w-full aspect-4/5 overflow-hidden relative group">
+              <Image
+                src="/gallery/7.jpg"
+                alt="Team Highlight"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
         </div>

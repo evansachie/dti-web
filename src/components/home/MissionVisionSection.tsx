@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { missionVisionData } from "@/data/home";
 
 export function MissionVisionSection() {
@@ -5,7 +6,7 @@ export function MissionVisionSection() {
     <section className="py-24 px-6 max-w-[1200px] mx-auto w-full flex flex-col md:flex-row gap-16">
       <div className="w-full md:w-1/2">
         <div className="flex items-center gap-4 mb-5">
-          <span className="text-zinc-500 text-[13px] font-bold uppercase tracking-wider">
+          <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
             {missionVisionData.welcome}
           </span>
           <div className="h-[2px] w-[50px] bg-zinc-200"></div>
@@ -71,9 +72,14 @@ export function MissionVisionSection() {
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 relative mt-8 md:mt-0">
-        <div className="bg-[#e4ecea] w-full h-[380px] flex items-center justify-center text-[#219D80]/50 text-sm font-medium">
-          [Performance/Workshop Image Placeholder]
+      <div className="w-full md:w-1/2 relative mt-8 md:mt-20">
+        <div className="w-full h-[450px] relative overflow-hidden bg-zinc-100 shadow-xl border-[8px] md:border-[12px] border-white">
+          <Image
+            src="/gallery/4.jpg"
+            alt="Community Participation"
+            fill
+            className="object-cover"
+          />
         </div>
         <div className="bg-white border-[6px] border-[#EAF5F3] p-8 relative -mt-16 ml-auto w-[90%] shadow-md z-10 hidden sm:block">
           <h4 className="font-semibold text-[#252A34] text-lg mb-5 uppercase tracking-wide">

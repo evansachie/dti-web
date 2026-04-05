@@ -25,25 +25,16 @@ export function VideoSpotlightSection() {
           the people.
         </p>
 
-        <div className="w-full relative aspect-video bg-[#252A34] shadow-2xl overflow-hidden group cursor-pointer ring-1 ring-white/10 hover:ring-[#24a186]/50 transition-all duration-500">
-          <div className="absolute inset-0 bg-[#2b313d] flex items-center justify-center opacity-80 group-hover:scale-105 transition-transform duration-700">
-            <span className="text-white/20 font-medium tracking-widest uppercase">
-              [Live Performance/Community Video Thumbnail]
-            </span>
-          </div>
-
-          <div className="absolute inset-0 bg-[#181b21]/40 group-hover:bg-[#181b21]/20 transition-colors duration-500"></div>
-
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-24 md:w-28 md:h-28 bg-[#24a186] rounded-full flex items-center justify-center pl-2 group-hover:scale-110 group-hover:bg-[#1d826c] transition-all duration-300 shadow-[0_0_40px_rgba(36,161,134,0.4)]">
-              <Play
-                size={44}
-                fill="white"
-                strokeWidth={0}
-                className="text-white"
-              />
-            </div>
-          </div>
+        <div className="w-full relative aspect-video bg-[#181b21] shadow-2xl overflow-hidden ring-1 ring-white/10 hover:ring-[#24a186]/50 transition-all duration-500 rounded-sm">
+          <video
+            src="/gallery/vid.mp4"
+            className="absolute inset-0 w-full h-full object-cover opacity-100"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+          />
         </div>
       </div>
     </section>

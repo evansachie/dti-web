@@ -5,17 +5,22 @@ export function AboutSection() {
   return (
     <section className="py-24 px-6 max-w-[1200px] mx-auto w-full flex flex-col md:flex-row items-center gap-16 md:gap-24">
       <div className="w-full md:w-1/2 relative h-[450px] md:h-[550px] flex-shrink-0">
-        <div className="absolute top-0 left-0 w-[70%] md:w-[65%] aspect-square bg-[#d9dbdb] border-[12px] md:border-[16px] border-[#D9EFEA] z-0"></div>
+        <div className="absolute top-0 left-0 w-[70%] md:w-[65%] aspect-square bg-zinc-100 border-[8px] md:border-[12px] border-white shadow-xl z-0 overflow-hidden">
+          <Image
+            src="/gallery/1.jpg"
+            alt="Community Engagement"
+            fill
+            className="object-cover"
+          />
+        </div>
 
-        <div className="absolute bottom-0 right-0 md:right-4 w-[70%] md:w-[65%] aspect-square bg-[#d9dbdb] border-[12px] md:border-[16px] border-[#D9EFEA] z-10 overflow-hidden">
-          <div className="absolute right-0 bottom-0 w-[80%] h-[80%]">
-            <Image
-              src="/illustration-2.svg"
-              alt=""
-              fill
-              className="object-contain object-bottom-right opacity-10 translate-y-6 translate-x-6"
-            />
-          </div>
+        <div className="absolute bottom-0 right-0 md:right-4 w-[70%] md:w-[65%] aspect-square bg-zinc-100 border-[8px] md:border-[12px] border-white shadow-2xl z-10 overflow-hidden">
+          <Image
+            src="/gallery/2.jpg"
+            alt="TFDI in Action"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
 
