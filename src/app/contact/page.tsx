@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { ContactSection } from "@/components/contact/ContactSection";
+import { FaqSection } from "@/components/contact/FaqSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
 
 import { createPageMetadata } from "@/lib/seo";
@@ -17,6 +18,7 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-screen bg-white font-sans">
       <PageHero title="Contact Us" breadcrumb="Contact" />
       <ContactSection />
+      <FaqSection />
       <PartnersSection />
     </div>
   );

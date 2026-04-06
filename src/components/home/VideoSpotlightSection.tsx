@@ -1,5 +1,3 @@
-import { Play } from "lucide-react";
-
 export function VideoSpotlightSection() {
   return (
     <section className="py-24 px-6 bg-[#181b21] w-full">
