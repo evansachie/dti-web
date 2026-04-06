@@ -5,14 +5,14 @@ import { ArrowRight, MapPin, Clock } from "lucide-react";
 export function ProjectsListSection() {
   const projects = [
     {
-      title: "Environmental Hygiene Awareness Project",
-      subtitle: "Assin Foso Pilot Phase",
+      title: "Clean Earth, Clear Future",
+      subtitle: "Accra, Ghana",
       category: "Health & Sanitation",
       location: "Accra, Ghana",
       duration: "N/A",
       status: "Upcoming",
       description:
-        "A three-month pilot project focused on educating communities on proper sanitation practices through theatre performances, health walks, clean-up exercises, and demonstration of proper waste disposal.",
+        "Environmental Hygiene Awareness Project is focused on educating communities on proper sanitation practices through theatre performances, health walks, clean-up exercises, and demonstration of proper waste disposal.",
       image:
         "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&q=80",
       highlights: [
