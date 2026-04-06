@@ -15,7 +15,7 @@ export async function submitContactForm(data: ContactFormData) {
   }
 
   try {
-    const response = await fetch(scriptURL, {
+    await fetch(scriptURL, {
       method: "POST",
       mode: "no-cors",
       cache: "no-cache",
