@@ -5,11 +5,12 @@ import { ArrowRight, MapPin, Clock } from "lucide-react";
 export function ProjectsListSection() {
   const projects = [
     {
+      slug: "clean-earth-clear-future",
       title: "Clean Earth, Clear Future",
-      subtitle: "Accra, Ghana",
+      subtitle: "Assin Foso, Central Region (Pilot) / Nationwide",
       category: "Health & Sanitation",
-      location: "Accra, Ghana",
-      duration: "N/A",
+      location: "Assin Foso, Central Region",
+      duration: "Upcoming (Pilot Phase)",
       status: "Upcoming",
       description:
         "Environmental Hygiene Awareness Project is focused on educating communities on proper sanitation practices through theatre performances, health walks, clean-up exercises, and demonstration of proper waste disposal.",
@@ -22,6 +23,7 @@ export function ProjectsListSection() {
       ],
     },
     {
+      slug: "love-beyond-romance",
       title: "Love Beyond Romance",
       subtitle: "Exploring Love, Responsibility, and Youth Mental Health",
       category: "Mental Health",
@@ -39,11 +41,12 @@ export function ProjectsListSection() {
       ],
     },
     {
+      slug: "dialogue-on-the-stage",
       title: "Dialogue on the Stage",
       subtitle: "Navigating Tradition and Modernity in Marriage",
       category: "Culture & Development",
-      location: "Accra, Ghana",
-      duration: "Completed",
+      location: "Assin Foso, Central Region",
+      duration: "17th May 2025",
       status: "Previous",
       description:
         "A Theatre for Development project exploring cultural practices and modern influences in marriage through a stage play titled 'The Price of Love.'",
@@ -91,7 +94,7 @@ export function ProjectsListSection() {
               <div
                 className={`w-full lg:w-1/2 relative bg-[#f8fafa] flex items-center justify-center group overflow-hidden ${
                   project.title.includes("Dialogue")
-                    ? "aspect-[16/10]"
+                    ? "aspect-16/10"
                     : "aspect-square"
                 }`}
               >
@@ -164,7 +167,7 @@ export function ProjectsListSection() {
                   </ul>
                 </div>
                 <Link
-                  href="#"
+                  href={`/projects/${project.slug}`}
                   className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
                 >
                   Read Full Case Study
