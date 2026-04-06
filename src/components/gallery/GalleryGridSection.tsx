@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Pagination } from "@/components/ui/Pagination";
-import { Category, GalleryItem, galleryData } from "@/data/gallery";
+import { galleryData } from "@/data/gallery";
 
 export function GalleryGridSection() {
-  const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   const itemsPerPage = 9;
@@ -16,6 +16,34 @@ export function GalleryGridSection() {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
+
+  const handlePrevious = useCallback((e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    setSelectedIndex((prev) =>
+      prev !== null ? (prev === 0 ? galleryData.length - 1 : prev - 1) : null
+    );
+  }, []);
+
+  const handleNext = useCallback((e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    setSelectedIndex((prev) =>
+      prev !== null ? (prev === galleryData.length - 1 ? 0 : prev + 1) : null
+    );
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+      if (e.key === "ArrowLeft") handlePrevious();
+      else if (e.key === "ArrowRight") handleNext();
+      else if (e.key === "Escape") setSelectedIndex(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedIndex, handlePrevious, handleNext]);
+
+  const selectedImage =
+    selectedIndex !== null ? galleryData[selectedIndex] : null;
 
   return (
     <section className="py-24 px-6 bg-[#f8fafa] w-full">
@@ -46,43 +74,46 @@ export function GalleryGridSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {pagedData.map((item) => (
-            <div
-              key={item.id}
-              className="group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
-              onClick={() => setSelectedImage(item)}
-            >
-              <div className="relative aspect-4/5 overflow-hidden">
-                <Image
-                  src={item.src}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
+          {pagedData.map((item, localIndex) => {
+            const globalIndex = (currentPage - 1) * itemsPerPage + localIndex;
+            return (
+              <div
+                key={item.id}
+                className="group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
+                onClick={() => setSelectedIndex(globalIndex)}
+              >
+                <div className="relative aspect-4/5 overflow-hidden">
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
 
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                  <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="text-[#219D80] text-[10px] font-bold uppercase tracking-[0.2em] mb-2 block">
-                      {item.category}
-                    </span>
-                    <h3
-                      className="text-white text-[20px] font-medium mb-1"
-                      style={{
-                        fontFamily: "var(--font-playfair-display), serif",
-                      }}
-                    >
-                      {item.title}
-                    </h3>
-                    <p className="text-white/60 text-[12px] font-medium uppercase tracking-wider flex items-center gap-2">
-                      <span className="w-4 h-px bg-[#219D80]"></span>
-                      {item.location}
-                    </p>
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <span className="text-[#219D80] text-[10px] font-bold uppercase tracking-[0.2em] mb-2 block">
+                        {item.category}
+                      </span>
+                      <h3
+                        className="text-white text-[20px] font-medium mb-1"
+                        style={{
+                          fontFamily: "var(--font-playfair-display), serif",
+                        }}
+                      >
+                        {item.title}
+                      </h3>
+                      <p className="text-white/60 text-[12px] font-medium uppercase tracking-wider flex items-center gap-2">
+                        <span className="w-4 h-px bg-[#219D80]"></span>
+                        {item.location}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <Pagination
@@ -96,18 +127,27 @@ export function GalleryGridSection() {
 
         {selectedImage && (
           <div
-            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-6 sm:p-12 animate-in fade-in duration-300 cursor-zoom-out"
-            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-100 bg-black/95 flex items-center justify-center p-6 sm:p-12 animate-in fade-in duration-300 cursor-zoom-out"
+            onClick={() => setSelectedIndex(null)}
           >
             <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors"
+              onClick={() => setSelectedIndex(null)}
+              className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-101"
             >
               <X size={32} />
             </button>
 
+            {galleryData.length > 1 && (
+              <button
+                onClick={handlePrevious}
+                className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-all z-101"
+              >
+                <ChevronLeft size={28} />
+              </button>
+            )}
+
             <div
-              className="relative w-full max-w-[1000px] max-h-[85vh] flex flex-col items-center cursor-default"
+              className="relative w-full max-w-[1000px] max-h-[85vh] flex flex-col items-center cursor-default group"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative w-full h-[60vh] sm:h-[75vh]">
@@ -116,9 +156,10 @@ export function GalleryGridSection() {
                   alt={selectedImage.title}
                   fill
                   className="object-contain"
+                  priority
                 />
               </div>
-              <div className="mt-8 text-center">
+              <div className="mt-8 text-center px-4">
                 <span className="text-[#219D80] text-[12px] font-bold uppercase tracking-[0.3em] mb-3 block">
                   {selectedImage.category}
                 </span>
@@ -133,6 +174,15 @@ export function GalleryGridSection() {
                 </p>
               </div>
             </div>
+
+            {galleryData.length > 1 && (
+              <button
+                onClick={handleNext}
+                className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-all z-101"
+              >
+                <ChevronRight size={28} />
+              </button>
+            )}
           </div>
         )}
       </div>

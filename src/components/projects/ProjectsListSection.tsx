@@ -5,14 +5,15 @@ import { ArrowRight, MapPin, Clock } from "lucide-react";
 export function ProjectsListSection() {
   const projects = [
     {
-      title: "Environmental Hygiene Awareness Project",
-      subtitle: "Assin Foso Pilot Phase",
+      slug: "clean-earth-clear-future",
+      title: "Clean Earth, Clear Future",
+      subtitle: "Assin Foso, Central Region (Pilot) / Nationwide",
       category: "Health & Sanitation",
-      location: "Accra, Ghana",
-      duration: "N/A",
+      location: "Assin Foso, Central Region",
+      duration: "Upcoming (Pilot Phase)",
       status: "Upcoming",
       description:
-        "A three-month pilot project focused on educating communities on proper sanitation practices through theatre performances, health walks, clean-up exercises, and demonstration of proper waste disposal.",
+        "Environmental Hygiene Awareness Project is focused on educating communities on proper sanitation practices through theatre performances, health walks, clean-up exercises, and demonstration of proper waste disposal.",
       image:
         "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&q=80",
       highlights: [
@@ -22,6 +23,7 @@ export function ProjectsListSection() {
       ],
     },
     {
+      slug: "love-beyond-romance",
       title: "Love Beyond Romance",
       subtitle: "Exploring Love, Responsibility, and Youth Mental Health",
       category: "Mental Health",
@@ -39,11 +41,12 @@ export function ProjectsListSection() {
       ],
     },
     {
+      slug: "dialogue-on-the-stage",
       title: "Dialogue on the Stage",
       subtitle: "Navigating Tradition and Modernity in Marriage",
       category: "Culture & Development",
-      location: "Accra, Ghana",
-      duration: "Completed",
+      location: "Assin Foso, Central Region",
+      duration: "17th May 2025",
       status: "Previous",
       description:
         "A Theatre for Development project exploring cultural practices and modern influences in marriage through a stage play titled 'The Price of Love.'",
@@ -88,12 +91,24 @@ export function ProjectsListSection() {
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
-              <div className="w-full lg:w-1/2 relative bg-zinc-100 min-h-[380px] group overflow-hidden">
+              <div
+                className={`w-full lg:w-1/2 relative bg-[#f8fafa] flex items-center justify-center group overflow-hidden ${
+                  project.title.includes("Dialogue")
+                    ? "aspect-16/10"
+                    : "aspect-square"
+                }`}
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`transition-transform duration-500 ${
+                    project.title.includes("Hygiene") ||
+                    project.title.includes("Romance")
+                      ? "object-contain p-8 lg:p-12"
+                      : "object-cover object-top group-hover:scale-105"
+                  }`}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute top-5 left-5 z-10">
                   <span
@@ -152,7 +167,7 @@ export function ProjectsListSection() {
                   </ul>
                 </div>
                 <Link
-                  href="#"
+                  href={`/projects/${project.slug}`}
                   className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
                 >
                   Read Full Case Study
