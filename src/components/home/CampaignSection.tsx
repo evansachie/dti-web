@@ -48,12 +48,14 @@ export function CampaignSection() {
           </Link>
         </div>
 
-        <div className="w-full md:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-white flex-shrink-0 bg-white">
+        <div className="w-full md:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-white flex-shrink-0 bg-white relative">
           <Image
             src="/clean-earth.jpeg"
             alt="Clean Earth, Clear Future Campaign"
             width={800}
             height={1000}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
             className="w-full h-auto object-contain"
           />
         </div>

@@ -19,12 +19,15 @@ export function DonateCheckoutForm() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [referenceId, setReferenceId] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [transactionRef, setTransactionRef] = useState(() =>
+    new Date().getTime().toString()
+  );
 
   const amountValue = customAmount ? parseFloat(customAmount) : selectedAmount;
   const isValid = !!name && !!email && !!amountValue && amountValue > 0;
 
   const config = {
-    reference: new Date().getTime().toString(),
+    reference: transactionRef,
     email: email,
     amount: (amountValue || 0) * 100,
     publicKey: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || "",
@@ -84,6 +87,7 @@ export function DonateCheckoutForm() {
             setCustomAmount("");
             setSelectedAmount(50);
             setReferenceId("");
+            setTransactionRef(new Date().getTime().toString());
           }}
           className="w-full bg-[#252A34] hover:bg-[#1a1d24] text-white py-4 text-[13px] font-bold uppercase tracking-wider transition-colors"
         >
