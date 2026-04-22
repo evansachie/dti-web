@@ -6,8 +6,8 @@ export function BankTransferDetails() {
       </p>
       <div className="space-y-2 text-[14px] text-zinc-300">
         <p>
-          <span className="text-white font-semibold">Account Name:</span>{" "}
-          Theatre for Development Initiative
+          <span className="text-white font-semibold">Account Name:</span> Enoch
+          Aggrey
         </p>
         <p>
           <span className="text-white font-semibold">Bank:</span> CAL BANK

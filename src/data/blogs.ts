@@ -6,6 +6,7 @@ export interface BlogPost {
   slug: string;
   excerpt: string;
   image: string;
+  content?: string[];
 }
 
 export const featuredPost: BlogPost = {
@@ -21,15 +22,29 @@ export const featuredPost: BlogPost = {
 };
 
 export const featuredPostTwo: BlogPost = {
-  title: "TFDI Launches New Health Awareness Campaign in Central Region",
+  title: "Obra Ne Wara Wabo: The Life You Build Is the Life You Live",
   category: "Advocacy",
-  date: "March 20, 2026",
+  date: "April 17, 2026",
   readTime: "4 min read",
-  slug: "tfdi-launches-new-health-awareness-campaign-in-central-region",
+  slug: "obra-ne-wara-wabo-the-life-you-build-is-the-life-you-live",
   excerpt:
-    "Our newest participatory theatre project aims to combat prevalent localized health challenges through interactive storytelling and community mobilization across rural districts.",
-  image:
-    "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80",
+    "Life is what you have made it. Not what is handed to you, not what is done for you, but what you choose to build, protect, and sustain. Today, that truth speaks directly to one of the most urgent challenges of our time: plastic pollution.",
+  image: "/clean-earth-initiative.jpeg",
+  content: [
+    "“Obra ne wara wabo”. Life is what you have made it. Not what is handed to you, not what is done for you, but what you choose to build, protect, and sustain.",
+    "Today, that truth speaks directly to one of the most urgent challenges of our time: plastic pollution.",
+    "Your health is your life. And increasingly, that life is under threat, not by distant forces, but by the everyday choices we ignore.",
+    "Plastic pollution is quietly but aggressively shaping the future of our generation. It goes beyond the visible litter on our streets and in our gutters. It is degrading the very foundation of our existence: our health, our environment, and our economic strength.",
+    "When plastics invade our ecosystems, they don’t just disappear. They break down into smaller particles, infiltrating the air we breathe, the water we drink, and the food we eat. Over time, this reduces the quality of human health, weakening the very workforce that drives productivity. A weakened population cannot sustain strong economic growth. In this way, plastic pollution is not just an environmental issue, it is a development crisis.",
+    "The physical consequences are even more immediate. Choked drainages filled with plastic waste continue to trigger floods in our communities, destroying homes, livelihoods, and infrastructure. Our water bodies are polluted, making clean water increasingly scarce and unsafe.",
+    "Perhaps the most alarming impact lies beneath our feet. Our soils, once fertile and life-giving, are being contaminated with non-biodegradable plastics. This reduces agricultural productivity, threatens food security, and endangers the livelihoods of farmers. When the land can no longer produce, the ripple effects touch every sector of society.",
+    "This is the reality we have built. And by the wisdom of “Obra ne wara wabo,” it is also the reality we have the power to change.",
+    "The question is no longer whether plastic pollution is a problem. The question is whether we are ready to take responsibility for the life we are shaping.",
+    "Change begins with awareness, but it does not end there. It requires action; intentional, collective, and sustained. It requires individuals, communities, institutions, and leaders to rise beyond convenience and choose responsibility.",
+    "We must rethink our consumption habits. We must support and demand better waste management systems. We must educate, engage, and involve communities in solutions that are practical and lasting.",
+    "Because at the end of the day, the future is not something we wait for. It is something we create.",
+    "Let us rise. Let us act. Let us shape a future where life is not diminished by our neglect, but strengthened by our choices.",
+  ],
 };
 
 export const blogPosts: BlogPost[] = [
