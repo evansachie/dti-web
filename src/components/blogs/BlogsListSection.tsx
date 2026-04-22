@@ -110,12 +110,12 @@ export function BlogsListSection() {
                   />
                 </Link>
               </div>
-              <div className="relative h-[320px] lg:min-h-[450px] overflow-hidden order-1 lg:order-2">
+              <div className="relative h-[320px] lg:min-h-[450px] overflow-hidden order-1 lg:order-2 bg-zinc-50/50">
                 <Image
                   src={featuredPostTwo.image}
                   alt={featuredPostTwo.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>

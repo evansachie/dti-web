@@ -83,12 +83,12 @@ export default async function BlogDetailPage({ params }: Props) {
               {post.title}
             </h1>
 
-            <div className="relative w-full aspect-video overflow-hidden mb-10">
+            <div className="relative w-full aspect-video overflow-hidden mb-10 bg-zinc-50 border border-zinc-100 rounded-sm">
               <Image
                 src={post.image}
                 alt={post.title}
                 fill
-                className="object-cover"
+                className="object-contain p-4"
                 priority
               />
             </div>
@@ -98,66 +98,77 @@ export default async function BlogDetailPage({ params }: Props) {
                 {post.excerpt}
               </p>
 
-              <p>
-                For many communities across rural Ghana, traditional classroom
-                education has long been inaccessible — limited by underfunded
-                schools, high dropout rates, and a persistent disconnect between
-                formal curricula and lived, local realities.{" "}
-                {post.category === "Education"
-                  ? "TFDI is working to bridge that gap"
-                  : "TFDI works directly with community members"}{" "}
-                — not with textbooks alone, but with the transformative power of
-                participatory theatre.
-              </p>
+              {post.content ? (
+                post.content.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))
+              ) : (
+                <>
+                  <p>
+                    For many communities across rural Ghana, traditional
+                    classroom education has long been inaccessible — limited by
+                    underfunded schools, high dropout rates, and a persistent
+                    disconnect between formal curricula and lived, local
+                    realities.{" "}
+                    {post.category === "Education"
+                      ? "TFDI is working to bridge that gap"
+                      : "TFDI works directly with community members"}{" "}
+                    — not with textbooks alone, but with the transformative
+                    power of participatory theatre.
+                  </p>
 
-              <h2
-                style={{
-                  fontFamily: "var(--font-playfair-display), serif",
-                  color: "#252A34",
-                  fontSize: "26px",
-                  fontWeight: "600",
-                  margin: "2rem 0 1rem",
-                }}
-              >
-                Driving Real Community Change
-              </h2>
-              <p>
-                Using the Theatre for Development (TfD) methodology, TFDI
-                facilitators work directly with community members — including
-                youth, parents, chiefs, and local leaders — to co-create
-                performances that speak truth to their specific situation. This
-                is not scripted entertainment imposed from outside. It is
-                collaborative storytelling that emerges from the community
-                itself.
-              </p>
+                  <h2
+                    style={{
+                      fontFamily: "var(--font-playfair-display), serif",
+                      color: "#252A34",
+                      fontSize: "26px",
+                      fontWeight: "600",
+                      margin: "2rem 0 1rem",
+                    }}
+                  >
+                    Driving Real Community Change
+                  </h2>
+                  <p>
+                    Using the Theatre for Development (TfD) methodology, TFDI
+                    facilitators work directly with community members —
+                    including youth, parents, chiefs, and local leaders — to
+                    co-create performances that speak truth to their specific
+                    situation. This is not scripted entertainment imposed from
+                    outside. It is collaborative storytelling that emerges from
+                    the community itself.
+                  </p>
 
-              <p>
-                The results are measurable. Following our recent interventions,
-                we have seen increased community mobilization and securing
-                direct commitments from local authorities to address the core
-                social issues highlighted during our performances. Theatre, in
-                this case, directly catalyzes political will and civic action.
-              </p>
+                  <p>
+                    The results are measurable. Following our recent
+                    interventions, we have seen increased community mobilization
+                    and securing direct commitments from local authorities to
+                    address the core social issues highlighted during our
+                    performances. Theatre, in this case, directly catalyzes
+                    political will and civic action.
+                  </p>
 
-              <h2
-                style={{
-                  fontFamily: "var(--font-playfair-display), serif",
-                  color: "#252A34",
-                  fontSize: "26px",
-                  fontWeight: "600",
-                  margin: "2rem 0 1rem",
-                }}
-              >
-                Future Outlook
-              </h2>
-              <p>
-                TFDI is expanding its participatory models to new community
-                sites in 2026, with funding support from partner institutions.
-                Each site receives a tailored programme including needs
-                assessment, performance development, and post-performance
-                dialogue facilitation. We are actively seeking institutional
-                partners and individual donors to scale this work further.
-              </p>
+                  <h2
+                    style={{
+                      fontFamily: "var(--font-playfair-display), serif",
+                      color: "#252A34",
+                      fontSize: "26px",
+                      fontWeight: "600",
+                      margin: "2rem 0 1rem",
+                    }}
+                  >
+                    Future Outlook
+                  </h2>
+                  <p>
+                    TFDI is expanding its participatory models to new community
+                    sites in 2026, with funding support from partner
+                    institutions. Each site receives a tailored programme
+                    including needs assessment, performance development, and
+                    post-performance dialogue facilitation. We are actively
+                    seeking institutional partners and individual donors to
+                    scale this work further.
+                  </p>
+                </>
+              )}
             </div>
 
             <div className="mt-12 pt-8 border-t border-zinc-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">

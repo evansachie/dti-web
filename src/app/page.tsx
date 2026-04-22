@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/lib/seo";
 import { HomeHero } from "@/components/home/HomeHero";
+import { CampaignSection } from "@/components/home/CampaignSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { MissionVisionSection } from "@/components/home/MissionVisionSection";
 import { StatsSection } from "@/components/home/StatsSection";
@@ -31,6 +32,7 @@ export default function Home() {
       />
 
       <main className="flex flex-col flex-1 w-full">
+        <CampaignSection />
         <AboutSection />
         <MissionVisionSection />
         <StatsSection />

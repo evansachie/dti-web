@@ -6,19 +6,18 @@ export function BankTransferDetails() {
       </p>
       <div className="space-y-2 text-[14px] text-zinc-300">
         <p>
-          <span className="text-white font-semibold">Account Name:</span>{" "}
-          Theatre for Development Initiative
+          <span className="text-white font-semibold">Account Name:</span> Enoch
+          Aggrey
         </p>
         <p>
-          <span className="text-white font-semibold">Bank:</span> Ghana
-          Commercial Bank (GCB)
+          <span className="text-white font-semibold">Bank:</span> CAL BANK
         </p>
         <p>
-          <span className="text-white font-semibold">Account No.:</span> [To be
-          added]
+          <span className="text-white font-semibold">Account No.:</span>{" "}
+          140001072013
         </p>
         <p>
-          <span className="text-white font-semibold">Branch:</span> Legon, Accra
+          <span className="text-white font-semibold">Branch:</span> UG BRANCH
         </p>
       </div>
       <p className="text-zinc-500 text-[12px] mt-4">
