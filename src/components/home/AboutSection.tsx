@@ -10,6 +10,7 @@ export function AboutSection() {
             src="/gallery/1.jpg"
             alt="Community Engagement"
             fill
+            sizes="(max-width: 768px) 70vw, 35vw"
             className="object-cover"
           />
         </div>
@@ -19,6 +20,7 @@ export function AboutSection() {
             src="/gallery/2.jpg"
             alt="TFDI in Action"
             fill
+            sizes="(max-width: 768px) 70vw, 35vw"
             className="object-cover"
           />
         </div>
