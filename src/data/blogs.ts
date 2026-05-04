@@ -21,6 +21,46 @@ export const featuredPost: BlogPost = {
     "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80",
 };
 
+export const featuredPostMiddle: BlogPost = {
+  title:
+    "Dirty Surroundings, Poor Health: Why Our Environment Is a Matter of Life and Death",
+  category: "Impact",
+  date: "May 4, 2026",
+  readTime: "5 min read",
+  slug: "dirty-surroundings-poor-health-why-our-environment-is-a-matter-of-life-and-death",
+  excerpt:
+    "Look closely at the image: the Earth, wrapped in a plastic bag like waste waiting to be discarded. It’s a haunting metaphor—but also an uncomfortable truth. The environment we neglect today is the same one that shapes our health tomorrow.",
+  image: "/blog-3.jpeg",
+  content: [
+    "Look closely at the image: the Earth, wrapped in a plastic bag like waste waiting to be discarded. It’s a haunting metaphor—but also an uncomfortable truth. The environment we neglect today is the same one that shapes our health tomorrow.",
+    "Across communities, especially in rapidly growing urban and peri-urban areas, sanitation challenges are no longer just about aesthetics—they are directly tied to survival. Diseases like malaria, cholera, and typhoid are not random misfortunes. They are often the predictable outcomes of the conditions we tolerate.",
+    "The Silent Link Between Dirt and Disease",
+    "A dirty environment is not just unpleasant—it is dangerous.",
+    "Stagnant water collected in discarded containers becomes a breeding ground for mosquitoes, the carriers of malaria. Poor waste disposal contaminates water sources, paving the way for cholera outbreaks. Unhygienic surroundings invite flies and bacteria that spread typhoid and other infections.",
+    "These are not distant problems. They are happening in our neighborhoods, in our markets, around our homes.",
+    "The truth is simple:",
+    "When we neglect our environment, we create the perfect conditions for disease to thrive.",
+    "Beyond Government: A Shared Responsibility",
+    "It is easy to point fingers at authorities, waste management systems, or infrastructure gaps. And yes, these systems matter. But lasting change begins at the community and individual levels.",
+    "Where do we dump our waste? Do we clean our surroundings regularly? Do we educate others, especially children, about sanitation?",
+    "Environmental hygiene is not a one-time activity—it is a daily commitment.",
+    "The Cost of Neglect",
+    "Ignoring sanitation doesn’t just affect health—it affects livelihoods.",
+    "Medical expenses rise when preventable diseases spread. Productivity drops as people fall ill. Communities lose their vibrancy and attractiveness.",
+    "In contrast, clean environments promote tourism, economic growth, and a higher quality of life. Simply put, clean spaces create healthy, thriving communities.",
+    "Changing the Narrative Through Action",
+    "This is where advocacy, education, and community engagement come in. Initiatives like Clean Earth, Clear Future are not just campaigns—they are movements aimed at reshaping mindsets and behaviors.",
+    "Through storytelling, theatre, and community dialogue, people begin to see that sanitation is not someone else’s job—it is everyone’s responsibility.",
+    "Because real change happens when people don’t just hear messages… they feel them.",
+    "A Call to Action",
+    "The message is clear and urgent: Dirty surroundings equal poor health. But the opposite is also true: Clean surroundings create healthier lives.",
+    "So today, start small: Pick up waste around your home. Dispose of trash responsibly. Encourage others to do the same.",
+    "Because protecting the environment is not just about saving the planet—it is about saving ourselves.",
+    "The Earth is not meant to be wrapped in waste. It is meant to sustain life.",
+    "Let’s treat it that way.",
+  ],
+};
+
 export const featuredPostTwo: BlogPost = {
   title: "Obra Ne Wara Wabo: The Life You Build Is the Life You Live",
   category: "Advocacy",
@@ -120,6 +160,7 @@ export const blogPosts: BlogPost[] = [
 
 export const allBlogPosts: BlogPost[] = [
   featuredPost,
+  featuredPostMiddle,
   featuredPostTwo,
   ...blogPosts,
 ];
