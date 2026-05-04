@@ -4,6 +4,7 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 import {
   featuredPost,
+  featuredPostMiddle,
   featuredPostTwo,
   blogPosts,
   categoryColors,
@@ -75,6 +76,66 @@ export function BlogsListSection() {
             <div className="group grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden border border-zinc-100 shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="p-10 lg:p-14 flex flex-col justify-center bg-white order-2 lg:order-1">
                 <span
+                  className={`inline-block self-start text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest mb-5 rounded-full ${categoryColors[featuredPostMiddle.category]}`}
+                >
+                  {featuredPostMiddle.category}
+                </span>
+                <h2
+                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#219D80] transition-colors"
+                  style={{ fontFamily: "var(--font-playfair-display), serif" }}
+                >
+                  {featuredPostMiddle.title}
+                </h2>
+                <p className="text-zinc-500 text-[14px] leading-relaxed mb-6">
+                  {featuredPostMiddle.excerpt}
+                </p>
+                <div className="flex items-center gap-5 text-zinc-400 text-[12px] font-medium mb-8">
+                  <span className="flex items-center gap-1.5">
+                    <Calendar size={13} />
+                    {featuredPostMiddle.date}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock size={13} />
+                    {featuredPostMiddle.readTime}
+                  </span>
+                </div>
+                <Link
+                  href={`/blogs/${featuredPostMiddle.slug}`}
+                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
+                >
+                  Read Full Article
+                  <ArrowRight
+                    size={16}
+                    strokeWidth={2.5}
+                    className="group-hover/link:translate-x-1 transition-transform"
+                  />
+                </Link>
+              </div>
+              <div className="relative h-[320px] lg:min-h-[450px] overflow-hidden order-1 lg:order-2 bg-zinc-50/50">
+                <Image
+                  src={featuredPostMiddle.image}
+                  alt={featuredPostMiddle.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="group grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden border border-zinc-100 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div className="relative h-[320px] lg:min-h-[450px] overflow-hidden">
+                <Image
+                  src={featuredPostTwo.image}
+                  alt={featuredPostTwo.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-10 lg:p-14 flex flex-col justify-center bg-white">
+                <span
                   className={`inline-block self-start text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest mb-5 rounded-full ${categoryColors[featuredPostTwo.category]}`}
                 >
                   {featuredPostTwo.category}
@@ -109,15 +170,6 @@ export function BlogsListSection() {
                     className="group-hover/link:translate-x-1 transition-transform"
                   />
                 </Link>
-              </div>
-              <div className="relative h-[320px] lg:min-h-[450px] overflow-hidden order-1 lg:order-2 bg-zinc-50/50">
-                <Image
-                  src={featuredPostTwo.image}
-                  alt={featuredPostTwo.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-700"
-                />
               </div>
             </div>
           </div>
