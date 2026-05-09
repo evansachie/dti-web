@@ -130,15 +130,30 @@ export const featuredPostTwo: BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
-    title: "Celebrating Our Cultural Heritage Through Dance & Folklore",
-    category: "Culture",
-    date: "February 28, 2026",
-    slug: "celebrating-our-cultural-heritage-through-dance-and-folklore",
-    readTime: "5 min read",
+    title:
+      "Communities Must Wake Up: Blocked Drains Are Turning Rain Into Disaster",
+    category: "Advocacy",
+    date: "May 7, 2026",
+    slug: "communities-must-wake-up-blocked-drains-are-turning-rain-into-disaster",
+    readTime: "4 min read",
     excerpt:
-      "Highlights from our recent community workshop safely integrating traditional Ghanaian folklore into modern educational plays and social advocacy performances.",
+      "Flooding has become one of the most recurring environmental challenges affecting many communities across Ghana. Environmental experts say the problem often begins closer to home.",
     image:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+    content: [
+      "By Theatre for Development Initiative (TFDI)",
+      "Flooding has become one of the most recurring environmental challenges affecting many communities across Ghana. Whenever heavy rains fall, streets overflow, homes are submerged, businesses are disrupted, and families are left struggling to recover from the damage. While many blame the intensity of the rainfall, environmental experts and advocates say the problem often begins much closer to home—with the way people treat their environment.",
+      "According to the Theatre for Development Initiative (TFDI) through its environmental campaign, Clean Earth, Clear Future, blocked drains caused by indiscriminate waste disposal are contributing significantly to flooding in many urban and rural communities.",
+      "Plastic waste, sachet rubbers, bottles, and household refuse dumped into gutters prevent the free flow of water through drainage systems. As a result, rainwater accumulates quickly, causing floods that could otherwise have been prevented.",
+      "“Floods are not always accidents; many are the results of human actions,” the campaign emphasizes. “When drains are filled with rubbish, the consequences eventually return to the community.”",
+      "The campaign also highlights the dangerous health risks associated with poor sanitation and flooding. Stagnant and contaminated water creates breeding grounds for mosquitoes and bacteria, increasing the spread of diseases such as malaria, cholera, and typhoid.",
+      "Beyond health concerns, flooding destroys property, affects transportation, interrupts education and business activities, and places financial burdens on already struggling families.",
+      "Theatre for Development Initiative (TFDI), known for using creative arts and community engagement to drive social change, believes that solving environmental problems requires both education and active citizen participation. Through the Clean Earth, Clear Future campaign, the organization seeks to raise awareness about sanitation, environmental responsibility, and behavioral change.",
+      "The initiative encourages citizens to:\n• Stop dumping waste into gutters and water bodies\n• Practice proper sanitation and waste management\n• Join community clean-up exercises\n• Educate others on the importance of environmental care",
+      "TFDI believes that lasting change begins with individual responsibility and collective action. According to the organization, communities cannot continue contributing to environmental destruction while expecting different outcomes during the rainy season.",
+      "As Ghana continues to face environmental and sanitation challenges, campaigns like Clean Earth, Clear Future serve as an important reminder that protecting the environment is a shared responsibility.",
+      "The message remains simple but urgent:\nKeep the drains clean. Protect lives. Prevent floods.",
+    ],
   },
   {
     title: "The Price of Love: A Reflection on Tradition and Modernity",
