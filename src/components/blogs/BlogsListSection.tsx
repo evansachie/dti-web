@@ -24,12 +24,13 @@ export function BlogsListSection() {
             </div>
 
             <div className="group grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden border border-zinc-100 shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="relative h-[320px] lg:min-h-[450px] overflow-hidden">
+              <div className="relative h-[320px] lg:min-h-[450px] overflow-hidden bg-zinc-50/50">
                 <Image
                   src={featuredPost.image}
                   alt={featuredPost.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="p-10 lg:p-14 flex flex-col justify-center bg-white">
@@ -117,7 +118,7 @@ export function BlogsListSection() {
                   alt={featuredPostMiddle.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
