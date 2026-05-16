@@ -128,6 +128,55 @@ export const featuredPostTwo: BlogPost = {
   ],
 };
 
+export const featuredPostFourth: BlogPost = {
+  title:
+    "Stop Blaming Government Alone: A Clean Country Begins with Disciplined Citizens",
+  category: "Advocacy",
+  date: "May 16, 2026",
+  readTime: "5 min read",
+  slug: "stop-blaming-government-alone-a-clean-country-begins-with-disciplined-citizens",
+  excerpt:
+    "A nation cannot become clean if its citizens refuse to practice cleanliness. Too often, people blame authorities for conditions they actively contribute to every single day.",
+  image: "/blog-2.jpeg",
+  content: [
+    "By Theatre for Development Initiative (TFDI)",
+    "Clean Earth, Clear Future Campaign",
+    "Whenever communities become dirty, drains become choked, or floods destroy homes, one reaction is almost always the same:",
+    "“Government has failed.”",
+    "While leadership, policies, and sanitation systems are important, there is another truth many people avoid confronting:",
+    "A nation cannot become clean if its citizens refuse to practice cleanliness.",
+    "Too often, people blame authorities for conditions they actively contribute to every single day. Waste is thrown from moving vehicles. Gutters are used as dumping sites. Plastic waste is dropped on streets without a second thought. Public spaces are treated carelessly, as though responsibility belongs to someone else.",
+    "Then, when floods occur or diseases spread, the blame begins.",
+    "But the reality is this: No government can clean a country whose people are committed to making it dirty.",
+    "Systems Matter, But Habits Matter More",
+    "It is true that governments must provide better waste management systems, sanitation infrastructure, and stronger environmental policies. Communities deserve cleaner streets, proper drainage systems, and efficient waste collection services.",
+    "However, even the best systems can fail when citizens ignore basic responsibility.",
+    "A clean environment is not created by policies alone. It is built daily through discipline, awareness, and personal choices.",
+    "• Choosing not to litter\n• Keeping surroundings clean\n• Respecting public spaces\n• Disposing of waste properly\n• Participating in community sanitation efforts",
+    "These habits may seem small, but they determine the condition of entire communities.",
+    "The Culture of “Someone Else Will Do It”",
+    "One of the greatest enemies of environmental cleanliness is the mentality that sanitation is somebody else’s job.",
+    "People expect sweepers to clean places they deliberately dirty. Communities wait for authorities to clear gutters that residents continue to fill with rubbish. Citizens demand change while refusing to change their own behavior.",
+    "But national development cannot succeed without citizen responsibility.",
+    "A clean country starts first with disciplined people.",
+    "Environmental Problems Affect Everyone",
+    "Poor sanitation does not discriminate.",
+    "When drains are blocked, entire neighborhoods flood. When waste is burned irresponsibly, everyone breathes polluted air. When dirty environments attract disease, both rich and poor are affected.",
+    "Environmental neglect eventually returns to the same communities that created it.",
+    "This is why sanitation should never be viewed as an optional duty. It is directly connected to public health, safety, and quality of life.",
+    "Be Part of the Solution",
+    "Through the Clean Earth, Clear Future campaign, the Theatre for Development Initiative (TFDI) continues to encourage citizens to stop waiting for change and begin becoming part of it.",
+    "Communities become cleaner when:\n• Citizens stop littering\n• Residents participate in clean-up exercises\n• Young people are educated on sanitation\n• Individuals take ownership of their surroundings\n• Everyone understands that cleanliness is a shared responsibility",
+    "Real transformation happens when people stop asking, “What is the government doing?” and start asking, “What am I doing?”",
+    "Final Reflection",
+    "Yes, systems matter.",
+    "But habits matter more.",
+    "If we truly want cleaner communities, healthier environments, and safer cities, then responsibility must begin with all of us.",
+    "Let us stop blaming government alone.",
+    "Let us become part of the solution.",
+  ],
+};
+
 export const blogPosts: BlogPost[] = [
   {
     title:
@@ -218,6 +267,7 @@ export const allBlogPosts: BlogPost[] = [
   featuredPost,
   featuredPostMiddle,
   featuredPostTwo,
+  featuredPostFourth,
   ...blogPosts,
 ];
 
