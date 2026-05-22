@@ -1,15 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getProjectBySlug } from "@/data/projects";
+import { getProjectBySlug, projectsData } from "@/data/projects";
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
 import { MapPin, Clock, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { createPageMetadata } from "@/lib/seo";
 
-export default async function ProjectDetailPage({
-  params,
-}: {
+interface Props {
   params: Promise<{ slug: string }>;
-}) {
+}
+
+export function generateStaticParams() {
+  return projectsData.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+
+  if (!project) {
+    return createPageMetadata({
+      title: "Project Not Found",
+      description: "The requested TFDI project could not be found.",
+      path: "/projects",
+    });
+  }
+
+  return createPageMetadata({
+    title: project.title,
+    description: project.description,
+    path: `/projects/${project.slug}`,
+    image: project.heroImage,
+  });
+}
+
+export default async function ProjectDetailPage({ params }: Props) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
 
