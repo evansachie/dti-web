@@ -133,7 +133,6 @@ export function ProjectsListSection() {
                 >
                   {project.title}
                 </h3>
-                ...
                 <p className="text-zinc-400 text-[14px] font-medium italic mb-5">
                   {project.subtitle}
                 </p>
