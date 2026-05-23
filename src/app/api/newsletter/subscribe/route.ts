@@ -25,6 +25,16 @@ export async function POST(request: Request) {
     body && typeof body === "object" && "email" in body
       ? String(body.email).trim().toLowerCase()
       : "";
+  const companyWebsite =
+    body && typeof body === "object" && "companyWebsite" in body
+      ? String(body.companyWebsite).trim()
+      : "";
+
+  if (companyWebsite) {
+    return Response.json({
+      message: "You're subscribed. Thank you for joining the TFDI newsletter.",
+    });
+  }
 
   if (!isValidEmail(email)) {
     return Response.json(

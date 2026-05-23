@@ -6,6 +6,7 @@ export interface ContactFormData {
   subject: string;
   message: string;
   newsletterOptIn: boolean;
+  companyWebsite: string;
 }
 
 export async function submitContactForm(data: ContactFormData) {

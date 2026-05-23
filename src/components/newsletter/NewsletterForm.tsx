@@ -59,13 +59,16 @@ export function NewsletterForm({
     setStatus("loading");
     setMessage("");
 
+    const formData = new FormData(event.currentTarget);
+    const companyWebsite = String(formData.get("companyWebsite") ?? "");
+
     try {
       const response = await fetch("/api/newsletter/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, companyWebsite }),
       });
       const data = await response.json();
 
@@ -84,6 +87,17 @@ export function NewsletterForm({
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
+      <div className="hidden" aria-hidden="true">
+        <label>
+          Company website
+          <input
+            type="text"
+            name="companyWebsite"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </label>
+      </div>
       <input
         type="email"
         value={email}

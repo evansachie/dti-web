@@ -14,6 +14,7 @@ export function ContactForm() {
     subject: "",
     message: "",
     newsletterOptIn: false,
+    companyWebsite: "",
   });
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -49,6 +50,7 @@ export function ContactForm() {
         subject: "",
         message: "",
         newsletterOptIn: false,
+        companyWebsite: "",
       });
     } catch (error: unknown) {
       console.error("Error submitting form:", error);
@@ -111,6 +113,20 @@ export function ContactForm() {
       </p>
 
       <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+        <div className="hidden" aria-hidden="true">
+          <label>
+            Company website
+            <input
+              type="text"
+              name="companyWebsite"
+              value={formData.companyWebsite}
+              onChange={handleChange}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </label>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div className="flex flex-col gap-1.5">
             <label className="text-[12px] font-bold text-zinc-500 uppercase tracking-wider">

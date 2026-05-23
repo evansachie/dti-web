@@ -13,6 +13,7 @@ type ContactPayload = {
   subject: string;
   message: string;
   newsletterOptIn?: boolean;
+  companyWebsite?: string;
 };
 
 const subjectLabels: Record<string, string> = {
@@ -49,6 +50,9 @@ function normalizePayload(body: unknown): ContactPayload {
     message: cleanField("message" in data ? data.message : ""),
     newsletterOptIn:
       "newsletterOptIn" in data ? Boolean(data.newsletterOptIn) : false,
+    companyWebsite: cleanField(
+      "companyWebsite" in data ? data.companyWebsite : ""
+    ),
   };
 }
 
@@ -190,6 +194,13 @@ export async function POST(request: Request) {
   }
 
   const payload = normalizePayload(body);
+
+  if (payload.companyWebsite) {
+    return Response.json({
+      message: "Thank you! Your message has been sent successfully.",
+    });
+  }
+
   const validationError = validatePayload(payload);
 
   if (validationError) {
