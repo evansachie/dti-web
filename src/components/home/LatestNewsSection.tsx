@@ -55,7 +55,10 @@ export function LatestNewsSection() {
                   {news.date}
                 </div>
 
-                <Link href="/blogs" className="block outline-none">
+                <Link
+                  href={`/blogs/${news.slug}`}
+                  className="block outline-none"
+                >
                   <h3 className="text-[20px] font-semibold text-[#252A34] mb-4 leading-snug group-hover:text-[#219D80] transition-colors line-clamp-2">
                     {news.title}
                   </h3>
@@ -66,7 +69,7 @@ export function LatestNewsSection() {
                 </p>
 
                 <Link
-                  href="/blogs"
+                  href={`/blogs/${news.slug}`}
                   className="text-[#252A34] group-hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors flex items-center gap-2 mt-auto"
                 >
                   Read Article
