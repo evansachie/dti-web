@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { submitContactForm } from "@/lib/contact";
 import { getErrorMessage } from "@/lib/utils";
@@ -219,6 +220,24 @@ export function ContactForm() {
             information by email.
           </span>
         </label>
+
+        <p className="text-[12px] leading-relaxed text-zinc-400">
+          By submitting this form, you agree to our{" "}
+          <Link
+            href="/privacy-policy"
+            className="font-medium text-[#219D80] hover:underline"
+          >
+            Privacy Policy
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="/terms-of-service"
+            className="font-medium text-[#219D80] hover:underline"
+          >
+            Terms of Service
+          </Link>
+          .
+        </p>
 
         {status === "error" && (
           <p className="text-red-500 text-sm font-medium">{message}</p>

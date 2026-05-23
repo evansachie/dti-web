@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { getErrorMessage } from "@/lib/utils";
 
@@ -19,6 +20,7 @@ const variantStyles = {
     button:
       "bg-[#24a186] hover:bg-[#1d826c] text-white px-7 py-3.5 text-[13px] font-bold uppercase tracking-wider transition-colors whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed",
     message: "text-[12px] mt-1 sm:basis-full sm:text-center",
+    legal: "text-zinc-400 sm:basis-full sm:text-center",
   },
   footer: {
     form: "flex flex-col gap-3",
@@ -27,6 +29,7 @@ const variantStyles = {
     button:
       "bg-[#24a186] hover:bg-[#1d826c] text-white px-4 py-3 text-sm font-semibold transition-colors w-full uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed",
     message: "text-[12px] mt-1",
+    legal: "text-zinc-500",
   },
   sidebar: {
     form: "flex flex-col gap-3",
@@ -35,6 +38,7 @@ const variantStyles = {
     button:
       "w-full bg-[#24a186] hover:bg-[#1d826c] text-white py-2.5 text-[12px] font-bold uppercase tracking-wider transition-colors disabled:opacity-60 disabled:cursor-not-allowed",
     message: "text-[12px]",
+    legal: "text-white/35",
   },
 };
 
@@ -105,6 +109,14 @@ export function NewsletterForm({
           {message}
         </p>
       )}
+      <p className={`${styles.legal} text-[11px] leading-relaxed`}>
+        By subscribing, you agree to receive TFDI emails. You can unsubscribe at
+        any time. See our{" "}
+        <Link href="/privacy-policy" className="text-[#24a186] hover:underline">
+          Privacy Policy
+        </Link>
+        .
+      </p>
     </form>
   );
 }

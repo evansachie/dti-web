@@ -108,6 +108,40 @@ function buildEmailContent(payload: ContactPayload) {
   };
 }
 
+function buildConfirmationEmailContent(payload: ContactPayload) {
+  const textContent = [
+    `Hello ${payload.fullName},`,
+    "",
+    "Thank you for contacting Theatre for Development Initiative (TFDI). We have received your message and our team will review it shortly.",
+    "",
+    "We typically respond within 1-2 business days.",
+    "",
+    "A copy of your message:",
+    payload.message,
+    "",
+    "Regards,",
+    "Theatre for Development Initiative",
+  ].join("\n");
+
+  const htmlContent = `
+    <div style="font-family:Arial,sans-serif;line-height:1.7;color:#252A34;">
+      <h1 style="font-size:22px;margin:0 0 16px;">Thank you for contacting TFDI</h1>
+      <p>Hello ${escapeHtml(payload.fullName)},</p>
+      <p>Thank you for contacting Theatre for Development Initiative (TFDI). We have received your message and our team will review it shortly.</p>
+      <p>We typically respond within 1-2 business days.</p>
+      <div style="margin:24px 0;padding:16px;border-left:4px solid #24a186;background:#f8fafa;">
+        <p style="margin:0 0 8px;font-weight:700;">A copy of your message:</p>
+        <p style="margin:0;white-space:pre-wrap;color:#3f3f46;">${escapeHtml(payload.message)}</p>
+      </div>
+      <p>Regards,<br />Theatre for Development Initiative</p>
+    </div>`;
+
+  return {
+    textContent,
+    htmlContent,
+  };
+}
+
 async function addContactToLists(payload: ContactPayload) {
   const contactListId = parseBrevoListId(process.env.BREVO_CONTACTS_LIST_ID);
   const newsletterListId = payload.newsletterOptIn
@@ -194,6 +228,32 @@ export async function POST(request: Request) {
       },
       { status: 502 }
     );
+  }
+
+  try {
+    const confirmation = buildConfirmationEmailContent(payload);
+
+    await sendBrevoEmail({
+      sender: {
+        name: senderName,
+        email: senderEmail,
+      },
+      to: [
+        {
+          email: payload.email,
+          name: payload.fullName,
+        },
+      ],
+      replyTo: {
+        email: toEmail,
+        name: "TFDI",
+      },
+      subject: "We received your message",
+      htmlContent: confirmation.htmlContent,
+      textContent: confirmation.textContent,
+    });
+  } catch (error: unknown) {
+    console.error("Brevo contact confirmation email failed:", error);
   }
 
   try {
