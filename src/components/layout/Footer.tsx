@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { SocialIcons } from "@/components/ui/SocialIcons";
+import { NewsletterForm } from "@/components/newsletter/NewsletterForm";
 
 export function Footer() {
   return (
@@ -125,19 +126,11 @@ export function Footer() {
             Subscribe to our newsletter to receive the latest updates on our
             projects and workshops.
           </p>
-          <form className="flex flex-col gap-3">
-            <input
-              type="email"
-              placeholder="Your Email Address"
-              className="bg-white/5 border border-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#24a186] transition-colors w-full"
-            />
-            <button
-              type="submit"
-              className="bg-[#24a186] hover:bg-[#1d826c] text-white px-4 py-3 text-sm font-semibold transition-colors w-full uppercase tracking-wider"
-            >
-              Subscribe Now
-            </button>
-          </form>
+          <NewsletterForm
+            variant="footer"
+            buttonLabel="Subscribe Now"
+            placeholder="Your Email Address"
+          />
         </div>
       </div>
 
@@ -158,13 +151,13 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <Link
-              href="#"
+              href="/privacy-policy"
               className="text-zinc-500 hover:text-white text-sm transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#"
+              href="/terms-of-service"
               className="text-zinc-500 hover:text-white text-sm transition-colors"
             >
               Terms of Service

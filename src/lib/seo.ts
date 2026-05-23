@@ -17,19 +17,49 @@ type PageMetadataInput = {
   noIndex?: boolean;
 };
 
+const productionSiteUrl = "https://www.theatrefordevelopmentinitiative.com";
+
 export const siteConfig: SiteConfig = {
   name: "TFDI",
   title: "TFDI | Theatre for Development Initiative",
   description:
     "Empowering communities in Ghana through participatory theatre, creative arts, and social advocacy for sustainable development.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://tfdi-ghana.org",
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? productionSiteUrl).replace(
+    /\/$/,
+    ""
+  ),
   locale: "en_GH",
   twitterHandle: "@TFDI_Ghana",
 };
 
-function absoluteUrl(path?: string) {
+export function absoluteUrl(path?: string) {
   if (!path) return siteConfig.url;
   return new URL(path, siteConfig.url).toString();
+}
+
+export function stringifyJsonLd(data: unknown) {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
+export function getOrganizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    name: "Theatre for Development Initiative",
+    alternateName: siteConfig.name,
+    url: siteConfig.url,
+    logo: absoluteUrl("/logo.png"),
+    email: "tfdi.ghana@gmail.com",
+    telephone: "+233509941591",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Accra",
+      addressCountry: "GH",
+    },
+    sameAs: [
+      "https://www.tiktok.com/@tfd.initiatives.edu3?_r=1&_t=ZS-95ILLuEzAHM",
+    ],
+  };
 }
 
 export function getSeoDefaults(): Metadata {

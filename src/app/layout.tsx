@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-import { getSeoDefaults } from "@/lib/seo";
+import {
+  getOrganizationJsonLd,
+  getSeoDefaults,
+  stringifyJsonLd,
+} from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +41,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col relative">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: stringifyJsonLd(getOrganizationJsonLd()),
+          }}
+        />
         <Navbar />
         {children}
         <Footer />

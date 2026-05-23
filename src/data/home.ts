@@ -52,6 +52,7 @@ export const servicesData = [
 
 export const homeProjectsData = [
   {
+    slug: "clean-earth-clear-future",
     title: "Environmental Hygiene Awareness Project",
     status: "Upcoming",
     category: "Health & Sanitation",
@@ -62,6 +63,7 @@ export const homeProjectsData = [
     categoryBg: "#24a186",
   },
   {
+    slug: "love-beyond-romance",
     title: "Love Beyond Romance",
     status: "Recent",
     category: "Mental Health",
@@ -71,6 +73,7 @@ export const homeProjectsData = [
     categoryBg: "#eab308",
   },
   {
+    slug: "dialogue-on-the-stage",
     title: "Dialogue on the Stage",
     status: "Previous",
     category: "Culture & Development",

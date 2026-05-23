@@ -58,7 +58,7 @@ export function ProjectsSection() {
                   {project.description}
                 </p>
                 <Link
-                  href="/projects"
+                  href={`/projects/${project.slug}`}
                   className="text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors flex items-center gap-2"
                 >
                   Learn More

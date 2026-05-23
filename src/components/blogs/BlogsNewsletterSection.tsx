@@ -1,3 +1,5 @@
+import { NewsletterForm } from "@/components/newsletter/NewsletterForm";
+
 export function BlogsNewsletterSection() {
   return (
     <section className="py-20 px-6 bg-[#f8fafa] w-full border-t border-zinc-100">
@@ -15,19 +17,7 @@ export function BlogsNewsletterSection() {
           Subscribe to the TFDI newsletter and be the first to receive updates
           on our projects, impact stories, and upcoming events.
         </p>
-        <form className="flex flex-col sm:flex-row gap-3 max-w-[520px] mx-auto">
-          <input
-            type="email"
-            placeholder="Enter your email address"
-            className="flex-1 bg-white border border-zinc-200 px-5 py-3.5 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors"
-          />
-          <button
-            type="submit"
-            className="bg-[#24a186] hover:bg-[#1d826c] text-white px-7 py-3.5 text-[13px] font-bold uppercase tracking-wider transition-colors whitespace-nowrap"
-          >
-            Subscribe
-          </button>
-        </form>
+        <NewsletterForm />
         <p className="text-zinc-400 text-[12px] mt-4">
           No spam. Unsubscribe anytime.
         </p>

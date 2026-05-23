@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { submitContactForm } from "@/lib/contact";
 import { getErrorMessage } from "@/lib/utils";
@@ -12,6 +13,8 @@ export function ContactForm() {
     organisation: "",
     subject: "",
     message: "",
+    newsletterOptIn: false,
+    companyWebsite: "",
   });
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -23,7 +26,12 @@ export function ContactForm() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const value =
+      e.target instanceof HTMLInputElement && e.target.type === "checkbox"
+        ? e.target.checked
+        : e.target.value;
+
+    setFormData({ ...formData, [e.target.name]: value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -41,6 +49,8 @@ export function ContactForm() {
         organisation: "",
         subject: "",
         message: "",
+        newsletterOptIn: false,
+        companyWebsite: "",
       });
     } catch (error: unknown) {
       console.error("Error submitting form:", error);
@@ -103,6 +113,20 @@ export function ContactForm() {
       </p>
 
       <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+        <div className="hidden" aria-hidden="true">
+          <label>
+            Company website
+            <input
+              type="text"
+              name="companyWebsite"
+              value={formData.companyWebsite}
+              onChange={handleChange}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </label>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div className="flex flex-col gap-1.5">
             <label className="text-[12px] font-bold text-zinc-500 uppercase tracking-wider">
@@ -198,6 +222,38 @@ export function ContactForm() {
             className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors resize-none"
           />
         </div>
+
+        <label className="flex items-start gap-3 text-[13px] leading-relaxed text-zinc-500">
+          <input
+            type="checkbox"
+            name="newsletterOptIn"
+            checked={formData.newsletterOptIn}
+            onChange={handleChange}
+            className="mt-1 h-4 w-4 shrink-0 accent-[#24a186]"
+          />
+          <span>
+            I would also like to receive TFDI news, project updates, and event
+            information by email.
+          </span>
+        </label>
+
+        <p className="text-[12px] leading-relaxed text-zinc-400">
+          By submitting this form, you agree to our{" "}
+          <Link
+            href="/privacy-policy"
+            className="font-medium text-[#219D80] hover:underline"
+          >
+            Privacy Policy
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="/terms-of-service"
+            className="font-medium text-[#219D80] hover:underline"
+          >
+            Terms of Service
+          </Link>
+          .
+        </p>
 
         {status === "error" && (
           <p className="text-red-500 text-sm font-medium">{message}</p>

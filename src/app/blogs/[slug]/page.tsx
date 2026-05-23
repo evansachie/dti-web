@@ -7,9 +7,16 @@ import { PageHero } from "@/components/layout/PageHero";
 import type { Metadata } from "next";
 import { allBlogPosts, categoryColors } from "@/data/blogs";
 import { createPageMetadata } from "@/lib/seo";
+import { NewsletterForm } from "@/components/newsletter/NewsletterForm";
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+export function generateStaticParams() {
+  return allBlogPosts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -254,14 +261,10 @@ export default async function BlogDetailPage({ params }: Props) {
               <p className="text-white font-semibold text-[16px] mb-3 leading-snug">
                 Get updates on our latest stories & projects
               </p>
-              <input
-                type="email"
+              <NewsletterForm
+                variant="sidebar"
                 placeholder="Your email address"
-                className="w-full bg-white/5 border border-white/10 px-4 py-2.5 text-[13px] text-white placeholder:text-zinc-500 focus:outline-none focus:border-[#24a186] transition-colors mb-3"
               />
-              <button className="w-full bg-[#24a186] hover:bg-[#1d826c] text-white py-2.5 text-[12px] font-bold uppercase tracking-wider transition-colors">
-                Subscribe
-              </button>
             </div>
           </aside>
         </div>

@@ -17,6 +17,7 @@ export function DonateCheckoutForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isVerifying, setIsVerifying] = useState(false);
   const [referenceId, setReferenceId] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const [transactionRef, setTransactionRef] = useState(() =>
@@ -29,14 +30,51 @@ export function DonateCheckoutForm() {
   const config = {
     reference: transactionRef,
     email: email,
-    amount: (amountValue || 0) * 100,
+    amount: Math.round((amountValue || 0) * 100),
     publicKey: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || "",
     currency: "GHS",
   };
 
-  const handleDonateSuccess = (reference: Record<string, unknown>) => {
-    setReferenceId(String(reference.reference));
-    setIsSuccess(true);
+  const handleDonateSuccess = async (reference: Record<string, unknown>) => {
+    const paymentReference = String(reference.reference || "");
+
+    if (!paymentReference || !amountValue) {
+      setErrorMsg("We could not verify this donation. Please contact TFDI.");
+      return;
+    }
+
+    setIsVerifying(true);
+    setErrorMsg("");
+
+    try {
+      const response = await fetch("/api/donations/verify", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          reference: paymentReference,
+          amount: amountValue,
+          email,
+        }),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Donation verification failed.");
+      }
+
+      setReferenceId(String(result.reference || paymentReference));
+      setIsSuccess(true);
+    } catch (error: unknown) {
+      setErrorMsg(
+        error instanceof Error
+          ? error.message
+          : "We could not verify this donation. Please contact TFDI."
+      );
+    } finally {
+      setIsVerifying(false);
+    }
   };
 
   const handleDonateClose = () => {
@@ -87,6 +125,7 @@ export function DonateCheckoutForm() {
             setCustomAmount("");
             setSelectedAmount(50);
             setReferenceId("");
+            setErrorMsg("");
             setTransactionRef(new Date().getTime().toString());
           }}
           className="w-full bg-[#252A34] hover:bg-[#1a1d24] text-white py-4 text-[13px] font-bold uppercase tracking-wider transition-colors"
@@ -206,13 +245,17 @@ export function DonateCheckoutForm() {
                 onSuccess={handleDonateSuccess}
                 onClose={handleDonateClose}
                 className="w-full h-full text-inherit bg-transparent outline-none cursor-pointer"
-                text={`Donate ${
-                  customAmount
-                    ? `GHS ${customAmount}`
-                    : selectedAmount
-                      ? `GHS ${selectedAmount}`
-                      : "Now"
-                }`}
+                text={
+                  isVerifying
+                    ? "Verifying..."
+                    : `Donate ${
+                        customAmount
+                          ? `GHS ${customAmount}`
+                          : selectedAmount
+                            ? `GHS ${selectedAmount}`
+                            : "Now"
+                      }`
+                }
               />
             </div>
           )}
