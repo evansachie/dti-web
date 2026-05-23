@@ -12,6 +12,7 @@ export function ContactForm() {
     organisation: "",
     subject: "",
     message: "",
+    newsletterOptIn: false,
   });
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -23,7 +24,12 @@ export function ContactForm() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const value =
+      e.target instanceof HTMLInputElement && e.target.type === "checkbox"
+        ? e.target.checked
+        : e.target.value;
+
+    setFormData({ ...formData, [e.target.name]: value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -41,6 +47,7 @@ export function ContactForm() {
         organisation: "",
         subject: "",
         message: "",
+        newsletterOptIn: false,
       });
     } catch (error: unknown) {
       console.error("Error submitting form:", error);
@@ -198,6 +205,20 @@ export function ContactForm() {
             className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors resize-none"
           />
         </div>
+
+        <label className="flex items-start gap-3 text-[13px] leading-relaxed text-zinc-500">
+          <input
+            type="checkbox"
+            name="newsletterOptIn"
+            checked={formData.newsletterOptIn}
+            onChange={handleChange}
+            className="mt-1 h-4 w-4 shrink-0 accent-[#24a186]"
+          />
+          <span>
+            I would also like to receive TFDI news, project updates, and event
+            information by email.
+          </span>
+        </label>
 
         {status === "error" && (
           <p className="text-red-500 text-sm font-medium">{message}</p>
