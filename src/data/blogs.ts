@@ -139,7 +139,7 @@ export const featuredPostFourth: BlogPost = {
     "A nation cannot become clean if its citizens refuse to practice cleanliness. Too often, people blame authorities for conditions they actively contribute to every single day.",
   image: "/blog-2.jpeg",
   content: [
-    "By Theatre for Development Initiative (TFDI)",
+    "By Developmental Theatre Initiative (DTI)",
     "Clean Earth, Clear Future Campaign",
     "Whenever communities become dirty, drains become choked, or floods destroy homes, one reaction is almost always the same:",
     "“Government has failed.”",
@@ -165,7 +165,7 @@ export const featuredPostFourth: BlogPost = {
     "Environmental neglect eventually returns to the same communities that created it.",
     "This is why sanitation should never be viewed as an optional duty. It is directly connected to public health, safety, and quality of life.",
     "Be Part of the Solution",
-    "Through the Clean Earth, Clear Future campaign, the Theatre for Development Initiative (TFDI) continues to encourage citizens to stop waiting for change and begin becoming part of it.",
+    "Through the Clean Earth, Clear Future campaign, the Developmental Theatre Initiative (DTI) continues to encourage citizens to stop waiting for change and begin becoming part of it.",
     "Communities become cleaner when:\n• Citizens stop littering\n• Residents participate in clean-up exercises\n• Young people are educated on sanitation\n• Individuals take ownership of their surroundings\n• Everyone understands that cleanliness is a shared responsibility",
     "Real transformation happens when people stop asking, “What is the government doing?” and start asking, “What am I doing?”",
     "Final Reflection",
@@ -190,16 +190,16 @@ export const blogPosts: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
     content: [
-      "By Theatre for Development Initiative (TFDI)",
+      "By Developmental Theatre Initiative (DTI)",
       "Flooding has become one of the most recurring environmental challenges affecting many communities across Ghana. Whenever heavy rains fall, streets overflow, homes are submerged, businesses are disrupted, and families are left struggling to recover from the damage. While many blame the intensity of the rainfall, environmental experts and advocates say the problem often begins much closer to home—with the way people treat their environment.",
-      "According to the Theatre for Development Initiative (TFDI) through its environmental campaign, Clean Earth, Clear Future, blocked drains caused by indiscriminate waste disposal are contributing significantly to flooding in many urban and rural communities.",
+      "According to the Developmental Theatre Initiative (DTI) through its environmental campaign, Clean Earth, Clear Future, blocked drains caused by indiscriminate waste disposal are contributing significantly to flooding in many urban and rural communities.",
       "Plastic waste, sachet rubbers, bottles, and household refuse dumped into gutters prevent the free flow of water through drainage systems. As a result, rainwater accumulates quickly, causing floods that could otherwise have been prevented.",
       "“Floods are not always accidents; many are the results of human actions,” the campaign emphasizes. “When drains are filled with rubbish, the consequences eventually return to the community.”",
       "The campaign also highlights the dangerous health risks associated with poor sanitation and flooding. Stagnant and contaminated water creates breeding grounds for mosquitoes and bacteria, increasing the spread of diseases such as malaria, cholera, and typhoid.",
       "Beyond health concerns, flooding destroys property, affects transportation, interrupts education and business activities, and places financial burdens on already struggling families.",
-      "Theatre for Development Initiative (TFDI), known for using creative arts and community engagement to drive social change, believes that solving environmental problems requires both education and active citizen participation. Through the Clean Earth, Clear Future campaign, the organization seeks to raise awareness about sanitation, environmental responsibility, and behavioral change.",
+      "Developmental Theatre Initiative (DTI), known for using creative arts and community engagement to drive social change, believes that solving environmental problems requires both education and active citizen participation. Through the Clean Earth, Clear Future campaign, the organization seeks to raise awareness about sanitation, environmental responsibility, and behavioral change.",
       "The initiative encourages citizens to:\n• Stop dumping waste into gutters and water bodies\n• Practice proper sanitation and waste management\n• Join community clean-up exercises\n• Educate others on the importance of environmental care",
-      "TFDI believes that lasting change begins with individual responsibility and collective action. According to the organization, communities cannot continue contributing to environmental destruction while expecting different outcomes during the rainy season.",
+      "DTI believes that lasting change begins with individual responsibility and collective action. According to the organization, communities cannot continue contributing to environmental destruction while expecting different outcomes during the rainy season.",
       "As Ghana continues to face environmental and sanitation challenges, campaigns like Clean Earth, Clear Future serve as an important reminder that protecting the environment is a shared responsibility.",
       "The message remains simple but urgent:\nKeep the drains clean. Protect lives. Prevent floods.",
     ],
@@ -222,7 +222,7 @@ export const blogPosts: BlogPost[] = [
     slug: "from-cleanup-to-policy-how-one-performance-changed-assin-foso",
     readTime: "8 min read",
     excerpt:
-      "The remarkable story of how a single TFDI theatre performance on environmental hygiene led to a community-wide cleanup and a municipal government commitment.",
+      "The remarkable story of how a single DTI theatre performance on environmental hygiene led to a community-wide cleanup and a municipal government commitment.",
     image:
       "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80",
   },
@@ -233,19 +233,19 @@ export const blogPosts: BlogPost[] = [
     slug: "youth-voices-training-the-next-generation-of-theatre-advocates",
     readTime: "5 min read",
     excerpt:
-      "How TFDI's educational workshops are equipping young Ghanaians with the storytelling tools to become advocates for change in their own communities.",
+      "How DTI's educational workshops are equipping young Ghanaians with the storytelling tools to become advocates for change in their own communities.",
     image:
       "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&q=80",
   },
   {
     title:
-      "Partnering for Impact: TFDI's Approach to Institutional Collaboration",
+      "Partnering for Impact: DTI's Approach to Institutional Collaboration",
     category: "Partnerships",
     date: "November 30, 2025",
     slug: "partnering-for-impact-tfdis-approach-to-institutional-collaboration",
     readTime: "4 min read",
     excerpt:
-      "Exploring how TFDI works with NGOs, government agencies, and local institutions to create scalable, sustainable social development programs.",
+      "Exploring how DTI works with NGOs, government agencies, and local institutions to create scalable, sustainable social development programs.",
     image:
       "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&q=80",
   },
@@ -257,7 +257,7 @@ export const blogPosts: BlogPost[] = [
     slug: "digital-storytelling-using-theatre-to-drive-change-in-the-social-media-era",
     readTime: "6 min read",
     excerpt:
-      "How TFDI is blending traditional theatre with digital platforms to reach wider audiences, amplify social advocacy, and engage Ghana’s youth through storytelling online.",
+      "How DTI is blending traditional theatre with digital platforms to reach wider audiences, amplify social advocacy, and engage Ghana’s youth through storytelling online.",
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
   },

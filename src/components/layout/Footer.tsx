@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
-import { SocialIcons } from "@/components/ui/SocialIcons";
 import { NewsletterForm } from "@/components/newsletter/NewsletterForm";
 
 export function Footer() {
@@ -12,18 +11,17 @@ export function Footer() {
           <Link href="/" className="inline-block mb-6">
             <Image
               src="/logo.svg"
-              alt="TFDI Logo"
+              alt="DTI Logo"
               width={140}
               height={90}
               className="object-contain"
             />
           </Link>
           <p className="text-zinc-400 text-sm leading-relaxed mb-6 pe-4">
-            A community-driven organization using participatory theatre and
-            creative arts as tools for education, advocacy, and social
-            transformation in Ghana.
+            A non-profit organization promoting sustainable development through
+            theatre, creative arts, dialogue, advocacy, and community
+            participation.
           </p>
-          <SocialIcons variant="dark" />
         </div>
 
         <div>
@@ -102,20 +100,22 @@ export function Footer() {
             <li className="flex items-center gap-4">
               <Phone className="text-[#24a186] shrink-0" size={20} />
               <p className="text-zinc-400 text-sm">
-                +233 50 994 1591{" "}
+                +233 24 713 4085{" "}
                 <span className="text-[10px] opacity-50 ml-1">(Voice)</span>
               </p>
             </li>
             <li className="flex items-center gap-4">
               <MessageCircle className="text-[#24a186] shrink-0" size={20} />
               <p className="text-zinc-400 text-sm">
-                0247 134 085{" "}
+                +233 24 713 4085{" "}
                 <span className="text-[10px] opacity-50 ml-1">(WhatsApp)</span>
               </p>
             </li>
             <li className="flex items-center gap-4">
               <Mail className="text-[#24a186] shrink-0" size={20} />
-              <p className="text-zinc-400 text-sm">tfdi.ghana@gmail.com</p>
+              <p className="text-zinc-400 text-sm break-all">
+                developmentaltheatreinitiative@gmail.com
+              </p>
             </li>
           </ul>
         </div>
@@ -137,9 +137,8 @@ export function Footer() {
       <div className="border-t border-white/10 pt-8 mt-10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-zinc-500 text-sm">
-            © {new Date().getFullYear()} Theatre For Development Initiative
-            (TFDI). All Rights Reserved.{" "}
-            <span className="mx-2 text-zinc-700">|</span>
+            © {new Date().getFullYear()} Developmental Theatre Initiative (DTI).
+            All Rights Reserved. <span className="mx-2 text-zinc-700">|</span>
             <Link
               href="https://evansdev.vercel.app"
               target="_blank"

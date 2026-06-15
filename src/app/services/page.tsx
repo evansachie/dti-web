@@ -10,7 +10,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Our Services",
   description:
-    "Explore TFDI's range of services: from community theatre performances and educational workshops to advocacy campaigns across Ghana.",
+    "Explore DTI's programme areas, from environment and climate action to youth leadership, mental health, public health education, and theatre for development.",
   path: "/services",
 });
 

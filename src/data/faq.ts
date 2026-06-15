@@ -18,15 +18,15 @@ export const faqData: FaqItem[] = [
     question:
       "Are your projects restricted only to the Greater Accra and Central Regions?",
     answer:
-      "No. While projects like our 'Clean Earth, Clear Future' pilot began in Assin Foso and 'Love Beyond Romance' started at the University of Ghana, TFDI is a national initiative. We are actively scaling our programs and are open to partnerships that allow us to deploy our teams to any region across Ghana.",
+      "No. While projects like our 'Clean Earth, Clear Future' pilot began in Assin Foso and 'Love Beyond Romance' started at the University of Ghana, DTI is a national initiative. We are actively scaling our programs and are open to partnerships that allow us to deploy our teams to any region across Ghana.",
   },
   {
-    question: "Can I join TFDI as an actor, facilitator, or volunteer?",
+    question: "Can I join DTI as an actor, facilitator, or volunteer?",
     answer:
       "Absolutely. We are always looking for passionate actors, facilitators, researchers, and volunteers who believe in visual and performing arts as tools for social change. Keep an eye on our social media channels for specific casting and volunteer calls, or drop us a message with your CV and portfolio expressing your interest.",
   },
   {
-    question: "How is the Theatre for Development Initiative funded?",
+    question: "How is the Developmental Theatre Initiative funded?",
     answer:
       "Our initiatives are largely supported through institutional partnerships, grants from development organizations, corporate sponsorships, and generous donations from individuals who believe in our cause. We also collaborate with local government assemblies for community-specific interventions.",
   },

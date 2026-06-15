@@ -31,7 +31,7 @@ export default function TwitterImage() {
           textTransform: "uppercase",
         }}
       >
-        Theatre for Development Initiative
+        Developmental Theatre Initiative
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         <div style={{ fontSize: 64, fontWeight: 700, lineHeight: 1.05 }}>

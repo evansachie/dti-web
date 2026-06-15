@@ -3,82 +3,81 @@ import Image from "next/image";
 export function ServicesListSection() {
   const services = [
     {
-      title: "Community Theatre Performances",
+      title: "Environment & Climate Action",
       description:
-        "We design and stage high-impact, participatory theatre performances directly within communities, tailored to local realities and encouraging communal problem-solving.",
+        "Promoting sanitation, environmental responsibility, climate awareness, waste management, and sustainable community practices through advocacy and action.",
       features: [
-        "Original script development",
-        "Community-specific themes",
-        "Interactive audience participation",
-        "Post-performance dialogue sessions",
+        "Sanitation awareness",
+        "Clean-up exercises",
+        "Climate education",
+        "Community environmental action",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80",
+    },
+    {
+      title: "Youth Development & Leadership",
+      description:
+        "Building leadership capacity, volunteerism, civic engagement, mentorship, and practical skills among young people.",
+      features: [
+        "Leadership development",
+        "Volunteer engagement",
+        "Mentorship",
+        "Civic participation",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+    },
+    {
+      title: "Mental Health & Well-being",
+      description:
+        "Creating safe spaces for dialogue, awareness, emotional healing, psychosocial support, and healthy relationships.",
+      features: [
+        "Dialogue circles",
+        "Mental health awareness",
+        "Counselling pathways",
+        "Youth support systems",
+      ],
+      image: "/gallery/love-project.jpg",
+    },
+    {
+      title: "Public Health Education",
+      description:
+        "Using theatre, creative arts, and participatory methods to improve health awareness and promote healthy lifestyles.",
+      features: [
+        "Health walks",
+        "Community sensitization",
+        "Healthy lifestyle education",
+        "School and market outreach",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    },
+    {
+      title: "Theatre & Creative Arts for Development",
+      description:
+        "Applying theatre, storytelling, and performance as tools for education, advocacy, community mobilization, and social transformation.",
+      features: [
+        "Participatory theatre",
+        "Storytelling",
+        "Performance facilitation",
+        "Post-performance dialogue",
       ],
       image:
         "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80",
     },
     {
-      title: "Social Awareness Campaigns",
+      title: "Community Development & Social Inclusion",
       description:
-        "Targeted, localized awareness campaigns combining live performances, health walks, and community activations to tackle specific societal challenges.",
+        "Strengthening participation, social cohesion, gender inclusion, and local ownership of development initiatives.",
       features: [
-        "Multi-day campaign planning",
-        "Health walk coordination",
-        "Public sensitization events",
-        "Measurable impact tracking",
+        "Inclusive participation",
+        "Community ownership",
+        "Stakeholder collaboration",
+        "Sustainable action",
       ],
       image:
-        "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80",
-    },
-    {
-      title: "Educational Drama Workshops",
-      description:
-        "Structured workshops for schools, youth groups, and community organizations teaching storytelling, drama facilitation, and using theatre as an educational tool.",
-      features: [
-        "Curriculum-aligned content",
-        "Youth & educator focused",
-        "Hands-on drama exercises",
-        "Certificate of participation",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
-    },
-    {
-      title: "Advocacy & Sensitization Programs",
-      description:
-        "We partner with NGOs, government bodies, and institutions to deliver targeted advocacy programs using creative arts to sensitize communities.",
-      features: [
-        "Policy and rights advocacy",
-        "Cultural heritage promotion",
-        "SDG-aligned programming",
-        "Institutional collaboration",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=800&q=80",
-    },
-    {
-      title: "Event Production",
-      description:
-        "End-to-end production support for cultural events, festivals, and community performances — professionally executed with lasting community impact.",
-      features: [
-        "Creative direction & scripting",
-        "Stage & venue management",
-        "Performer coordination",
-        "Post-event documentation",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
-    },
-    {
-      title: "Research & Development Projects",
-      description:
-        "Rigorous research into the effectiveness of Theatre for Development as a social change methodology to continually improve our community programs.",
-      features: [
-        "Participatory action research",
-        "Field data collection",
-        "Impact assessment reports",
-        "Academic & NGO collaboration",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+        "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&q=80",
     },
   ];
 
@@ -100,8 +99,9 @@ export function ServicesListSection() {
             Our Core Services
           </h2>
           <p className="text-zinc-500 text-[15px] mt-4 max-w-2xl leading-relaxed">
-            From live performances to structured workshops, every TFDI service
-            is grounded in the transformative power of participatory theatre.
+            From environmental action to youth leadership and public well-being,
+            every DTI programme is grounded in participation, dialogue, creative
+            expression, and sustainable action.
           </p>
         </div>
 

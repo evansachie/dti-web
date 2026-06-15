@@ -232,7 +232,7 @@ export function ContactForm() {
             className="mt-1 h-4 w-4 shrink-0 accent-[#24a186]"
           />
           <span>
-            I would also like to receive TFDI news, project updates, and event
+            I would also like to receive DTI news, project updates, and event
             information by email.
           </span>
         </label>

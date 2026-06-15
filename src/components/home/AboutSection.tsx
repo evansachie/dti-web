@@ -18,7 +18,7 @@ export function AboutSection() {
         <div className="absolute bottom-0 right-0 md:right-4 w-[70%] md:w-[65%] aspect-square bg-zinc-100 border-[8px] md:border-[12px] border-white shadow-2xl z-10 overflow-hidden">
           <Image
             src="/gallery/2.jpg"
-            alt="TFDI in Action"
+            alt="DTI in Action"
             fill
             sizes="(max-width: 768px) 70vw, 35vw"
             className="object-cover"
@@ -38,18 +38,18 @@ export function AboutSection() {
           className="text-[38px] md:text-[44px] leading-[1.1] text-[#252A34] font-medium mb-6"
           style={{ fontFamily: "var(--font-playfair-display), serif" }}
         >
-          Using Theatre As A Tool For Transformation.
+          Building Sustainable Communities Through Theatre.
         </h2>
 
         <p className="text-zinc-500 leading-relaxed mb-6 text-[14px]">
-          Theatre for Development Initiative (TFDI) is a community-driven
-          organization that uses participatory theatre and creative arts as
-          tools for education, advocacy, and social transformation.
+          Developmental Theatre Initiative (DTI) is a non-profit organization
+          committed to promoting sustainable development through theatre,
+          creative arts, dialogue, advocacy, and community participation.
         </p>
         <p className="text-zinc-500 leading-relaxed mb-10 text-[14px]">
-          Rooted in the principles of Theatre for Development, we engage
-          communities in dialogue, awareness creation, and problem-solving
-          around pressing societal issues.
+          Founded by Theatre for Development practitioner Enoch Aggrey, DTI
+          empowers people to identify challenges, discuss solutions, and take
+          collective action toward positive change.
         </p>
 
         <Link

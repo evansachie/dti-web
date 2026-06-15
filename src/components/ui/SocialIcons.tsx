@@ -10,10 +10,12 @@ function IconWrapper({
   children,
   variant = "dark",
 }: {
-  href: string;
+  href?: string;
   children: React.ReactNode;
   variant?: "dark" | "light";
 }) {
+  if (!href) return null;
+
   const base =
     variant === "dark"
       ? "w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#24a186] transition-colors text-white"
@@ -43,7 +45,7 @@ const svgProps = (size = 18) => ({
 });
 
 export function TikTokIcon({
-  href = "#",
+  href,
   variant = "dark",
   size = 18,
 }: SocialIconProps & { href?: string }) {
@@ -57,7 +59,7 @@ export function TikTokIcon({
 }
 
 export function YoutubeIcon({
-  href = "#",
+  href,
   variant = "dark",
   size = 18,
 }: SocialIconProps & { href?: string }) {
@@ -74,12 +76,14 @@ export function YoutubeIcon({
 export function SocialIcons({
   variant = "dark",
   size = 18,
-  tiktok = "https://www.tiktok.com/@tfd.initiatives.edu3?_r=1&_t=ZS-95ILLuEzAHM",
-  youtube = "https://youtube.com/@theatrefordevelopmentinitiativ?si=XKHR5ezp8c8JsJUG",
+  tiktok,
+  youtube,
 }: SocialIconProps & {
   tiktok?: string;
   youtube?: string;
 }) {
+  if (!tiktok && !youtube) return null;
+
   return (
     <div className="flex items-center gap-3">
       <TikTokIcon href={tiktok} variant={variant} size={size} />

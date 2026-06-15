@@ -20,16 +20,16 @@ type PageMetadataInput = {
 const productionSiteUrl = "https://www.theatrefordevelopmentinitiative.com";
 
 export const siteConfig: SiteConfig = {
-  name: "TFDI",
-  title: "TFDI | Theatre for Development Initiative",
+  name: "DTI",
+  title: "DTI | Developmental Theatre Initiative",
   description:
-    "Empowering communities in Ghana through participatory theatre, creative arts, and social advocacy for sustainable development.",
+    "Empowering communities, inspiring change, and driving development through theatre, creative arts, dialogue, advocacy, and community participation.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? productionSiteUrl).replace(
     /\/$/,
     ""
   ),
   locale: "en_GH",
-  twitterHandle: "@TFDI_Ghana",
+  twitterHandle: "@DTI_Ghana",
 };
 
 export function absoluteUrl(path?: string) {
@@ -45,20 +45,17 @@ export function getOrganizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "NGO",
-    name: "Theatre for Development Initiative",
+    name: "Developmental Theatre Initiative",
     alternateName: siteConfig.name,
     url: siteConfig.url,
     logo: absoluteUrl("/logo.png"),
-    email: "tfdi.ghana@gmail.com",
-    telephone: "+233509941591",
+    email: "developmentaltheatreinitiative@gmail.com",
+    telephone: "+233247134085",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Accra",
       addressCountry: "GH",
     },
-    sameAs: [
-      "https://www.tiktok.com/@tfd.initiatives.edu3?_r=1&_t=ZS-95ILLuEzAHM",
-    ],
   };
 }
 

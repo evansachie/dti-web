@@ -14,9 +14,9 @@ import { PartnersSection } from "@/components/home/PartnersSection";
 import { CtaSection } from "@/components/home/CtaSection";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "TFDI | Theatre for Development Initiative",
+  title: "DTI | Developmental Theatre Initiative",
   description:
-    "A community-driven organization that uses participatory theatre and creative arts as tools for education, advocacy, and social transformation in Ghana.",
+    "Developmental Theatre Initiative promotes sustainable development through theatre, creative arts, dialogue, advocacy, and community participation.",
   path: "/",
 });
 
@@ -24,9 +24,9 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white font-sans">
       <HomeHero
-        eyebrow="Theatre For Development Initiative (TFDI)"
-        title="Using Theatre to Inspire Change & Transform Lives"
-        description="We engage communities through participatory theatre and creative arts—driving education, advocacy, and sustainable social transformation."
+        eyebrow="Developmental Theatre Initiative (DTI)"
+        title="Using Theatre for Social Change"
+        description="Empowering communities, inspiring change, and driving development through theatre, creative arts, dialogue, advocacy, and community participation."
         primaryAction={{ label: "Our Projects", href: "/projects" }}
         secondaryAction={{ label: "About Us", href: "/about" }}
       />

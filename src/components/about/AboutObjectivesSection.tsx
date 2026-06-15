@@ -1,49 +1,63 @@
 import {
-  BookOpen,
-  Scale,
-  Recycle,
-  Users,
+  Brain,
+  HeartPulse,
+  Leaf,
   Handshake,
   Megaphone,
+  Theater,
+  TrendingUp,
+  Users,
 } from "lucide-react";
 
 export function AboutObjectivesSection() {
   const objectives = [
     {
-      title: "Community Education",
+      title: "Environment & Climate Action",
       description:
-        "Use theatre as a powerful tool for community education and widespread awareness.",
-      icon: BookOpen,
+        "Promote sanitation, environmental responsibility, climate awareness, and sustainable community practices.",
+      icon: Leaf,
     },
     {
-      title: "Cultural Dialogue",
+      title: "Youth Development & Leadership",
       description:
-        "Promote active dialogue between deeply rooted tradition and rapid modernity.",
-      icon: Scale,
+        "Empower young people through leadership development, volunteerism, mentorship, civic engagement, and skills-building.",
+      icon: TrendingUp,
     },
     {
-      title: "Environmental Action",
+      title: "Mental Health & Well-being",
       description:
-        "Address severe environmental and sanitation issues directly through performance.",
-      icon: Recycle,
+        "Create safe spaces for dialogue, awareness, emotional healing, and psychosocial support.",
+      icon: Brain,
     },
     {
-      title: "Empowerment",
+      title: "Public Health Education",
       description:
-        "Empower youth and local communities to take charge of their narratives.",
+        "Use theatre and participatory approaches to increase health awareness and promote healthy lifestyles.",
+      icon: HeartPulse,
+    },
+    {
+      title: "Theatre & Creative Arts",
+      description:
+        "Advance theatre, storytelling, and creative expression as tools for education, advocacy, and social change.",
+      icon: Theater,
+    },
+    {
+      title: "Community Development & Inclusion",
+      description:
+        "Strengthen community participation, social cohesion, inclusion, and local ownership of development initiatives.",
       icon: Users,
     },
     {
-      title: "Sustainable Partnerships",
+      title: "Research & Advocacy",
       description:
-        "Partner with institutions for sustainable, long-term development.",
-      icon: Handshake,
+        "Generate knowledge and facilitate dialogue that contributes to informed decision-making and sustainable development.",
+      icon: Megaphone,
     },
     {
-      title: "Social Advocacy",
+      title: "Institutional Growth",
       description:
-        "Launch targeted advocacy campaigns to address systemic social challenges at a grassroots level.",
-      icon: Megaphone,
+        "Build a strong, accountable, and resilient organization through governance, partnerships, volunteer development, and resource mobilization.",
+      icon: Handshake,
     },
   ];
 
@@ -54,7 +68,7 @@ export function AboutObjectivesSection() {
           <div className="flex items-center justify-center gap-4 mb-5">
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
             <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
-              Strategic Focus
+              Strategic Direction
             </span>
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
           </div>
@@ -62,7 +76,7 @@ export function AboutObjectivesSection() {
             className="text-[36px] md:text-[42px] leading-[1.2] text-[#252A34] font-medium"
             style={{ fontFamily: "var(--font-playfair-display), serif" }}
           >
-            Our Core Objectives
+            Our 2027-2031 Priorities
           </h2>
         </div>
 

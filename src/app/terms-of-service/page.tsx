@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Terms of Service",
   description:
-    "Review the terms for using Theatre for Development Initiative's website, content, donation tools, and online forms.",
+    "Review the terms for using Developmental Theatre Initiative's website, content, donation tools, and online forms.",
   path: "/terms-of-service",
 });
 
@@ -15,9 +15,10 @@ const sections = [
     title: "Use Of This Website",
     body: (
       <p>
-        This website is provided to share information about TFDI, our projects,
-        campaigns, events, services, and opportunities for support or
-        collaboration. You agree to use the website lawfully and respectfully.
+        This website is provided to share information about DTI, our projects,
+        campaigns, events, programmes, services, and opportunities for support
+        or collaboration. You agree to use the website lawfully and
+        respectfully.
       </p>
     ),
   },
@@ -26,7 +27,7 @@ const sections = [
     body: (
       <p>
         Text, images, videos, logos, graphics, project descriptions, and other
-        materials on this website belong to TFDI or are used with permission
+        materials on this website belong to DTI or are used with permission
         unless otherwise stated. You may not copy, reproduce, modify, or
         distribute website content for commercial purposes without our written
         permission.
@@ -37,10 +38,10 @@ const sections = [
     title: "Donations",
     body: (
       <p>
-        Donations made through this website support TFDI programmes and
-        community initiatives. Donation transactions may be processed by
-        third-party payment providers. Please review payment details carefully
-        before completing a transaction.
+        Donations made through this website support DTI programmes, development
+        initiatives, and community activities. Donation transactions may be
+        processed by third-party payment providers. Please review payment
+        details carefully before completing a transaction.
       </p>
     ),
   },
@@ -60,7 +61,7 @@ const sections = [
     body: (
       <p>
         Our website may link to third-party platforms, including social media,
-        maps, payment processors, and partner websites. TFDI is not responsible
+        maps, payment processors, and partner websites. DTI is not responsible
         for the content, policies, or practices of third-party websites.
       </p>
     ),
@@ -79,7 +80,7 @@ const sections = [
     title: "Limitation Of Liability",
     body: (
       <p>
-        To the fullest extent permitted by law, TFDI is not liable for losses or
+        To the fullest extent permitted by law, DTI is not liable for losses or
         damages arising from your use of, or inability to use, this website or
         third-party services linked from it.
       </p>
@@ -103,7 +104,7 @@ export default function TermsOfServicePage() {
       <PageHero title="Terms of Service" breadcrumb="Terms" />
       <LegalContent
         effectiveDate="May 23, 2026"
-        intro="These Terms of Service explain the conditions for using Theatre for Development Initiative's website, online forms, donation tools, and related digital services."
+        intro="These Terms of Service explain the conditions for using Developmental Theatre Initiative's website, online forms, donation tools, and related digital services."
         sections={sections}
       />
     </div>

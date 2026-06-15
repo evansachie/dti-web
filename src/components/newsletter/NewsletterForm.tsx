@@ -124,7 +124,7 @@ export function NewsletterForm({
         </p>
       )}
       <p className={`${styles.legal} text-[11px] leading-relaxed`}>
-        By subscribing, you agree to receive TFDI emails. You can unsubscribe at
+        By subscribing, you agree to receive DTI emails. You can unsubscribe at
         any time. See our{" "}
         <Link href="/privacy-policy" className="text-[#24a186] hover:underline">
           Privacy Policy

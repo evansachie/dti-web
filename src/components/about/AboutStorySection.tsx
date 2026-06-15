@@ -16,29 +16,28 @@ export function AboutStorySection() {
             className="text-[36px] md:text-[44px] leading-[1.2] text-[#252A34] font-medium mb-8"
             style={{ fontFamily: "var(--font-playfair-display), serif" }}
           >
-            Empowering Communities Through The Creative Arts
+            Empowering Communities Through Theatre And Participation
           </h2>
 
           <div className="space-y-6 text-zinc-500 leading-relaxed text-[15px]">
             <p>
-              Theatre for Development Initiative (TFDI) is a community-driven
-              organization that firmly believes in the transformative power of
-              art. We use participatory theatre and creative arts as
-              foundational tools for education, advocacy, and social
-              transformation.
+              Developmental Theatre Initiative (DTI) is a non-profit
+              organization committed to promoting sustainable development
+              through theatre, creative arts, dialogue, advocacy, and community
+              participation.
             </p>
             <p>
-              Rooted heavily in the principles of{" "}
+              Established by Theatre for Development practitioner Enoch Aggrey
+              in 2025, DTI is rooted in the principles of{" "}
               <strong>Theatre for Development (TfD)</strong>, we go beyond
-              traditional entertainment. Instead, we engage local communities
-              directly in dialogue, awareness creation, and collaborative
-              problem-solving around their most pressing societal issues.
+              traditional entertainment. We engage communities as active
+              participants in identifying challenges, reflecting on their
+              causes, and creating solutions together.
             </p>
             <p>
-              By giving people the platform to see their own stories, struggles,
-              and triumphs acted out in front of them, we bridge the gap between
-              tradition and modernity, sparking actionable change that resonates
-              deeply with local audiences.
+              Our work supports social inclusion, environmental sustainability,
+              public well-being, responsible citizenship, and community
+              transformation across Ghana and beyond.
             </p>
           </div>
         </div>

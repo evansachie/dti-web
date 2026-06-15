@@ -25,7 +25,7 @@ export function DonateFormSection() {
             <p className="text-zinc-500 text-[15px] leading-relaxed mb-10">
               Every contribution — no matter the size — directly funds a
               community performance, an educational workshop, or an advocacy
-              campaign that changes lives. TFDI operates on the ground where it
+              campaign that changes lives. DTI operates on the ground where it
               matters most.
             </p>
 

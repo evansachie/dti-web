@@ -36,7 +36,7 @@ export default function OpenGraphImage() {
           textTransform: "uppercase",
         }}
       >
-        Theatre for Development Initiative
+        Developmental Theatre Initiative
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>

@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Blog & News",
   description:
-    "Read the latest stories, project updates, and impact reports from the Theatre for Development Initiative (TFDI) in rural Ghana.",
+    "Read the latest stories, project updates, and impact reports from the Developmental Theatre Initiative (DTI) in rural Ghana.",
   path: "/blogs",
 });
 

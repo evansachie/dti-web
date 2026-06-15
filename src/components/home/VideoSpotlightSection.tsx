@@ -19,7 +19,7 @@ export function VideoSpotlightSection() {
 
         <p className="text-zinc-400 text-[15px] max-w-2xl leading-[1.8] mb-14">
           Experience the raw energy, emotion, and actual community mobilization
-          that happens when TFDI brings powerful, localized stories directly to
+          that happens when DTI brings powerful, localized stories directly to
           the people.
         </p>
 

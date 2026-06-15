@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Globe, MessageCircle, Mail } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
 
 export function AboutTeamSection() {
   return (
@@ -30,19 +30,19 @@ export function AboutTeamSection() {
 
             <div className="absolute inset-0 bg-[#252A34]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-10">
               <a
-                href="#"
+                href="tel:+233247134085"
                 className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-[#24a186] text-[#252A34] hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75"
               >
-                <Globe size={20} />
+                <Phone size={20} />
               </a>
               <a
-                href="#"
+                href="https://wa.me/233247134085"
                 className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-[#24a186] text-[#252A34] hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-100"
               >
                 <MessageCircle size={20} />
               </a>
               <a
-                href={`mailto:tfdi.ghana@gmail.com`}
+                href={`mailto:developmentaltheatreinitiative@gmail.com`}
                 className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-[#24a186] text-[#252A34] hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-150"
               >
                 <Mail size={20} />
@@ -54,12 +54,13 @@ export function AboutTeamSection() {
             Enoch Aggrey
           </h3>
           <p className="text-[#24a186] text-[13px] font-bold uppercase tracking-widest mb-4">
-            Founder / Project Lead
+            Founder & Executive Director
           </p>
           <p className="text-zinc-500 text-[14px] leading-relaxed px-4">
-            A visionary leader dedicated to utilizing creative arts and
-            strategic theatre performances to bridge the gaps in education and
-            drive widespread social awareness across Ghana.
+            A Theatre for Development practitioner from the University of Ghana
+            dedicated to using theatre, dialogue, creative engagement, and
+            community participation to promote sustainable development and
+            positive social change.
           </p>
         </div>
       </div>

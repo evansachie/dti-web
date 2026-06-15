@@ -14,8 +14,8 @@ export function BlogsNewsletterSection() {
           Get Our Latest Stories Delivered To You
         </h2>
         <p className="text-zinc-500 text-[15px] leading-relaxed mb-10">
-          Subscribe to the TFDI newsletter and be the first to receive updates
-          on our projects, impact stories, and upcoming events.
+          Subscribe to the DTI newsletter and be the first to receive updates on
+          our projects, impact stories, and upcoming events.
         </p>
         <NewsletterForm />
         <p className="text-zinc-400 text-[12px] mt-4">

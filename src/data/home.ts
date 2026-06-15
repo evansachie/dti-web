@@ -1,52 +1,91 @@
-import { Theater, Users, Megaphone, Music } from "lucide-react";
+import {
+  Brain,
+  HeartPulse,
+  Landmark,
+  Leaf,
+  Theater,
+  TrendingUp,
+  Users,
+  Vote,
+} from "lucide-react";
 
 export const missionVisionData = {
-  welcome: "Welcome to TFDI",
-  title: "Let Us Come Together To Make A Difference",
+  welcome: "Welcome to DTI",
+  title: "Empowering Communities, Inspiring Change, Driving Development",
   description:
-    "We believe in the power of creative expression to communicate complex societal challenges and drive actionable community-led solutions.",
+    "Developmental Theatre Initiative uses theatre, creative arts, dialogue, advocacy, and community participation to help people identify challenges, create solutions, and take collective action.",
   mission: {
     title: "Our Mission",
     description:
-      "To educate, empower, and mobilize communities through participatory theatre and creative engagement to address social, cultural, and environmental issues.",
+      "To educate, empower, and mobilize individuals and communities through participatory theatre, creative engagement, advocacy, and development initiatives that promote social inclusion, environmental sustainability, public well-being, and community transformation.",
   },
   vision: {
     title: "Our Vision",
     description:
-      "To become a leading force in using theatre and creative arts to drive sustainable development and social change across Ghana and beyond.",
+      "To be a leading organization that uses theatre, creative arts, and community participation to drive sustainable development, social transformation, and positive behavioural change across Ghana and beyond.",
   },
   coreValues: [
-    "Community Engagement",
-    "Creativity & Innovation",
-    "Cultural Respect & Inclusivity",
-    "Social Impact & Collaboration",
+    "Integrity",
+    "Accountability",
+    "Participation",
+    "Inclusivity",
+    "Innovation",
+    "Professionalism",
+    "Collaboration",
+    "Sustainability",
+    "Community Empowerment",
+    "Excellence",
   ],
 };
 
 export const servicesData = [
   {
-    title: "Community Theatre",
+    title: "Environment & Climate Action",
     description:
-      "We design engaging performances highlighting local realities, encouraging reflective thinking and communual problem-solving.",
+      "Promoting sanitation, environmental sustainability, waste management, climate awareness, and community environmental responsibility.",
+    icon: Leaf,
+  },
+  {
+    title: "Youth Development & Leadership",
+    description:
+      "Building leadership capacity, volunteerism, civic engagement, mentorship, and skills development among young people.",
+    icon: TrendingUp,
+  },
+  {
+    title: "Mental Health & Well-being",
+    description:
+      "Creating safe spaces for dialogue, awareness, emotional healing, and psychosocial support.",
+    icon: Brain,
+  },
+  {
+    title: "Public Health Education",
+    description:
+      "Using creative and participatory approaches to improve health awareness and promote healthy lifestyles.",
+    icon: HeartPulse,
+  },
+  {
+    title: "Theatre & Creative Arts",
+    description:
+      "Applying theatre, storytelling, and performance as tools for education, advocacy, and social transformation.",
     icon: Theater,
   },
   {
-    title: "Workshops & Training",
+    title: "Culture & Heritage",
     description:
-      "Capacity-building workshops for youth and educators, training them in storytelling, arts, and facilitation skills.",
+      "Promoting cultural appreciation, preservation of indigenous knowledge, and positive cultural practices.",
+    icon: Landmark,
+  },
+  {
+    title: "Governance & Civic Engagement",
+    description:
+      "Encouraging responsible citizenship, community participation, and democratic engagement.",
+    icon: Vote,
+  },
+  {
+    title: "Gender & Social Inclusion",
+    description:
+      "Promoting equal participation, inclusion, and opportunities for all.",
     icon: Users,
-  },
-  {
-    title: "Advocacy Campaigns",
-    description:
-      "Targeted localized campaigns on health, environmental sustainability, and human rights through public performances.",
-    icon: Megaphone,
-  },
-  {
-    title: "Cultural Preservation",
-    description:
-      "Promoting Ghanaian heritage by directly integrating traditional music, dance, and vibrant folklore into our plays.",
-    icon: Music,
   },
 ];
 
@@ -86,22 +125,22 @@ export const homeProjectsData = [
 
 export const statsData = [
   { value: "50+", label: "Communities Reached" },
-  { value: "15+", label: "Active Projects" },
-  { value: "10k+", label: "Audience Members" },
-  { value: "20+", label: "Theatre Groups" },
+  { value: "20k+", label: "Beneficiaries Targeted" },
+  { value: "2027-2031", label: "Strategic Vision" },
+  { value: "8", label: "Programme Areas" },
 ];
 
 export const testimonialsData = [
   {
     quote:
-      "The environmental hygiene play staged here was an absolute eye-opener. It didn't just entertain us; it directly mobilized our entire community to take action. The massive cleanup exercise that followed is definitive proof of TFDI's remarkable impact.",
+      "The environmental hygiene play staged here was an absolute eye-opener. It didn't just entertain us; it directly mobilized our entire community to take action. The massive cleanup exercise that followed is definitive proof of DTI's remarkable impact.",
     name: "Municipal Chief Executive",
     title: "Assin Foso Municipality",
     avatarLetter: "M",
   },
   {
     quote:
-      "Participating in the 'Dialogue on the Stage' workshops completely transformed how I view civic responsibility. TFDI consistently provides a safe space for youth to tackle complex national issues through the beauty of art and unity.",
+      "Participating in the 'Dialogue on the Stage' workshops completely transformed how I view civic responsibility. DTI consistently provides a safe space for youth to tackle complex national issues through the beauty of art and unity.",
     name: "Kwame Mensah",
     title: "Community Youth Leader",
     avatarLetter: "K",
@@ -109,9 +148,12 @@ export const testimonialsData = [
 ];
 
 export const partnersData = [
-  { name: "Partner One" },
-  { name: "Partner Two" },
-  { name: "Partner Three" },
-  { name: "Partner Four" },
-  { name: "Partner Five" },
+  { name: "Government Institutions" },
+  { name: "Development Agencies" },
+  { name: "NGOs" },
+  { name: "Corporate Organizations" },
+  { name: "Educational Institutions" },
+  { name: "Faith-Based Organizations" },
+  { name: "Traditional Authorities" },
+  { name: "Media Organizations" },
 ];

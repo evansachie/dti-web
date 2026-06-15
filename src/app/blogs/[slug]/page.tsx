@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
-import { SocialIcons } from "@/components/ui/SocialIcons";
 import { PageHero } from "@/components/layout/PageHero";
 import type { Metadata } from "next";
 import { allBlogPosts, categoryColors } from "@/data/blogs";
@@ -118,8 +117,8 @@ export default async function BlogDetailPage({ params }: Props) {
                     disconnect between formal curricula and lived, local
                     realities.{" "}
                     {post.category === "Education"
-                      ? "TFDI is working to bridge that gap"
-                      : "TFDI works directly with community members"}{" "}
+                      ? "DTI is working to bridge that gap"
+                      : "DTI works directly with community members"}{" "}
                     — not with textbooks alone, but with the transformative
                     power of participatory theatre.
                   </p>
@@ -136,7 +135,7 @@ export default async function BlogDetailPage({ params }: Props) {
                     Driving Real Community Change
                   </h2>
                   <p>
-                    Using the Theatre for Development (TfD) methodology, TFDI
+                    Using the Theatre for Development (TfD) methodology, DTI
                     facilitators work directly with community members —
                     including youth, parents, chiefs, and local leaders — to
                     co-create performances that speak truth to their specific
@@ -166,7 +165,7 @@ export default async function BlogDetailPage({ params }: Props) {
                     Future Outlook
                   </h2>
                   <p>
-                    TFDI is expanding its participatory models to new community
+                    DTI is expanding its participatory models to new community
                     sites in 2026, with funding support from partner
                     institutions. Each site receives a tailored programme
                     including needs assessment, performance development, and
@@ -188,15 +187,9 @@ export default async function BlogDetailPage({ params }: Props) {
                     Enoch Aggrey
                   </p>
                   <p className="text-zinc-400 text-[13px]">
-                    Founder / Project Lead, TFDI
+                    Founder & Executive Director, DTI
                   </p>
                 </div>
-              </div>
-              <div>
-                <p className="text-zinc-400 text-[12px] font-bold uppercase tracking-widest mb-2">
-                  Share Article
-                </p>
-                <SocialIcons variant="light" />
               </div>
             </div>
           </article>
