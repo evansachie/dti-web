@@ -21,7 +21,7 @@ export const galleryData: GalleryItem[] = [
       : i % 3 === 1
         ? "Workshops"
         : "Community Dialogue") as Category,
-    title: `TFDI Impact Record #${i + 1}`,
+    title: `DTI Impact Record #${i + 1}`,
     location: i % 2 === 0 ? "Greater Accra" : "Central Region",
   })),
 ];

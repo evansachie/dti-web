@@ -16,7 +16,7 @@ export function CtaSection() {
           We Believe That We Can Inspire More Communities With You
         </h2>
         <p className="text-white/80 text-[16px] md:text-[18px] mb-10 max-w-2xl font-light leading-relaxed">
-          Your support allows TFDI to reach marginalized communities and tackle
+          Your support allows DTI to reach marginalized communities and tackle
           pressing social issues through the power of participatory theatre.
           Partner with us to drive actionable change.
         </p>

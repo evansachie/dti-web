@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) {
     return createPageMetadata({
       title: "Project Not Found",
-      description: "The requested TFDI project could not be found.",
+      description: "The requested DTI project could not be found.",
       path: "/projects",
     });
   }

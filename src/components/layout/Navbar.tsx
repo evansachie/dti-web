@@ -60,7 +60,7 @@ export function Navbar() {
           >
             <Image
               src={isScrolled || isMobileMenuOpen ? "/logo2.svg" : "/logo.svg"}
-              alt="TFDI Logo"
+              alt="DTI Logo"
               width={250}
               height={125}
               className={`object-contain transition-all duration-300 ${

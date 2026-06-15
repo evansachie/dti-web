@@ -77,7 +77,7 @@ function buildEmailContent(payload: ContactPayload) {
   ];
 
   const textContent = [
-    "New TFDI website contact form submission",
+    "New DTI website contact form submission",
     "",
     ...fields.map(([label, value]) => `${label}: ${value}`),
     "",
@@ -97,7 +97,7 @@ function buildEmailContent(payload: ContactPayload) {
 
   const htmlContent = `
     <div style="font-family:Arial,sans-serif;line-height:1.6;color:#252A34;">
-      <h1 style="font-size:22px;margin:0 0 16px;">New TFDI website enquiry</h1>
+      <h1 style="font-size:22px;margin:0 0 16px;">New DTI website enquiry</h1>
       <table style="border-collapse:collapse;width:100%;max-width:680px;margin-bottom:24px;">
         ${htmlRows}
       </table>
@@ -116,7 +116,7 @@ function buildConfirmationEmailContent(payload: ContactPayload) {
   const textContent = [
     `Hello ${payload.fullName},`,
     "",
-    "Thank you for contacting Theatre for Development Initiative (TFDI). We have received your message and our team will review it shortly.",
+    "Thank you for contacting Developmental Theatre Initiative (DTI). We have received your message and our team will review it shortly.",
     "",
     "We typically respond within 1-2 business days.",
     "",
@@ -124,20 +124,20 @@ function buildConfirmationEmailContent(payload: ContactPayload) {
     payload.message,
     "",
     "Regards,",
-    "Theatre for Development Initiative",
+    "Developmental Theatre Initiative",
   ].join("\n");
 
   const htmlContent = `
     <div style="font-family:Arial,sans-serif;line-height:1.7;color:#252A34;">
-      <h1 style="font-size:22px;margin:0 0 16px;">Thank you for contacting TFDI</h1>
+      <h1 style="font-size:22px;margin:0 0 16px;">Thank you for contacting DTI</h1>
       <p>Hello ${escapeHtml(payload.fullName)},</p>
-      <p>Thank you for contacting Theatre for Development Initiative (TFDI). We have received your message and our team will review it shortly.</p>
+      <p>Thank you for contacting Developmental Theatre Initiative (DTI). We have received your message and our team will review it shortly.</p>
       <p>We typically respond within 1-2 business days.</p>
       <div style="margin:24px 0;padding:16px;border-left:4px solid #24a186;background:#f8fafa;">
         <p style="margin:0 0 8px;font-weight:700;">A copy of your message:</p>
         <p style="margin:0;white-space:pre-wrap;color:#3f3f46;">${escapeHtml(payload.message)}</p>
       </div>
-      <p>Regards,<br />Theatre for Development Initiative</p>
+      <p>Regards,<br />Developmental Theatre Initiative</p>
     </div>`;
 
   return {
@@ -166,7 +166,7 @@ async function addContactToLists(payload: ContactPayload) {
 export async function POST(request: Request) {
   const toEmail = process.env.BREVO_CONTACT_TO_EMAIL;
   const senderEmail = process.env.BREVO_SENDER_EMAIL;
-  const senderName = process.env.BREVO_SENDER_NAME ?? "TFDI Website";
+  const senderName = process.env.BREVO_SENDER_NAME ?? "DTI Website";
 
   if (!toEmail || !senderEmail) {
     return Response.json(
@@ -218,7 +218,7 @@ export async function POST(request: Request) {
       to: [
         {
           email: toEmail,
-          name: "TFDI",
+          name: "DTI",
         },
       ],
       replyTo: {
@@ -257,7 +257,7 @@ export async function POST(request: Request) {
       ],
       replyTo: {
         email: toEmail,
-        name: "TFDI",
+        name: "DTI",
       },
       subject: "We received your message",
       htmlContent: confirmation.htmlContent,

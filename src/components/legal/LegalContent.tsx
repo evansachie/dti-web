@@ -46,10 +46,10 @@ export function LegalContent({
           <p className="text-[14px] leading-7 text-zinc-500">
             For questions about these terms or this policy, contact us at{" "}
             <a
-              href="mailto:tfdi.ghana@gmail.com"
+              href="mailto:developmentaltheatreinitiative@gmail.com"
               className="font-semibold text-[#219D80] hover:underline"
             >
-              tfdi.ghana@gmail.com
+              developmentaltheatreinitiative@gmail.com
             </a>
             .
           </p>

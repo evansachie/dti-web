@@ -11,20 +11,20 @@ export const contactInfo = [
   {
     icon: Phone,
     label: "Phone (Voice)",
-    value: "+233 50 994 1591",
-    href: "tel:+233509941591",
+    value: "+233 24 713 4085",
+    href: "tel:+233247134085",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "0247 134 085",
+    value: "+233 24 713 4085",
     href: "https://wa.me/233247134085",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "tfdi.ghana@gmail.com",
-    href: "mailto:tfdi.ghana@gmail.com",
+    value: "developmentaltheatreinitiative@gmail.com",
+    href: "mailto:developmentaltheatreinitiative@gmail.com",
   },
   {
     icon: MapPin,
@@ -40,8 +40,8 @@ export const contactInfo = [
   },
   {
     icon: Share2,
-    label: "Follow Us",
-    value: "TikTok",
-    href: "https://www.tiktok.com/@tfd.initiatives.edu3?_r=1&_t=ZS-95ILLuEzAHM",
+    label: "Social Media",
+    value: "Developmental Theatre Initiative",
+    href: null,
   },
 ];

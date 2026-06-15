@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy",
   description:
-    "Read how Theatre for Development Initiative collects, uses, and protects personal information shared through its website.",
+    "Read how Developmental Theatre Initiative collects, uses, and protects personal information shared through its website.",
   path: "/privacy-policy",
 });
 
@@ -33,8 +33,9 @@ const sections = [
     body: (
       <p>
         We use your information to respond to enquiries, manage newsletter
-        subscriptions, process donations, communicate about TFDI programmes, and
-        improve how we present our projects, events, and advocacy work.
+        subscriptions, process donations, communicate about DTI programmes, and
+        improve how we present our projects, events, advocacy work, and
+        development initiatives.
       </p>
     ),
   },
@@ -77,7 +78,7 @@ const sections = [
       <p>
         We do not sell personal information. We may share information with
         trusted service providers who help us operate the website, manage
-        communications, process donations, or support TFDI programmes, only as
+        communications, process donations, or support DTI programmes, only as
         needed for those purposes.
       </p>
     ),
@@ -111,7 +112,7 @@ export default function PrivacyPolicyPage() {
       <PageHero title="Privacy Policy" breadcrumb="Privacy Policy" />
       <LegalContent
         effectiveDate="May 23, 2026"
-        intro="This Privacy Policy explains how Theatre for Development Initiative (TFDI) handles personal information shared through this website and related online services."
+        intro="This Privacy Policy explains how Developmental Theatre Initiative (DTI) handles personal information shared through this website and related online services."
         sections={sections}
       />
     </div>

@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Impact Gallery",
   description:
-    "Explore TFDI's visual journey through Ghana. Capturing the power of participatory theatre, workshops, and community dialogue in action.",
+    "Explore DTI's visual journey through Ghana. Capturing the power of participatory theatre, workshops, and community dialogue in action.",
   path: "/gallery",
 });
 

@@ -39,7 +39,7 @@ export function DonateCheckoutForm() {
     const paymentReference = String(reference.reference || "");
 
     if (!paymentReference || !amountValue) {
-      setErrorMsg("We could not verify this donation. Please contact TFDI.");
+      setErrorMsg("We could not verify this donation. Please contact DTI.");
       return;
     }
 
@@ -70,7 +70,7 @@ export function DonateCheckoutForm() {
       setErrorMsg(
         error instanceof Error
           ? error.message
-          : "We could not verify this donation. Please contact TFDI."
+          : "We could not verify this donation. Please contact DTI."
       );
     } finally {
       setIsVerifying(false);
@@ -263,7 +263,7 @@ export function DonateCheckoutForm() {
       </form>
 
       <p className="text-zinc-400 text-[12px] text-center mt-4">
-        Secure payments powered by Paystack. All funds go directly to TFDI.
+        Secure payments powered by Paystack. All funds go directly to DTI.
       </p>
     </>
   );

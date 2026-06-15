@@ -9,7 +9,7 @@ export function ContactMap() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="TFDI Location - Dept. of Theatre Arts, University of Ghana"
+        title="DTI Location - Dept. of Theatre Arts, University of Ghana"
       ></iframe>
     </div>
   );

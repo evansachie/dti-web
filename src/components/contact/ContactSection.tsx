@@ -1,4 +1,3 @@
-import { SocialIcons } from "@/components/ui/SocialIcons";
 import { contactInfo } from "@/data/contact";
 import { ContactForm } from "./ContactForm";
 import { ContactMap } from "./ContactMap";
@@ -68,13 +67,6 @@ export function ContactSection() {
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="mb-10">
-              <p className="text-zinc-400 text-[11px] font-bold uppercase tracking-widest mb-3">
-                Follow Us
-              </p>
-              <SocialIcons variant="light" />
             </div>
 
             <ContactMap />

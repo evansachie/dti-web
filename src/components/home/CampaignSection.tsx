@@ -36,7 +36,7 @@ export function CampaignSection() {
               coming years.
             </p>
             <p className="not-italic text-zinc-500 text-[14px]">
-              &mdash; Enoch Aggrey, CEO of TFDI
+              &mdash; Enoch Aggrey, Founder & Executive Director of DTI
             </p>
           </div>
 

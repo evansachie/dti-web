@@ -32,7 +32,7 @@ export async function POST(request: Request) {
 
   if (companyWebsite) {
     return Response.json({
-      message: "You're subscribed. Thank you for joining the TFDI newsletter.",
+      message: "You're subscribed. Thank you for joining the DTI newsletter.",
     });
   }
 
@@ -58,6 +58,6 @@ export async function POST(request: Request) {
   }
 
   return Response.json({
-    message: "You're subscribed. Thank you for joining the TFDI newsletter.",
+    message: "You're subscribed. Thank you for joining the DTI newsletter.",
   });
 }

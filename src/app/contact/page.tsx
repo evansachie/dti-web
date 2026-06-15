@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Contact Us",
   description:
-    "Get in touch with TFDI. Reach out for partnerships, project collaborations, workshop bookings, or general enquiries in Ghana.",
+    "Get in touch with DTI. Reach out for partnerships, project collaborations, workshop bookings, or general enquiries in Ghana.",
   path: "/contact",
 });
 

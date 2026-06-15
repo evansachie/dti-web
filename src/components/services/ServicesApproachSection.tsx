@@ -58,9 +58,10 @@ export function ServicesApproachSection() {
               How We Deliver Impact
             </h2>
             <p className="text-zinc-500 text-[15px] leading-relaxed mb-8">
-              Every TFDI engagement follows a rigorous, community-centred
-              process. We don&apos;t just perform — we co-create with
-              communities to ensure lasting, measurable change.
+              DTI adopts the principles of Theatre for Development: community
+              participation, dialogue, reflection, collective problem-solving,
+              and local ownership. We do not impose solutions; we work with
+              people as active participants in shaping sustainable action.
             </p>
             <Link
               href="/contact"
