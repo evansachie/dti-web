@@ -44,6 +44,52 @@ const svgProps = (size = 18) => ({
   strokeLinejoin: "round" as const,
 });
 
+export function FacebookIcon({
+  href,
+  variant = "dark",
+  size = 18,
+}: SocialIconProps & { href?: string }) {
+  return (
+    <IconWrapper href={href} variant={variant}>
+      <svg {...svgProps(size)}>
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    </IconWrapper>
+  );
+}
+
+export function LinkedinIcon({
+  href,
+  variant = "dark",
+  size = 18,
+}: SocialIconProps & { href?: string }) {
+  return (
+    <IconWrapper href={href} variant={variant}>
+      <svg {...svgProps(size)}>
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    </IconWrapper>
+  );
+}
+
+export function InstagramIcon({
+  href,
+  variant = "dark",
+  size = 18,
+}: SocialIconProps & { href?: string }) {
+  return (
+    <IconWrapper href={href} variant={variant}>
+      <svg {...svgProps(size)}>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </svg>
+    </IconWrapper>
+  );
+}
+
 export function TikTokIcon({
   href,
   variant = "dark",
@@ -76,16 +122,25 @@ export function YoutubeIcon({
 export function SocialIcons({
   variant = "dark",
   size = 18,
+  facebook,
+  linkedin,
+  instagram,
   tiktok,
   youtube,
 }: SocialIconProps & {
+  facebook?: string;
+  linkedin?: string;
+  instagram?: string;
   tiktok?: string;
   youtube?: string;
 }) {
-  if (!tiktok && !youtube) return null;
+  if (!facebook && !linkedin && !instagram && !tiktok && !youtube) return null;
 
   return (
     <div className="flex items-center gap-3">
+      <FacebookIcon href={facebook} variant={variant} size={size} />
+      <LinkedinIcon href={linkedin} variant={variant} size={size} />
+      <InstagramIcon href={instagram} variant={variant} size={size} />
       <TikTokIcon href={tiktok} variant={variant} size={size} />
       <YoutubeIcon href={youtube} variant={variant} size={size} />
     </div>

@@ -32,7 +32,7 @@ export default function Home() {
       />
 
       <main className="flex flex-col flex-1 w-full">
-        <CampaignSection />
+        {/* <CampaignSection /> */}
         <AboutSection />
         <MissionVisionSection />
         <StatsSection />

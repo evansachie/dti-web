@@ -57,11 +57,14 @@ export function HomeHero({
           {eyebrow}
         </span>
         <h1
-          className="text-[42px] md:text-[68px] leading-[1.1] font-medium mb-6 max-w-4xl tracking-tight drop-shadow-sm"
+          className="text-[42px] md:text-[68px] leading-[1.1] font-medium mb-3 max-w-4xl tracking-tight drop-shadow-sm"
           style={{ fontFamily: "var(--font-playfair-display), serif" }}
         >
           {title}
         </h1>
+        <p className="text-[14px] md:text-[16px] text-white/70 font-light italic mb-8 tracking-wide">
+          Using Theatre For Social Change
+        </p>
         <p className="text-[15px] md:text-[18px] text-white/90 font-light max-w-2xl mb-10 leading-relaxed">
           {description}
         </p>

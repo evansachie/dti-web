@@ -109,6 +109,83 @@ export const projectsData: ProjectDetail[] = [
     },
   },
   {
+    slug: "school-theatre-workshop",
+    title: "School Theatre Workshop",
+    subtitle: "Empowering Students Through Participatory Theatre",
+    category: "Youth Development",
+    location: "Assin Foso, Central Region (Pilot) / Nationwide",
+    duration: "3 months (Pilot) / 12 months (Full Scale)",
+    status: "Upcoming",
+    description:
+      "A school-based Theatre for Development programme that visits schools to train students in participatory theatre, develop short plays, and build confidence, creativity, and leadership skills among young people.",
+    heroImage:
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80",
+    details: {
+      background:
+        "Many schools in Ghana lack creative and engaging platforms for students to develop soft skills such as confidence, critical thinking, teamwork, and communication. Traditional classroom methods often leave little room for creative expression, particularly in underserved communities. Theatre for Development offers a proven participatory approach that empowers young people to explore social issues, express themselves, and develop leadership skills through drama and performance.",
+      aim: "To empower students through participatory theatre training, creativity development, and leadership building in schools across Ghana.",
+      objectives: [
+        "To introduce students to Theatre for Development methodologies",
+        "To build confidence, creativity, and communication skills among students",
+        "To develop short plays addressing social issues relevant to young people",
+        "To train student facilitators who can continue theatre activities in their schools",
+        "To create a replicable model for school-based theatre programmes nationwide",
+      ],
+      coreComponents: [
+        "Interactive theatre workshops in partner schools",
+        "Training in improvisation, devising, and performance skills",
+        "Development of short plays on social themes",
+        "Student-led performances and community showcases",
+        "Mentorship and capacity building for student facilitators",
+        "Documentation of best practices and impact stories",
+      ],
+      targetAudience: [
+        "Junior and Senior High School students",
+        "Teachers and school administrators",
+        "Youth groups and community organizations",
+        "Educational institutions nationwide",
+      ],
+      geographicScope:
+        "The programme will begin with a pilot phase in 3–5 schools in Assin Foso and surrounding communities in the Central Region, with plans to scale to other regions.",
+      implementationStrategy: {
+        phase1: [
+          "Partner with 3–5 schools in the pilot area",
+          "Conduct baseline assessments of student needs and interests",
+        ],
+        phase2: [
+          "Deliver weekly theatre workshops over 8–12 weeks",
+          "Guide students in developing and performing short plays",
+        ],
+        phase3: [
+          "Organize inter-school showcases and community performances",
+          "Evaluate impact and prepare for scale-up to additional schools",
+        ],
+      },
+      stakeholders: [
+        "Ghana Education Service",
+        "School heads and teachers",
+        "Parent-Teacher Associations",
+        "Community leaders",
+        "Youth organizations",
+        "Corporate sponsors",
+      ],
+      expectedOutcomes: [
+        "Improved confidence and communication skills among students",
+        "Increased engagement in creative and leadership activities",
+        "Development of short plays addressing social issues",
+        "Trained student facilitators capable of leading theatre activities",
+        "A replicable model for school-based theatre programmes",
+      ],
+      sustainability: [
+        "Training of teacher facilitators to sustain programme activities",
+        "Establishment of school drama clubs",
+        "Partnerships with educational institutions",
+        "Integration of theatre activities into school curricula",
+      ],
+      galleryImages: [],
+    },
+  },
+  {
     slug: "love-beyond-romance",
     title: "Love Beyond Romance",
     subtitle: "Exploring Love, Responsibility, and Youth Mental Health",

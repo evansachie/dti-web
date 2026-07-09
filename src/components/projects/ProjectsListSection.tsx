@@ -23,6 +23,25 @@ export function ProjectsListSection() {
       ],
     },
     {
+      slug: "school-theatre-workshop",
+      title: "School Theatre Workshop",
+      subtitle: "Empowering Students Through Participatory Theatre",
+      category: "Youth Development",
+      location: "Assin Foso, Central Region (Pilot)",
+      duration: "Upcoming (Pilot Phase)",
+      status: "Upcoming",
+      description:
+        "A school-based programme visiting 3–5 schools to train students in participatory theatre, develop short plays, and build confidence, creativity, and leadership skills among young people.",
+      image:
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80",
+      highlights: [
+        "Student Theatre Training",
+        "Short Play Development",
+        "Leadership Building",
+        "Inter-school Showcases",
+      ],
+    },
+    {
       slug: "love-beyond-romance",
       title: "Love Beyond Romance",
       subtitle: "Exploring Love, Responsibility, and Youth Mental Health",

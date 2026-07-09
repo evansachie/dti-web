@@ -12,14 +12,14 @@ export function StatsSection() {
         }}
       ></div>
 
-      <div className="max-w-[1200px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative z-10 divide-x-0 lg:divide-x lg:divide-white/20">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-3 gap-12 lg:gap-8 relative z-10 divide-y sm:divide-y-0 sm:divide-x sm:divide-white/20">
         {statsData.map((stat, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center px-4"
+            className="flex flex-col items-center text-center px-3"
           >
             <h3
-              className="text-white text-[42px] md:text-[56px] font-bold mb-3 drop-shadow-sm"
+              className="text-white text-[42px] md:text-[56px] font-bold mb-3 drop-shadow-sm whitespace-nowrap"
               style={{ fontFamily: "var(--font-playfair-display), serif" }}
             >
               {stat.value}

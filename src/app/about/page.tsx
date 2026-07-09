@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { AboutStorySection } from "@/components/about/AboutStorySection";
+import { FounderMessageSection } from "@/components/about/FounderMessageSection";
 import { AboutObjectivesSection } from "@/components/about/AboutObjectivesSection";
-import { AboutTeamSection } from "@/components/about/AboutTeamSection";
+import { OurApproachSection } from "@/components/about/OurApproachSection";
+import { AboutGovernanceSection } from "@/components/about/AboutGovernanceSection";
 import { AboutGallerySection } from "@/components/about/AboutGallerySection";
 import { TestimonialSection } from "@/components/home/TestimonialSection";
 import { PartnersSection } from "@/components/home/PartnersSection";
@@ -23,8 +25,10 @@ export default function AboutPage() {
       <PageHero title="About Us" breadcrumb="About" />
 
       <AboutStorySection />
+      <FounderMessageSection />
       <AboutObjectivesSection />
-      <AboutTeamSection />
+      <OurApproachSection />
+      <AboutGovernanceSection />
       <TestimonialSection />
       <PartnersSection />
       <AboutGallerySection />
