@@ -64,28 +64,28 @@ export const servicesData = [
     icon: HeartPulse,
   },
   {
-    title: "Theatre & Creative Arts",
+    title: "Theatre & Creative Arts for Development",
     description:
       "Applying theatre, storytelling, and performance as tools for education, advocacy, and social transformation.",
     icon: Theater,
   },
   {
-    title: "Culture & Heritage",
+    title: "Community Development & Social Inclusion",
     description:
-      "Promoting cultural appreciation, preservation of indigenous knowledge, and positive cultural practices.",
-    icon: Landmark,
+      "Strengthening community participation, social cohesion, inclusion, and local ownership of development initiatives.",
+    icon: Users,
   },
   {
-    title: "Governance & Civic Engagement",
+    title: "Research, Advocacy & Knowledge Development",
     description:
-      "Encouraging responsible citizenship, community participation, and democratic engagement.",
+      "Conducting research, generating knowledge, and facilitating dialogue that contributes to informed decision-making and sustainable development.",
     icon: Vote,
   },
   {
-    title: "Gender & Social Inclusion",
+    title: "Institutional Growth & Sustainability",
     description:
-      "Promoting equal participation, inclusion, and opportunities for all.",
-    icon: Users,
+      "Building a strong, accountable, and resilient organization through effective governance, strategic partnerships, volunteer development, and resource mobilization.",
+    icon: Landmark,
   },
 ];
 
@@ -96,7 +96,7 @@ export const homeProjectsData = [
     status: "Upcoming",
     category: "Health & Sanitation",
     description:
-      "A pilot project educating communities on proper sanitation through participatory theatre, health walks, and clean-up exercises.",
+      "A national environmental advocacy and action campaign promoting sanitation, environmental responsibility, and sustainable community practices through awareness creation, clean-up exercises, community engagement, and behavioural change interventions.",
     image:
       "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&q=80",
     categoryBg: "#24a186",
@@ -117,17 +117,16 @@ export const homeProjectsData = [
     status: "Previous",
     category: "Culture & Development",
     description:
-      "Exploring cultural practices and modern influences in marriage through an award-winning stage playtitled 'The Price of Love'.",
+      "Exploring cultural practices and modern influences in marriage through an award-winning stage play titled 'The Price of Love'.",
     image: "/gallery/12.jpg",
     categoryBg: "#a855f7",
   },
 ];
 
 export const statsData = [
-  { value: "50+", label: "Communities Reached" },
-  { value: "20k+", label: "Beneficiaries Targeted" },
+  { value: "50+", label: "Communities by 2031" },
+  { value: "20k+", label: "Beneficiaries by 2031" },
   { value: "2027-2031", label: "Strategic Vision" },
-  { value: "8", label: "Programme Areas" },
 ];
 
 export const testimonialsData = [
@@ -156,4 +155,14 @@ export const partnersData = [
   { name: "Faith-Based Organizations" },
   { name: "Traditional Authorities" },
   { name: "Media Organizations" },
+];
+
+export const partnershipTypesData = [
+  "Financial Support",
+  "Technical Assistance",
+  "Volunteer Engagement",
+  "Capacity Building",
+  "Media Support",
+  "Research Collaboration",
+  "Programme Implementation",
 ];

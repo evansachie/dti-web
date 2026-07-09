@@ -29,8 +29,8 @@ export function AboutStorySection() {
             <p>
               Established by Theatre for Development practitioner Enoch Aggrey
               in 2025, DTI is rooted in the principles of{" "}
-              <strong>Theatre for Development (TfD)</strong>, we go beyond
-              traditional entertainment. We engage communities as active
+              <strong>Theatre for Development (TfD)</strong>. We go beyond
+              traditional entertainment — we engage communities as active
               participants in identifying challenges, reflecting on their
               causes, and creating solutions together.
             </p>

@@ -8,7 +8,7 @@ interface PageHeroProps {
 
 export function PageHero({ title, breadcrumb }: PageHeroProps) {
   return (
-    <div className="relative w-full h-[400px] md:h-[450px] bg-[#252A34]/70 overflow-hidden">
+    <div className="relative w-full h-[500px] md:h-[560px] bg-[#252A34]/70 overflow-hidden">
       <div
         className="absolute top-0 left-0 bottom-0 w-full bg-[#219D80]/55"
         style={{ clipPath: "polygon(0 0, 55% 0, 35% 100%, 0 100%)" }}

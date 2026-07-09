@@ -69,15 +69,41 @@ export function ServicesListSection() {
     {
       title: "Community Development & Social Inclusion",
       description:
-        "Strengthening participation, social cohesion, gender inclusion, and local ownership of development initiatives.",
+        "Strengthening community participation, social cohesion, inclusion, and local ownership of development initiatives.",
       features: [
-        "Inclusive participation",
-        "Community ownership",
-        "Stakeholder collaboration",
-        "Sustainable action",
+        "Community participation",
+        "Social cohesion",
+        "Inclusion and equity",
+        "Local ownership of development",
       ],
       image:
-        "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&q=80",
+        "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80",
+    },
+    {
+      title: "Research, Advocacy & Knowledge Development",
+      description:
+        "Conducting research, generating knowledge, and facilitating dialogue that contributes to informed decision-making and sustainable development.",
+      features: [
+        "Research and data collection",
+        "Knowledge generation",
+        "Policy advocacy",
+        "Informed decision-making",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
+    },
+    {
+      title: "Institutional Growth & Sustainability",
+      description:
+        "Building a strong, accountable, and resilient organization through effective governance, strategic partnerships, volunteer development, and resource mobilization.",
+      features: [
+        "Effective governance",
+        "Strategic partnerships",
+        "Resource mobilization",
+        "Operational excellence",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
     },
   ];
 

@@ -2,6 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { NewsletterForm } from "@/components/newsletter/NewsletterForm";
+import {
+  FacebookIcon,
+  LinkedinIcon,
+  InstagramIcon,
+  TikTokIcon,
+  YoutubeIcon,
+} from "@/components/ui/SocialIcons";
 
 export function Footer() {
   return (
@@ -22,6 +29,25 @@ export function Footer() {
             theatre, creative arts, dialogue, advocacy, and community
             participation.
           </p>
+          <div className="flex items-center gap-3">
+            <FacebookIcon
+              href="https://facebook.com/"
+              variant="dark"
+              size={18}
+            />
+            <LinkedinIcon
+              href="https://linkedin.com/"
+              variant="dark"
+              size={18}
+            />
+            <InstagramIcon
+              href="https://instagram.com/"
+              variant="dark"
+              size={18}
+            />
+            <TikTokIcon href="https://tiktok.com/" variant="dark" size={18} />
+            <YoutubeIcon href="https://youtube.com/" variant="dark" size={18} />
+          </div>
         </div>
 
         <div>
