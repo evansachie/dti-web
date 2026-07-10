@@ -119,6 +119,21 @@ export function YoutubeIcon({
   );
 }
 
+export function TelegramIcon({
+  href,
+  variant = "dark",
+  size = 18,
+}: SocialIconProps & { href?: string }) {
+  return (
+    <IconWrapper href={href} variant={variant}>
+      <svg {...svgProps(size)}>
+        <path d="M22 2L11 13" />
+        <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+      </svg>
+    </IconWrapper>
+  );
+}
+
 export function SocialIcons({
   variant = "dark",
   size = 18,
@@ -127,14 +142,17 @@ export function SocialIcons({
   instagram,
   tiktok,
   youtube,
+  telegram,
 }: SocialIconProps & {
   facebook?: string;
   linkedin?: string;
   instagram?: string;
   tiktok?: string;
   youtube?: string;
+  telegram?: string;
 }) {
-  if (!facebook && !linkedin && !instagram && !tiktok && !youtube) return null;
+  if (!facebook && !linkedin && !instagram && !tiktok && !youtube && !telegram)
+    return null;
 
   return (
     <div className="flex items-center gap-3">
@@ -142,6 +160,7 @@ export function SocialIcons({
       <LinkedinIcon href={linkedin} variant={variant} size={size} />
       <InstagramIcon href={instagram} variant={variant} size={size} />
       <TikTokIcon href={tiktok} variant={variant} size={size} />
+      <TelegramIcon href={telegram} variant={variant} size={size} />
       <YoutubeIcon href={youtube} variant={variant} size={size} />
     </div>
   );
