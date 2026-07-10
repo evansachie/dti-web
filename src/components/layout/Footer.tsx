@@ -8,6 +8,7 @@ import {
   InstagramIcon,
   TikTokIcon,
   YoutubeIcon,
+  TelegramIcon,
 } from "@/components/ui/SocialIcons";
 
 export function Footer() {
@@ -31,22 +32,30 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-3">
             <FacebookIcon
-              href="https://facebook.com/"
+              href="https://www.facebook.com/people/Developmemtaltheatreinitiative/61590315404599/"
               variant="dark"
               size={18}
             />
             <LinkedinIcon
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/company/developmental-theatre-initiative/"
               variant="dark"
               size={18}
             />
             <InstagramIcon
-              href="https://instagram.com/"
+              href="https://www.instagram.com/developmentaltheatreinitiative/"
               variant="dark"
               size={18}
             />
-            <TikTokIcon href="https://tiktok.com/" variant="dark" size={18} />
-            <YoutubeIcon href="https://youtube.com/" variant="dark" size={18} />
+            <TikTokIcon
+              href="https://www.tiktok.com/@developmentalthea"
+              variant="dark"
+              size={18}
+            />
+            <TelegramIcon
+              href="https://t.me/developmentaltheatreinitiative"
+              variant="dark"
+              size={18}
+            />
           </div>
         </div>
 
