@@ -20,7 +20,7 @@ export function LegalContent({
     <main className="bg-white px-6 py-20 md:py-24">
       <article className="mx-auto max-w-[900px]">
         <div className="mb-12 border-b border-zinc-100 pb-8">
-          <p className="mb-5 text-[12px] font-bold uppercase tracking-widest text-[#219D80]">
+          <p className="mb-5 text-[12px] font-bold uppercase tracking-widest text-[#1B5E20]">
             Last updated: {effectiveDate}
           </p>
           <p className="text-[16px] leading-8 text-zinc-600">{intro}</p>
@@ -47,7 +47,7 @@ export function LegalContent({
             For questions about these terms or this policy, contact us at{" "}
             <a
               href="mailto:developmentaltheatreinitiative@gmail.com"
-              className="font-semibold text-[#219D80] hover:underline"
+              className="font-semibold text-[#1B5E20] hover:underline"
             >
               developmentaltheatreinitiative@gmail.com
             </a>

@@ -11,7 +11,7 @@ export function DonateFormSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <div className="flex items-center gap-4 mb-5">
-              <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+              <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
                 Make A Difference
               </span>
               <div className="h-[2px] w-[30px] bg-zinc-200"></div>

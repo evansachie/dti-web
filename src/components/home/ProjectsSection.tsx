@@ -10,7 +10,7 @@ export function ProjectsSection() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-4 mb-5">
             <div className="h-[2px] w-[40px] bg-zinc-300"></div>
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+            <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
               Our Work
             </span>
             <div className="h-[2px] w-[40px] bg-zinc-300"></div>
@@ -51,7 +51,7 @@ export function ProjectsSection() {
               </div>
 
               <div className="p-8 flex flex-col flex-1">
-                <h3 className="text-xl md:text-2xl font-semibold text-[#252A34] mb-4 leading-snug group-hover:text-[#219D80] transition-colors">
+                <h3 className="text-xl md:text-2xl font-semibold text-[#252A34] mb-4 leading-snug group-hover:text-[#1B5E20] transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-zinc-500 leading-relaxed text-[14px] mb-8 flex-1">
@@ -59,7 +59,7 @@ export function ProjectsSection() {
                 </p>
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors flex items-center gap-2"
+                  className="text-[#252A34] hover:text-[#1B5E20] font-bold text-[13px] uppercase tracking-wider transition-colors flex items-center gap-2"
                 >
                   Learn More
                   <ArrowRight size={16} strokeWidth={2.5} />
@@ -72,7 +72,7 @@ export function ProjectsSection() {
         <div className="mt-16 flex justify-center">
           <Link
             href="/projects"
-            className="border-2 border-[#24a186] text-[#24a186] hover:bg-[#24a186] hover:text-white px-8 py-3.5 text-[14px] font-medium transition-colors"
+            className="border-2 border-[#F9A825] text-[#F9A825] hover:bg-[#F9A825] hover:text-[#252A34] px-8 py-3.5 text-[14px] font-bold transition-colors"
           >
             View All Projects
           </Link>

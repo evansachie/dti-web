@@ -28,7 +28,7 @@ export function AboutGovernanceSection() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-4 mb-5">
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+            <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
               Governance
             </span>
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
@@ -52,10 +52,10 @@ export function AboutGovernanceSection() {
               key={index}
               className="bg-white p-10 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-black/[0.03] text-center group hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-[#EAF5F3] flex items-center justify-center rounded-full mb-6 mx-auto group-hover:bg-[#219D80] transition-colors duration-300">
+              <div className="w-16 h-16 bg-[#FFF8E1] flex items-center justify-center rounded-full mb-6 mx-auto group-hover:bg-[#1B5E20] transition-colors duration-300">
                 <tier.icon
                   size={28}
-                  className="text-[#219D80] group-hover:text-white transition-colors duration-300"
+                  className="text-[#1B5E20] group-hover:text-white transition-colors duration-300"
                   strokeWidth={1.5}
                 />
               </div>

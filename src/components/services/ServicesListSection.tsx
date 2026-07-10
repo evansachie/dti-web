@@ -113,7 +113,7 @@ export function ServicesListSection() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-4 mb-5">
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+            <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
               What We Offer
             </span>
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
@@ -144,11 +144,11 @@ export function ServicesListSection() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-linear-to-br from-[#219D80]/60 to-[#252A34]/50"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-[#1B5E20]/60 to-[#252A34]/50"></div>
               </div>
 
               <div className="p-8 flex flex-col flex-1">
-                <h3 className="text-[19px] font-bold text-[#252A34] mb-3 leading-snug group-hover:text-[#219D80] transition-colors">
+                <h3 className="text-[19px] font-bold text-[#252A34] mb-3 leading-snug group-hover:text-[#1B5E20] transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-zinc-500 text-[14px] leading-relaxed mb-6 flex-1">
@@ -161,7 +161,7 @@ export function ServicesListSection() {
                       key={i}
                       className="flex items-center gap-2.5 text-zinc-600 text-[13px]"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#24a186] shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#1B5E20] shrink-0"></span>
                       {f}
                     </li>
                   ))}

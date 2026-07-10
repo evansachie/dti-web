@@ -8,7 +8,7 @@ export function TestimonialSection() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-4 mb-5">
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+            <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
               Testimonials
             </span>
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
@@ -25,24 +25,24 @@ export function TestimonialSection() {
           {testimonialsData.map((testimonial, idx) => (
             <div
               key={idx}
-              className="bg-white p-10 md:p-12 shadow-sm shadow-[#219D80]/5 border border-[#219D80]/10 flex flex-col relative overflow-hidden group hover:shadow-md transition-shadow"
+              className="bg-white p-10 md:p-12 shadow-sm shadow-[#1B5E20]/5 border border-[#1B5E20]/10 flex flex-col relative overflow-hidden group hover:shadow-md transition-shadow"
             >
               <Quote
-                className="text-[#EAF5F3] absolute top-10 right-10 rotate-180 transition-transform duration-500 group-hover:scale-110"
+                className="text-[#FFF8E1] absolute top-10 right-10 rotate-180 transition-transform duration-500 group-hover:scale-110"
                 size={80}
                 strokeWidth={0.5}
                 fill="currentColor"
               />
 
               <div className="flex items-center gap-5 mb-8 relative z-10">
-                <div className="w-16 h-16 rounded-full bg-[#24a186] flex items-center justify-center text-white font-serif text-2xl shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-[#1B5E20] flex items-center justify-center text-white font-serif text-2xl shadow-sm">
                   {testimonial.avatarLetter}
                 </div>
                 <div>
                   <h4 className="text-[#252A34] font-bold text-[17px] mb-1">
                     {testimonial.name}
                   </h4>
-                  <p className="text-[#219D80] text-[12px] font-bold uppercase tracking-wider">
+                  <p className="text-[#1B5E20] text-[12px] font-bold uppercase tracking-wider">
                     {testimonial.title}
                   </p>
                 </div>

@@ -12,7 +12,7 @@ export function LatestNewsSection() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-4 mb-5">
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+            <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
               Latest News & Blog
             </span>
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
@@ -32,10 +32,10 @@ export function LatestNewsSection() {
               className="bg-white border border-zinc-100 shadow-sm overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300"
             >
               <div className="relative h-[220px] w-full bg-zinc-200 overflow-hidden">
-                <div className="absolute top-4 left-4 bg-[#24a186] text-white text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest z-10">
+                <div className="absolute top-4 left-4 bg-[#1B5E20] text-white text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest z-10">
                   {news.category}
                 </div>
-                <div className="absolute inset-0 bg-[#eef1f1] flex items-center justify-center text-[#219D80]/60 text-[13px] font-medium group-hover:scale-105 transition-transform duration-500">
+                <div className="absolute inset-0 bg-[#eef1f1] flex items-center justify-center text-[#1B5E20]/60 text-[13px] font-medium group-hover:scale-105 transition-transform duration-500">
                   {news.image ? (
                     <Image
                       src={news.image}
@@ -59,7 +59,7 @@ export function LatestNewsSection() {
                   href={`/blogs/${news.slug}`}
                   className="block outline-none"
                 >
-                  <h3 className="text-[20px] font-semibold text-[#252A34] mb-4 leading-snug group-hover:text-[#219D80] transition-colors line-clamp-2">
+                  <h3 className="text-[20px] font-semibold text-[#252A34] mb-4 leading-snug group-hover:text-[#1B5E20] transition-colors line-clamp-2">
                     {news.title}
                   </h3>
                 </Link>
@@ -70,7 +70,7 @@ export function LatestNewsSection() {
 
                 <Link
                   href={`/blogs/${news.slug}`}
-                  className="text-[#252A34] group-hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors flex items-center gap-2 mt-auto"
+                  className="text-[#252A34] group-hover:text-[#1B5E20] font-bold text-[13px] uppercase tracking-wider transition-colors flex items-center gap-2 mt-auto"
                 >
                   Read Article
                   <ArrowRight
@@ -87,7 +87,7 @@ export function LatestNewsSection() {
         <div className="mt-16 flex justify-center">
           <Link
             href="/blogs"
-            className="border-2 border-zinc-200 text-zinc-600 hover:border-[#24a186] hover:bg-[#24a186] hover:text-white px-8 py-3.5 text-[14px] font-medium transition-all"
+            className="border-2 border-zinc-200 text-zinc-600 hover:border-[#F9A825] hover:bg-[#F9A825] hover:text-[#252A34] px-8 py-3.5 text-[14px] font-bold transition-all"
           >
             Visit Our Blog
           </Link>

@@ -71,7 +71,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             </Link>
 
             <div className="flex items-center gap-4 mb-4">
-              <span className="bg-[#24a186] text-white text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest">
+              <span className="bg-[#1B5E20] text-white text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest">
                 {project.category}
               </span>
               <span className="bg-white/10 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest">
@@ -128,7 +128,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                   >
                     <CheckCircle2
                       size={20}
-                      className="text-[#24a186] shrink-0 mt-0.5"
+                      className="text-[#1B5E20] shrink-0 mt-0.5"
                     />
                     <span>{component}</span>
                   </li>
@@ -144,7 +144,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 Implementation Strategy
               </h2>
               <div className="flex flex-col gap-8">
-                <div className="border-l-2 border-[#24a186] pl-6 py-1">
+                <div className="border-l-2 border-[#1B5E20] pl-6 py-1">
                   <h3 className="text-[#252A34] font-bold uppercase tracking-wider text-[13px] mb-3">
                     Phase 1: Pilot Expansion
                   </h3>
@@ -156,7 +156,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     )}
                   </ul>
                 </div>
-                <div className="border-l-2 border-[#24a186] pl-6 py-1">
+                <div className="border-l-2 border-[#1B5E20] pl-6 py-1">
                   <h3 className="text-[#252A34] font-bold uppercase tracking-wider text-[13px] mb-3">
                     Phase 2: Media Integration
                   </h3>
@@ -168,7 +168,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     )}
                   </ul>
                 </div>
-                <div className="border-l-2 border-[#24a186] pl-6 py-1">
+                <div className="border-l-2 border-[#1B5E20] pl-6 py-1">
                   <h3 className="text-[#252A34] font-bold uppercase tracking-wider text-[13px] mb-3">
                     Phase 3: National Rollout
                   </h3>
@@ -201,7 +201,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     key={idx}
                     className="flex items-start gap-4 p-4 bg-white border border-zinc-100 shadow-sm"
                   >
-                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#eaf5f2] text-[#24a186] font-bold text-sm shrink-0">
+                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#eaf5f2] text-[#1B5E20] font-bold text-sm shrink-0">
                       {idx + 1}
                     </span>
                     <span className="text-[#252A34] font-medium text-[15px] pt-1">
@@ -221,7 +221,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
               <div className="space-y-5">
                 <div>
-                  <span className="flex items-center gap-2 text-[#24a186] text-[12px] font-bold uppercase tracking-widest mb-1">
+                  <span className="flex items-center gap-2 text-[#1B5E20] text-[12px] font-bold uppercase tracking-widest mb-1">
                     <MapPin size={14} /> Location
                   </span>
                   <p className="text-zinc-600 text-[14px]">
@@ -229,7 +229,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                   </p>
                 </div>
                 <div>
-                  <span className="flex items-center gap-2 text-[#24a186] text-[12px] font-bold uppercase tracking-widest mb-1">
+                  <span className="flex items-center gap-2 text-[#1B5E20] text-[12px] font-bold uppercase tracking-widest mb-1">
                     <Clock size={14} /> Implementation
                   </span>
                   <p className="text-zinc-600 text-[14px]">
@@ -259,7 +259,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               <div className="absolute -right-10 -bottom-10 opacity-5">
                 <CheckCircle2 size={150} />
               </div>
-              <h3 className="font-bold uppercase tracking-wider text-[#24a186] text-[13px] mb-4">
+              <h3 className="font-bold uppercase tracking-wider text-[#1B5E20] text-[13px] mb-4">
                 Primary Aim
               </h3>
               <p
@@ -280,7 +280,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     key={idx}
                     className="text-zinc-600 text-[14px] flex gap-3"
                   >
-                    <span className="text-[#24a186]">•</span>
+                    <span className="text-[#1B5E20]">•</span>
                     {obj}
                   </li>
                 ))}
@@ -313,7 +313,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     key={idx}
                     className="text-zinc-600 text-[14px] flex gap-3"
                   >
-                    <span className="text-[#24a186]">•</span>
+                    <span className="text-[#1B5E20]">•</span>
                     {sust}
                   </li>
                 ))}

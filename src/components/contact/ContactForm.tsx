@@ -61,8 +61,8 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-[#EAF5F3] border border-[#219D80]/20 p-8 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
-        <div className="w-16 h-16 bg-[#219D80] rounded-full flex items-center justify-center mx-auto mb-6">
+      <div className="bg-[#FFF8E1] border border-[#1B5E20]/20 p-8 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="w-16 h-16 bg-[#1B5E20] rounded-full flex items-center justify-center mx-auto mb-6">
           <svg
             className="w-8 h-8 text-white"
             fill="none"
@@ -85,7 +85,7 @@ export function ContactForm() {
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="text-[#219D80] font-bold text-[13px] uppercase tracking-wider hover:underline"
+          className="text-[#1B5E20] font-bold text-[13px] uppercase tracking-wider hover:underline"
         >
           Send another message
         </button>
@@ -95,9 +95,9 @@ export function ContactForm() {
 
   return (
     <>
-      <div className="flex items-center gap-2 bg-[#EAF5F3] border border-[#219D80]/20 px-4 py-3 mb-8">
-        <div className="w-2 h-2 rounded-full bg-[#24a186] animate-pulse shrink-0"></div>
-        <p className="text-[#219D80] text-[12px] font-semibold">
+      <div className="flex items-center gap-2 bg-[#FFF8E1] border border-[#1B5E20]/20 px-4 py-3 mb-8">
+        <div className="w-2 h-2 rounded-full bg-[#1B5E20] animate-pulse shrink-0"></div>
+        <p className="text-[#1B5E20] text-[12px] font-semibold">
           We typically respond within 1–2 business days.
         </p>
       </div>
@@ -139,7 +139,7 @@ export function ContactForm() {
               value={formData.fullName}
               onChange={handleChange}
               placeholder="e.g. Kofi Mensah"
-              className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors"
+              className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#1B5E20] transition-colors"
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -153,7 +153,7 @@ export function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder="you@example.com"
-              className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors"
+              className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#1B5E20] transition-colors"
             />
           </div>
         </div>
@@ -169,7 +169,7 @@ export function ContactForm() {
               value={formData.phone}
               onChange={handleChange}
               placeholder="+233 XX XXX XXXX"
-              className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors"
+              className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#1B5E20] transition-colors"
             />
           </div>
           <div className="flex flex-col gap-1.5">
@@ -182,7 +182,7 @@ export function ContactForm() {
               value={formData.organisation}
               onChange={handleChange}
               placeholder="e.g. NGO, School, Company"
-              className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors"
+              className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#1B5E20] transition-colors"
             />
           </div>
         </div>
@@ -196,7 +196,7 @@ export function ContactForm() {
             value={formData.subject}
             onChange={handleChange}
             required
-            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] focus:outline-none focus:border-[#24a186] transition-colors appearance-none"
+            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] focus:outline-none focus:border-[#1B5E20] transition-colors appearance-none"
           >
             <option value="">Select a topic...</option>
             <option value="partnership">Partnership Inquiry</option>
@@ -219,7 +219,7 @@ export function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Tell us about your interest or inquiry..."
-            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors resize-none"
+            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#1B5E20] transition-colors resize-none"
           />
         </div>
 
@@ -229,7 +229,7 @@ export function ContactForm() {
             name="newsletterOptIn"
             checked={formData.newsletterOptIn}
             onChange={handleChange}
-            className="mt-1 h-4 w-4 shrink-0 accent-[#24a186]"
+            className="mt-1 h-4 w-4 shrink-0 accent-[#1B5E20]"
           />
           <span>
             I would also like to receive DTI news, project updates, and event
@@ -241,14 +241,14 @@ export function ContactForm() {
           By submitting this form, you agree to our{" "}
           <Link
             href="/privacy-policy"
-            className="font-medium text-[#219D80] hover:underline"
+            className="font-medium text-[#1B5E20] hover:underline"
           >
             Privacy Policy
           </Link>{" "}
           and{" "}
           <Link
             href="/terms-of-service"
-            className="font-medium text-[#219D80] hover:underline"
+            className="font-medium text-[#1B5E20] hover:underline"
           >
             Terms of Service
           </Link>
@@ -262,7 +262,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="bg-[#24a186] hover:bg-[#1d826c] text-white py-4 text-[13px] font-bold uppercase tracking-wider transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="bg-[#F9A825] hover:bg-[#F57F17] text-[#252A34] py-4 text-[13px] font-bold uppercase tracking-wider transition-colors mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Sending..." : "Send Message"}
         </button>

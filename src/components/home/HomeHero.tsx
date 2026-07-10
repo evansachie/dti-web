@@ -27,7 +27,7 @@ export function HomeHero({
       <div
         className="absolute top-0 left-0 bottom-0 w-full"
         style={{
-          backgroundColor: "rgb(33 157 128 / 55%)",
+          backgroundColor: "rgb(27 94 32 / 55%)",
           clipPath: "polygon(0 0, 55% 0, 35% 100%, 0 100%)",
         }}
       >
@@ -72,7 +72,7 @@ export function HomeHero({
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <Link
             href={primaryAction.href}
-            className="bg-[#24a186] hover:bg-[#1d826c] shadow-sm text-white px-8 py-3.5 text-[15px] font-medium transition-colors min-w-[160px]"
+            className="bg-[#F9A825] hover:bg-[#F57F17] shadow-sm text-[#252A34] px-8 py-3.5 text-[15px] font-bold transition-colors min-w-[160px]"
           >
             {primaryAction.label}
           </Link>

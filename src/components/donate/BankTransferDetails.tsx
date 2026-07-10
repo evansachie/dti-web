@@ -1,7 +1,7 @@
 export function BankTransferDetails() {
   return (
     <div className="bg-[#252A34] p-8 text-white">
-      <p className="text-[#24a186] text-[12px] font-bold uppercase tracking-widest mb-3">
+      <p className="text-[#1B5E20] text-[12px] font-bold uppercase tracking-widest mb-3">
         Direct Bank Transfer
       </p>
       <div className="space-y-2 text-[14px] text-zinc-300">
@@ -24,7 +24,7 @@ export function BankTransferDetails() {
         After transferring, email us at{" "}
         <a
           href="mailto:developmentaltheatreinitiative@gmail.com"
-          className="text-[#24a186] hover:underline"
+          className="text-[#1B5E20] hover:underline"
         >
           developmentaltheatreinitiative@gmail.com
         </a>{" "}

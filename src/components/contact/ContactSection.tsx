@@ -9,7 +9,7 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <div className="flex items-center gap-4 mb-5">
-              <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+              <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
                 Get In Touch
               </span>
               <div className="h-[2px] w-[30px] bg-zinc-200"></div>
@@ -31,12 +31,12 @@ export function ContactSection() {
               {contactInfo.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-5 bg-[#f8fafa] border border-zinc-100 group hover:border-[#219D80]/30 transition-colors"
+                  className="flex items-start gap-4 p-5 bg-[#f8fafa] border border-zinc-100 group hover:border-[#1B5E20]/30 transition-colors"
                 >
-                  <div className="w-11 h-11 bg-[#EAF5F3] rounded-full flex items-center justify-center shrink-0 group-hover:bg-[#24a186] transition-colors duration-300">
+                  <div className="w-11 h-11 bg-[#FFF8E1] rounded-full flex items-center justify-center shrink-0 group-hover:bg-[#1B5E20] transition-colors duration-300">
                     <item.icon
                       size={18}
-                      className="text-[#24a186] group-hover:text-white transition-colors duration-300"
+                      className="text-[#1B5E20] group-hover:text-white transition-colors duration-300"
                       strokeWidth={1.5}
                     />
                   </div>
@@ -55,7 +55,7 @@ export function ContactSection() {
                             ? "noopener noreferrer"
                             : undefined
                         }
-                        className="text-[#252A34] text-[13px] font-semibold hover:text-[#219D80] transition-colors leading-snug"
+                        className="text-[#252A34] text-[13px] font-semibold hover:text-[#1B5E20] transition-colors leading-snug"
                       >
                         {item.value}
                       </a>

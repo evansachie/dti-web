@@ -7,7 +7,7 @@ export function FounderMessageSection() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-4 mb-5">
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+            <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
               Founder&apos;s Message
             </span>
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
@@ -31,7 +31,7 @@ export function FounderMessageSection() {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-[#252A34]/80 to-transparent p-6 pt-16">
                 <p className="text-white font-bold text-[18px]">Enoch Aggrey</p>
-                <p className="text-[#24a186] text-[12px] font-bold uppercase tracking-widest mt-1">
+                <p className="text-[#1B5E20] text-[12px] font-bold uppercase tracking-widest mt-1">
                   Founder & Executive Director
                 </p>
               </div>
@@ -39,7 +39,7 @@ export function FounderMessageSection() {
           </div>
 
           <div className="w-full lg:flex-1 bg-white p-10 md:p-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] border border-black/[0.03] border-l-0 lg:border-l-0 relative flex flex-col justify-center">
-            <div className="absolute top-8 left-8 text-[100px] leading-none text-[#24a186]/10 font-serif select-none">
+            <div className="absolute top-8 left-8 text-[100px] leading-none text-[#1B5E20]/10 font-serif select-none">
               &ldquo;
             </div>
             <div className="space-y-5 text-zinc-600 text-[15px] leading-[1.8] relative z-10">

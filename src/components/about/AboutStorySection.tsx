@@ -6,7 +6,7 @@ export function AboutStorySection() {
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-16">
         <div className="w-full lg:w-1/2">
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+            <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
               Who We Are
             </span>
             <div className="h-[2px] w-[50px] bg-zinc-200"></div>

@@ -6,7 +6,7 @@ export function MissionVisionSection() {
     <section className="py-24 px-6 max-w-[1200px] mx-auto w-full flex flex-col md:flex-row gap-16">
       <div className="w-full md:w-1/2">
         <div className="flex items-center gap-4 mb-5">
-          <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+          <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
             {missionVisionData.welcome}
           </span>
           <div className="h-[2px] w-[50px] bg-zinc-200"></div>
@@ -22,8 +22,8 @@ export function MissionVisionSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 mb-8">
-          <div className="bg-[#EAF5F3] p-8 border-l-2 sm:border-l-0 sm:border-b-2 border-[#219D80] flex-1">
-            <h3 className="flex items-center gap-2 text-[#219D80] text-lg font-bold mb-3">
+          <div className="bg-[#FFF8E1] p-8 border-l-2 sm:border-l-0 sm:border-b-2 border-[#1B5E20] flex-1">
+            <h3 className="flex items-center gap-2 text-[#1B5E20] text-lg font-bold mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -46,8 +46,8 @@ export function MissionVisionSection() {
               {missionVisionData.mission.description}
             </p>
           </div>
-          <div className="bg-[#EAF5F3] p-8 border-l-2 sm:border-l-0 sm:border-b-2 border-[#219D80] flex-1">
-            <h3 className="flex items-center gap-2 text-[#219D80] text-lg font-bold mb-3">
+          <div className="bg-[#FFF8E1] p-8 border-l-2 sm:border-l-0 sm:border-b-2 border-[#1B5E20] flex-1">
+            <h3 className="flex items-center gap-2 text-[#1B5E20] text-lg font-bold mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -81,7 +81,7 @@ export function MissionVisionSection() {
             className="object-cover"
           />
         </div>
-        <div className="bg-white border-[6px] border-[#EAF5F3] p-8 relative -mt-16 ml-auto w-[90%] shadow-md z-10 hidden sm:block">
+        <div className="bg-white border-[6px] border-[#FFF8E1] p-8 relative -mt-16 ml-auto w-[90%] shadow-md z-10 hidden sm:block">
           <h4 className="font-semibold text-[#252A34] text-lg mb-5 uppercase tracking-wide">
             Our Core Values
           </h4>
@@ -91,7 +91,7 @@ export function MissionVisionSection() {
                 key={idx}
                 className="flex items-start gap-4 text-[15px] font-medium text-zinc-700"
               >
-                <span className="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#219D80]" />{" "}
+                <span className="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#1B5E20]" />{" "}
                 {value}
               </li>
             ))}
