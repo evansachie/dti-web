@@ -1,6 +1,13 @@
 import { contactInfo } from "@/data/contact";
 import { ContactForm } from "./ContactForm";
 import { ContactMap } from "./ContactMap";
+import {
+  FacebookIcon,
+  LinkedinIcon,
+  InstagramIcon,
+  TikTokIcon,
+  TelegramIcon,
+} from "@/components/ui/SocialIcons";
 
 export function ContactSection() {
   return (
@@ -67,6 +74,39 @@ export function ContactSection() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mb-8">
+              <p className="text-zinc-400 text-[11px] font-bold uppercase tracking-widest mb-3">
+                Follow Us
+              </p>
+              <div className="flex items-center gap-3">
+                <FacebookIcon
+                  href="https://www.facebook.com/people/Developmemtaltheatreinitiative/61590315404599/"
+                  variant="light"
+                  size={18}
+                />
+                <LinkedinIcon
+                  href="https://www.linkedin.com/company/developmental-theatre-initiative/"
+                  variant="light"
+                  size={18}
+                />
+                <InstagramIcon
+                  href="https://www.instagram.com/developmentaltheatreinitiative/"
+                  variant="light"
+                  size={18}
+                />
+                <TikTokIcon
+                  href="https://www.tiktok.com/@developmentalthea"
+                  variant="light"
+                  size={18}
+                />
+                <TelegramIcon
+                  href="https://t.me/developmentaltheatreinitiative"
+                  variant="light"
+                  size={18}
+                />
+              </div>
             </div>
 
             <ContactMap />
