@@ -2,7 +2,7 @@ import { statsData } from "@/data/home";
 
 export function StatsSection() {
   return (
-    <section className="bg-[#219D80] py-20 px-6 w-full relative overflow-hidden">
+    <section className="bg-[#1B5E20] py-20 px-6 w-full relative overflow-hidden">
       <div
         className="absolute top-0 left-0 w-full h-full opacity-10"
         style={{

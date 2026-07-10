@@ -4,7 +4,7 @@ export function VideoSpotlightSection() {
       <div className="max-w-[1000px] mx-auto text-center flex flex-col items-center">
         <div className="flex items-center gap-4 mb-5">
           <div className="h-[2px] w-[30px] bg-zinc-600"></div>
-          <span className="text-[#24a186] text-[13px] font-bold uppercase tracking-wider">
+          <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
             Watch Us In Action
           </span>
           <div className="h-[2px] w-[30px] bg-zinc-600"></div>
@@ -23,7 +23,7 @@ export function VideoSpotlightSection() {
           the people.
         </p>
 
-        <div className="w-full relative aspect-video bg-[#181b21] shadow-2xl overflow-hidden ring-1 ring-white/10 hover:ring-[#24a186]/50 transition-all duration-500 rounded-sm">
+        <div className="w-full relative aspect-video bg-[#181b21] shadow-2xl overflow-hidden ring-1 ring-white/10 hover:ring-[#1B5E20]/50 transition-all duration-500 rounded-sm">
           <video
             src="/gallery/vid.mp4"
             className="absolute inset-0 w-full h-full object-cover opacity-100"

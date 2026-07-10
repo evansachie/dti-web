@@ -4,7 +4,7 @@ export function BlogsNewsletterSection() {
   return (
     <section className="py-20 px-6 bg-[#f8fafa] w-full border-t border-zinc-100">
       <div className="max-w-[700px] mx-auto text-center">
-        <span className="text-[#24a186] text-[13px] font-bold uppercase tracking-wider mb-4 block">
+        <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider mb-4 block">
           Stay In The Loop
         </span>
         <h2

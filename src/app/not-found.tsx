@@ -33,7 +33,7 @@ export default function NotFound() {
 
         <Link
           href="/"
-          className="inline-flex items-center justify-center gap-2 bg-[#252A34] text-white px-8 py-3.5 text-[13px] font-bold uppercase tracking-wider hover:bg-[#219D80] transition-colors"
+          className="inline-flex items-center justify-center gap-2 bg-[#252A34] text-white px-8 py-3.5 text-[13px] font-bold uppercase tracking-wider hover:bg-[#1B5E20] transition-colors"
         >
           <ArrowLeft size={16} />
           Return to Home

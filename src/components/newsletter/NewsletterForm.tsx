@@ -16,27 +16,27 @@ const variantStyles = {
   section: {
     form: "flex flex-col sm:flex-row sm:flex-wrap gap-3 max-w-[520px] mx-auto",
     input:
-      "flex-1 bg-white border border-zinc-200 px-5 py-3.5 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors",
+      "flex-1 bg-white border border-zinc-200 px-5 py-3.5 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#1B5E20] transition-colors",
     button:
-      "bg-[#24a186] hover:bg-[#1d826c] text-white px-7 py-3.5 text-[13px] font-bold uppercase tracking-wider transition-colors whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed",
+      "bg-[#F9A825] hover:bg-[#F57F17] text-[#252A34] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wider transition-colors whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed",
     message: "text-[12px] mt-1 sm:basis-full sm:text-center",
     legal: "text-zinc-400 sm:basis-full sm:text-center",
   },
   footer: {
     form: "flex flex-col gap-3",
     input:
-      "bg-white/5 border border-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#24a186] transition-colors w-full placeholder:text-zinc-500",
+      "bg-white/5 border border-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#F9A825] transition-colors w-full placeholder:text-zinc-500",
     button:
-      "bg-[#24a186] hover:bg-[#1d826c] text-white px-4 py-3 text-sm font-semibold transition-colors w-full uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed",
+      "bg-[#F9A825] hover:bg-[#F57F17] text-[#252A34] px-4 py-3 text-sm font-bold transition-colors w-full uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed",
     message: "text-[12px] mt-1",
     legal: "text-zinc-500",
   },
   sidebar: {
     form: "flex flex-col gap-3",
     input:
-      "w-full bg-white/5 border border-white/10 px-4 py-2.5 text-[13px] text-white placeholder:text-zinc-500 focus:outline-none focus:border-[#24a186] transition-colors",
+      "w-full bg-white/5 border border-white/10 px-4 py-2.5 text-[13px] text-white placeholder:text-zinc-500 focus:outline-none focus:border-[#F9A825] transition-colors",
     button:
-      "w-full bg-[#24a186] hover:bg-[#1d826c] text-white py-2.5 text-[12px] font-bold uppercase tracking-wider transition-colors disabled:opacity-60 disabled:cursor-not-allowed",
+      "w-full bg-[#F9A825] hover:bg-[#F57F17] text-[#252A34] py-2.5 text-[12px] font-bold uppercase tracking-wider transition-colors disabled:opacity-60 disabled:cursor-not-allowed",
     message: "text-[12px]",
     legal: "text-white/35",
   },
@@ -117,7 +117,7 @@ export function NewsletterForm({
       {message && (
         <p
           className={`${styles.message} ${
-            status === "success" ? "text-[#24a186]" : "text-red-500"
+            status === "success" ? "text-[#1B5E20]" : "text-red-500"
           }`}
         >
           {message}
@@ -126,7 +126,7 @@ export function NewsletterForm({
       <p className={`${styles.legal} text-[11px] leading-relaxed`}>
         By subscribing, you agree to receive DTI emails. You can unsubscribe at
         any time. See our{" "}
-        <Link href="/privacy-policy" className="text-[#24a186] hover:underline">
+        <Link href="/privacy-policy" className="text-[#1B5E20] hover:underline">
           Privacy Policy
         </Link>
         .

@@ -18,8 +18,8 @@ function IconWrapper({
 
   const base =
     variant === "dark"
-      ? "w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#24a186] transition-colors text-white"
-      : "w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center hover:bg-[#24a186] hover:border-[#24a186] hover:text-white transition-colors text-zinc-600";
+      ? "w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#1B5E20] transition-colors text-white"
+      : "w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center hover:bg-[#1B5E20] hover:border-[#1B5E20] hover:text-white transition-colors text-zinc-600";
   return (
     <Link
       href={href}

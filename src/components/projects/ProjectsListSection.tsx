@@ -84,7 +84,7 @@ export function ProjectsListSection() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-4 mb-5">
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+            <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
               Our Work
             </span>
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
@@ -133,7 +133,7 @@ export function ProjectsListSection() {
                   <span
                     className={`text-white text-[11px] font-bold px-3 py-1.5 uppercase tracking-widest ${
                       project.status === "Active"
-                        ? "bg-[#24a186]"
+                        ? "bg-[#1B5E20]"
                         : "bg-[#252A34]"
                     }`}
                   >
@@ -143,7 +143,7 @@ export function ProjectsListSection() {
               </div>
 
               <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                <span className="text-[#219D80] text-[12px] font-bold uppercase tracking-widest mb-3">
+                <span className="text-[#1B5E20] text-[12px] font-bold uppercase tracking-widest mb-3">
                   {project.category}
                 </span>
                 <h3
@@ -157,11 +157,11 @@ export function ProjectsListSection() {
                 </p>
                 <div className="flex flex-wrap items-center gap-5 mb-6 text-[13px] text-zinc-500">
                   <span className="flex items-center gap-1.5">
-                    <MapPin size={14} className="text-[#24a186]" />
+                    <MapPin size={14} className="text-[#1B5E20]" />
                     {project.location}
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Clock size={14} className="text-[#24a186]" />
+                    <Clock size={14} className="text-[#1B5E20]" />
                     {project.duration}
                   </span>
                 </div>
@@ -178,7 +178,7 @@ export function ProjectsListSection() {
                         key={i}
                         className="flex items-center gap-2 text-zinc-600 text-[14px]"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#24a186] shrink-0"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#1B5E20] shrink-0"></span>
                         {h}
                       </li>
                     ))}
@@ -186,7 +186,7 @@ export function ProjectsListSection() {
                 </div>
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#1B5E20] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
                 >
                   Read Full Case Study
                   <ArrowRight

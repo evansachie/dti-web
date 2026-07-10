@@ -7,7 +7,6 @@ import {
   LinkedinIcon,
   InstagramIcon,
   TikTokIcon,
-  YoutubeIcon,
   TelegramIcon,
 } from "@/components/ui/SocialIcons";
 
@@ -65,54 +64,54 @@ export function Footer() {
             <li>
               <Link
                 href="/about"
-                className="text-zinc-400 text-sm hover:text-[#24a186] transition-colors flex items-center gap-2"
+                className="text-zinc-400 text-sm hover:text-[#1B5E20] transition-colors flex items-center gap-2"
               >
-                <span className="w-1 h-1 bg-[#24a186] rounded-full"></span>{" "}
+                <span className="w-1 h-1 bg-[#1B5E20] rounded-full"></span>{" "}
                 About Us
               </Link>
             </li>
             <li>
               <Link
                 href="/projects"
-                className="text-zinc-400 text-sm hover:text-[#24a186] transition-colors flex items-center gap-2"
+                className="text-zinc-400 text-sm hover:text-[#1B5E20] transition-colors flex items-center gap-2"
               >
-                <span className="w-1 h-1 bg-[#24a186] rounded-full"></span>{" "}
+                <span className="w-1 h-1 bg-[#1B5E20] rounded-full"></span>{" "}
                 Active Projects
               </Link>
             </li>
             <li>
               <Link
                 href="/services"
-                className="text-zinc-400 text-sm hover:text-[#24a186] transition-colors flex items-center gap-2"
+                className="text-zinc-400 text-sm hover:text-[#1B5E20] transition-colors flex items-center gap-2"
               >
-                <span className="w-1 h-1 bg-[#24a186] rounded-full"></span> Core
+                <span className="w-1 h-1 bg-[#1B5E20] rounded-full"></span> Core
                 Activities
               </Link>
             </li>
             <li>
               <Link
                 href="/blogs"
-                className="text-zinc-400 text-sm hover:text-[#24a186] transition-colors flex items-center gap-2"
+                className="text-zinc-400 text-sm hover:text-[#1B5E20] transition-colors flex items-center gap-2"
               >
-                <span className="w-1 h-1 bg-[#24a186] rounded-full"></span>{" "}
+                <span className="w-1 h-1 bg-[#1B5E20] rounded-full"></span>{" "}
                 Latest News
               </Link>
             </li>
             <li>
               <Link
                 href="/gallery"
-                className="text-zinc-400 text-sm hover:text-[#24a186] transition-colors flex items-center gap-2"
+                className="text-zinc-400 text-sm hover:text-[#1B5E20] transition-colors flex items-center gap-2"
               >
-                <span className="w-1 h-1 bg-[#24a186] rounded-full"></span>{" "}
+                <span className="w-1 h-1 bg-[#1B5E20] rounded-full"></span>{" "}
                 Media Gallery
               </Link>
             </li>
             <li>
               <Link
                 href="/contact"
-                className="text-zinc-400 text-sm hover:text-[#24a186] transition-colors flex items-center gap-2"
+                className="text-zinc-400 text-sm hover:text-[#1B5E20] transition-colors flex items-center gap-2"
               >
-                <span className="w-1 h-1 bg-[#24a186] rounded-full"></span>{" "}
+                <span className="w-1 h-1 bg-[#1B5E20] rounded-full"></span>{" "}
                 Contact Us
               </Link>
             </li>
@@ -125,7 +124,7 @@ export function Footer() {
           </h3>
           <ul className="space-y-4">
             <li className="flex items-start gap-4">
-              <MapPin className="text-[#24a186] mt-1 shrink-0" size={20} />
+              <MapPin className="text-[#1B5E20] mt-1 shrink-0" size={20} />
               <p className="text-zinc-400 text-sm leading-relaxed">
                 Accra, Ghana
                 <br />
@@ -133,21 +132,21 @@ export function Footer() {
               </p>
             </li>
             <li className="flex items-center gap-4">
-              <Phone className="text-[#24a186] shrink-0" size={20} />
+              <Phone className="text-[#1B5E20] shrink-0" size={20} />
               <p className="text-zinc-400 text-sm">
                 +233 24 713 4085{" "}
                 <span className="text-[10px] opacity-50 ml-1">(Voice)</span>
               </p>
             </li>
             <li className="flex items-center gap-4">
-              <MessageCircle className="text-[#24a186] shrink-0" size={20} />
+              <MessageCircle className="text-[#1B5E20] shrink-0" size={20} />
               <p className="text-zinc-400 text-sm">
                 +233 24 713 4085{" "}
                 <span className="text-[10px] opacity-50 ml-1">(WhatsApp)</span>
               </p>
             </li>
             <li className="flex items-center gap-4">
-              <Mail className="text-[#24a186] shrink-0" size={20} />
+              <Mail className="text-[#1B5E20] shrink-0" size={20} />
               <p className="text-zinc-400 text-sm break-all">
                 developmentaltheatreinitiative@gmail.com
               </p>
@@ -178,7 +177,7 @@ export function Footer() {
               href="https://evansdev.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-500 hover:text-[#24a186] text-[11px] uppercase tracking-widest transition-colors font-semibold"
+              className="text-zinc-500 hover:text-[#1B5E20] text-[11px] uppercase tracking-widest transition-colors font-semibold"
             >
               Designed & Developed by Evans Acheampong
             </Link>

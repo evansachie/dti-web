@@ -95,8 +95,8 @@ export function DonateCheckoutForm() {
   if (isSuccess) {
     return (
       <div className="flex flex-col items-center justify-center text-center py-10 animate-in fade-in zoom-in duration-500">
-        <div className="w-20 h-20 bg-[#EAF5F3] rounded-full flex items-center justify-center mb-6">
-          <Heart size={36} className="text-[#24a186]" fill="#24a186" />
+        <div className="w-20 h-20 bg-[#FFF8E1] rounded-full flex items-center justify-center mb-6">
+          <Heart size={36} className="text-[#1B5E20]" fill="#1B5E20" />
         </div>
         <h3
           className="text-[28px] md:text-[32px] font-medium text-[#252A34] mb-4"
@@ -138,9 +138,9 @@ export function DonateCheckoutForm() {
 
   return (
     <>
-      <div className="flex items-center gap-2 bg-[#EAF5F3] border border-[#219D80]/20 px-4 py-3 mb-8">
-        <Heart size={14} className="text-[#24a186] shrink-0" fill="#24a186" />
-        <p className="text-[#219D80] text-[12px] font-semibold">
+      <div className="flex items-center gap-2 bg-[#FFF8E1] border border-[#1B5E20]/20 px-4 py-3 mb-8">
+        <Heart size={14} className="text-[#1B5E20] shrink-0" fill="#1B5E20" />
+        <p className="text-[#1B5E20] text-[12px] font-semibold">
           100% of your donation supports community programmes.
         </p>
       </div>
@@ -188,7 +188,7 @@ export function DonateCheckoutForm() {
               setSelectedAmount(null);
             }}
             placeholder="Enter amount e.g. 75"
-            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors"
+            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#1B5E20] transition-colors"
           />
         </div>
 
@@ -202,7 +202,7 @@ export function DonateCheckoutForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Your name"
-            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors"
+            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#1B5E20] transition-colors"
           />
         </div>
         <div className="flex flex-col gap-1.5">
@@ -215,7 +215,7 @@ export function DonateCheckoutForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="For your donation receipt"
-            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#24a186] transition-colors"
+            className="bg-white border border-zinc-200 px-4 py-3 text-[14px] text-[#252A34] placeholder:text-zinc-400 focus:outline-none focus:border-[#1B5E20] transition-colors"
           />
         </div>
 
@@ -229,7 +229,7 @@ export function DonateCheckoutForm() {
             <button
               type="button"
               onClick={(e) => handlePrevalidation(e)}
-              className="w-full bg-[#24a186] hover:bg-[#1d826c] text-white py-4 text-[14px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-[#F9A825] hover:bg-[#F57F17] text-[#252A34] py-4 text-[14px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
             >
               Donate{" "}
               {customAmount
@@ -239,7 +239,7 @@ export function DonateCheckoutForm() {
                   : "Now"}
             </button>
           ) : (
-            <div className="w-full bg-[#24a186] hover:bg-[#1d826c] text-white py-4 text-[14px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 cursor-pointer">
+            <div className="w-full bg-[#F9A825] hover:bg-[#F57F17] text-[#252A34] py-4 text-[14px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 cursor-pointer">
               <PaystackButton
                 {...config}
                 onSuccess={handleDonateSuccess}

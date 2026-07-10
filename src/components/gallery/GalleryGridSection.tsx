@@ -51,7 +51,7 @@ export function GalleryGridSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
             <div className="flex items-center gap-4 mb-5">
-              <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+              <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
                 Our Visual Journey
               </span>
               <div className="h-[2px] w-[30px] bg-zinc-200"></div>
@@ -93,7 +93,7 @@ export function GalleryGridSection() {
 
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                     <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <span className="text-[#219D80] text-[10px] font-bold uppercase tracking-[0.2em] mb-2 block">
+                      <span className="text-[#1B5E20] text-[10px] font-bold uppercase tracking-[0.2em] mb-2 block">
                         {item.category}
                       </span>
                       <h3
@@ -105,7 +105,7 @@ export function GalleryGridSection() {
                         {item.title}
                       </h3>
                       <p className="text-white/60 text-[12px] font-medium uppercase tracking-wider flex items-center gap-2">
-                        <span className="w-4 h-px bg-[#219D80]"></span>
+                        <span className="w-4 h-px bg-[#1B5E20]"></span>
                         {item.location}
                       </p>
                     </div>
@@ -160,7 +160,7 @@ export function GalleryGridSection() {
                 />
               </div>
               <div className="mt-8 text-center px-4">
-                <span className="text-[#219D80] text-[12px] font-bold uppercase tracking-[0.3em] mb-3 block">
+                <span className="text-[#1B5E20] text-[12px] font-bold uppercase tracking-[0.3em] mb-3 block">
                   {selectedImage.category}
                 </span>
                 <h3

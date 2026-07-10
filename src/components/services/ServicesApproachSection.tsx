@@ -46,7 +46,7 @@ export function ServicesApproachSection() {
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           <div className="w-full lg:w-2/5 lg:sticky lg:top-32">
             <div className="flex items-center gap-4 mb-5">
-              <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+              <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
                 Our Methodology
               </span>
               <div className="h-[2px] w-[30px] bg-zinc-300"></div>
@@ -65,7 +65,7 @@ export function ServicesApproachSection() {
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-[#24a186] hover:bg-[#1d826c] text-white px-8 py-3.5 text-[14px] font-medium transition-colors"
+              className="inline-block bg-[#F9A825] hover:bg-[#F57F17] text-[#252A34] px-8 py-3.5 text-[14px] font-bold transition-colors"
             >
               Partner With Us
             </Link>
@@ -76,9 +76,9 @@ export function ServicesApproachSection() {
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  className="flex gap-6 bg-white p-8 border border-zinc-100 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.04)] group hover:border-[#219D80]/30 transition-colors"
+                  className="flex gap-6 bg-white p-8 border border-zinc-100 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.04)] group hover:border-[#1B5E20]/30 transition-colors"
                 >
-                  <div className="shrink-0 w-12 h-12 bg-[#EAF5F3] rounded-full flex items-center justify-center text-[#219D80] text-[14px] font-black group-hover:bg-[#24a186] group-hover:text-white transition-colors duration-300">
+                  <div className="shrink-0 w-12 h-12 bg-[#FFF8E1] rounded-full flex items-center justify-center text-[#1B5E20] text-[14px] font-black group-hover:bg-[#1B5E20] group-hover:text-white transition-colors duration-300">
                     {step.number}
                   </div>
                   <div>

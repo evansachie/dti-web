@@ -28,7 +28,7 @@ export function AboutSection() {
 
       <div className="w-full md:w-1/2">
         <div className="flex items-center gap-4 mb-5">
-          <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+          <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
             About Us
           </span>
           <div className="h-[2px] w-[50px] bg-zinc-200"></div>
@@ -54,7 +54,7 @@ export function AboutSection() {
 
         <Link
           href="/about"
-          className="bg-[#24a186] hover:bg-[#1d826c] text-white px-8 py-3.5 text-[14px] font-medium transition-colors inline-block"
+          className="bg-[#F9A825] hover:bg-[#F57F17] text-[#252A34] px-8 py-3.5 text-[14px] font-bold transition-colors inline-block"
         >
           Read More
         </Link>

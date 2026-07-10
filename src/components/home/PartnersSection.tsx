@@ -75,9 +75,9 @@ export function PartnersSection() {
             {whyPartnerReasons.map((reason, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 p-4 bg-[#f8fafa] border border-zinc-100 hover:border-[#24a186]/30 transition-colors duration-300"
+                className="flex items-center gap-3 p-4 bg-[#f8fafa] border border-zinc-100 hover:border-[#1B5E20]/30 transition-colors duration-300"
               >
-                <reason.icon size={20} className="text-[#24a186] shrink-0" />
+                <reason.icon size={20} className="text-[#1B5E20] shrink-0" />
                 <span className="text-zinc-600 text-[14px] font-medium text-left">
                   {reason.title}
                 </span>

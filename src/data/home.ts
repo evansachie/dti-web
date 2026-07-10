@@ -99,7 +99,7 @@ export const homeProjectsData = [
       "A national environmental advocacy and action campaign promoting sanitation, environmental responsibility, and sustainable community practices through awareness creation, clean-up exercises, community engagement, and behavioural change interventions.",
     image:
       "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&q=80",
-    categoryBg: "#24a186",
+    categoryBg: "#1B5E20",
   },
   {
     slug: "love-beyond-romance",

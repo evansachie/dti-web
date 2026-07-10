@@ -89,7 +89,7 @@ export function Navbar() {
                 >
                   {item.name}
                   {isActive && (
-                    <span className="absolute -bottom-1 left-0 w-full h-[1.5px] bg-[#219D80] rounded-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-full h-[1.5px] bg-[#1B5E20] rounded-full"></span>
                   )}
                 </Link>
               );
@@ -101,7 +101,7 @@ export function Navbar() {
               href="/donate"
               className={`px-6 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors ${
                 pathname === "/donate"
-                  ? "bg-[#24a186] text-white"
+                  ? "bg-[#F9A825] text-[#252A34]"
                   : "border border-white/20 hover:bg-white/10 text-white"
               }`}
             >
@@ -112,7 +112,7 @@ export function Navbar() {
               className={`px-6 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors ${
                 pathname === "/contact"
                   ? "bg-white text-[#252A34]"
-                  : "bg-[#24a186] hover:bg-[#1d826c] text-white"
+                  : "bg-[#F9A825] hover:bg-[#F57F17] text-[#252A34]"
               }`}
             >
               Contact
@@ -145,7 +145,7 @@ export function Navbar() {
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`transition-colors border-b border-white/10 pb-4 ${
-                  isActive ? "text-[#219D80]" : "hover:text-[#219D80]"
+                  isActive ? "text-[#1B5E20]" : "hover:text-[#1B5E20]"
                 }`}
               >
                 {item.name}
@@ -160,7 +160,7 @@ export function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
             className={`text-center w-full py-4 text-[15px] font-bold uppercase tracking-wider transition-colors ${
               pathname === "/donate"
-                ? "bg-[#24a186] text-white"
+                ? "bg-[#F9A825] text-[#252A34]"
                 : "border-2 border-white/30 text-white hover:bg-white/10"
             }`}
           >
@@ -172,7 +172,7 @@ export function Navbar() {
             className={`text-center w-full py-4 text-[15px] font-bold uppercase tracking-wider transition-colors ${
               pathname === "/contact"
                 ? "bg-white text-[#252A34]"
-                : "bg-[#24a186] text-white hover:bg-[#1d826c]"
+                : "bg-[#F9A825] text-[#252A34] hover:bg-[#F57F17]"
             }`}
           >
             Contact Us

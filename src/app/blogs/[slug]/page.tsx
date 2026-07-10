@@ -59,7 +59,7 @@ export default async function BlogDetailPage({ params }: Props) {
           <article>
             <Link
               href="/blogs"
-              className="inline-flex items-center gap-2 text-zinc-500 hover:text-[#219D80] text-[13px] font-semibold uppercase tracking-wider transition-colors mb-8 group"
+              className="inline-flex items-center gap-2 text-zinc-500 hover:text-[#1B5E20] text-[13px] font-semibold uppercase tracking-wider transition-colors mb-8 group"
             >
               <ArrowLeft
                 size={14}
@@ -179,7 +179,7 @@ export default async function BlogDetailPage({ params }: Props) {
 
             <div className="mt-12 pt-8 border-t border-zinc-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-[#EAF5F3] flex items-center justify-center text-[#24a186] font-black text-xl">
+                <div className="w-14 h-14 rounded-full bg-[#FFF8E1] flex items-center justify-center text-[#1B5E20] font-black text-xl">
                   E
                 </div>
                 <div>
@@ -215,10 +215,10 @@ export default async function BlogDetailPage({ params }: Props) {
                       />
                     </div>
                     <div>
-                      <span className="text-[#24a186] text-[10px] font-bold uppercase tracking-widest">
+                      <span className="text-[#1B5E20] text-[10px] font-bold uppercase tracking-widest">
                         {rPost.category}
                       </span>
-                      <p className="text-[#252A34] text-[13px] font-semibold leading-snug group-hover:text-[#219D80] transition-colors line-clamp-2 mt-0.5">
+                      <p className="text-[#252A34] text-[13px] font-semibold leading-snug group-hover:text-[#1B5E20] transition-colors line-clamp-2 mt-0.5">
                         {rPost.title}
                       </p>
                       <p className="text-zinc-400 text-[12px] mt-1">
@@ -239,7 +239,7 @@ export default async function BlogDetailPage({ params }: Props) {
                   <Link
                     key={cat}
                     href="/blogs"
-                    className="px-4 py-2 border border-zinc-200 text-zinc-600 text-[12px] font-semibold hover:border-[#219D80] hover:text-[#219D80] transition-colors"
+                    className="px-4 py-2 border border-zinc-200 text-zinc-600 text-[12px] font-semibold hover:border-[#1B5E20] hover:text-[#1B5E20] transition-colors"
                   >
                     {cat}
                   </Link>
@@ -248,7 +248,7 @@ export default async function BlogDetailPage({ params }: Props) {
             </div>
 
             <div className="bg-[#252A34] p-7 text-white">
-              <p className="text-[#24a186] text-[11px] font-bold uppercase tracking-widest mb-3">
+              <p className="text-[#1B5E20] text-[11px] font-bold uppercase tracking-widest mb-3">
                 Newsletter
               </p>
               <p className="text-white font-semibold text-[16px] mb-3 leading-snug">

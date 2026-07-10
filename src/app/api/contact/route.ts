@@ -133,7 +133,7 @@ function buildConfirmationEmailContent(payload: ContactPayload) {
       <p>Hello ${escapeHtml(payload.fullName)},</p>
       <p>Thank you for contacting Developmental Theatre Initiative (DTI). We have received your message and our team will review it shortly.</p>
       <p>We typically respond within 1-2 business days.</p>
-      <div style="margin:24px 0;padding:16px;border-left:4px solid #24a186;background:#f8fafa;">
+      <div style="margin:24px 0;padding:16px;border-left:4px solid #1B5E20;background:#f8fafa;">
         <p style="margin:0 0 8px;font-weight:700;">A copy of your message:</p>
         <p style="margin:0;white-space:pre-wrap;color:#3f3f46;">${escapeHtml(payload.message)}</p>
       </div>

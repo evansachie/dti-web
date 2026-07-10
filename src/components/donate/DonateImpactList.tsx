@@ -24,8 +24,8 @@ export function DonateImpactList() {
     <div className="flex flex-col gap-6 mb-12">
       {impacts.map((item, i) => (
         <div key={i} className="flex items-start gap-5 group">
-          <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-[#EAF5F3]">
-            <item.icon size={20} strokeWidth={1.5} className="text-[#24a186]" />
+          <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-[#FFF8E1]">
+            <item.icon size={20} strokeWidth={1.5} className="text-[#1B5E20]" />
           </div>
           <div className="pt-1">
             <p className="text-[#252A34] font-bold text-[16px] mb-1">

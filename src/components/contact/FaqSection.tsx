@@ -12,7 +12,7 @@ export function FaqSection() {
       <div className="max-w-[800px] mx-auto">
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-4 mb-5">
-            <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+            <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
               Common Questions
             </span>
             <div className="h-[2px] w-[30px] bg-zinc-300"></div>
@@ -42,7 +42,7 @@ export function FaqSection() {
                 value={`item-${index}`}
                 className="border-b border-zinc-100 last:border-0 py-2"
               >
-                <AccordionTrigger className="text-left text-[#252A34] text-[16px] md:text-[18px] font-medium pb-4 hover:no-underline hover:text-[#219D80] transition-colors gap-6 group">
+                <AccordionTrigger className="text-left text-[#252A34] text-[16px] md:text-[18px] font-medium pb-4 hover:no-underline hover:text-[#1B5E20] transition-colors gap-6 group">
                   <span
                     style={{
                       fontFamily: "var(--font-playfair-display), serif",

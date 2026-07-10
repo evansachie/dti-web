@@ -4,7 +4,7 @@ export function CtaSection() {
   return (
     <section className="relative py-28 px-6 bg-[#252A34] overflow-hidden w-full flex items-center justify-center">
       <div
-        className="absolute top-0 right-0 w-[50%] h-full bg-[#219D80]/30"
+        className="absolute top-0 right-0 w-[50%] h-full bg-[#1B5E20]/30"
         style={{ clipPath: "polygon(25% 0, 100% 0, 100% 100%, 0% 100%)" }}
       ></div>
 
@@ -22,7 +22,7 @@ export function CtaSection() {
         </p>
         <Link
           href="/contact"
-          className="bg-[#24a186] hover:bg-white hover:text-[#252A34] text-white px-10 py-4 text-[14px] font-bold transition-all uppercase tracking-wider shadow-lg"
+          className="bg-[#1B5E20] hover:bg-white hover:text-[#252A34] text-white px-10 py-4 text-[14px] font-bold transition-all uppercase tracking-wider shadow-lg"
         >
           Partner With Us
         </Link>

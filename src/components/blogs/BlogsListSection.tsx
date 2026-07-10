@@ -19,7 +19,7 @@ export function BlogsListSection() {
           <div>
             <div className="flex items-center gap-4 mb-8">
               <div className="h-[2px] w-[30px] bg-zinc-300"></div>
-              <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+              <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
                 Featured Post
               </span>
             </div>
@@ -41,7 +41,7 @@ export function BlogsListSection() {
                   {featuredPost.category}
                 </span>
                 <h2
-                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#219D80] transition-colors"
+                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#1B5E20] transition-colors"
                   style={{ fontFamily: "var(--font-playfair-display), serif" }}
                 >
                   {featuredPost.title}
@@ -61,7 +61,7 @@ export function BlogsListSection() {
                 </div>
                 <Link
                   href={`/blogs/${featuredPost.slug}`}
-                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#1B5E20] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
                 >
                   Read Full Article
                   <ArrowRight
@@ -83,7 +83,7 @@ export function BlogsListSection() {
                   {featuredPostMiddle.category}
                 </span>
                 <h2
-                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#219D80] transition-colors"
+                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#1B5E20] transition-colors"
                   style={{ fontFamily: "var(--font-playfair-display), serif" }}
                 >
                   {featuredPostMiddle.title}
@@ -103,7 +103,7 @@ export function BlogsListSection() {
                 </div>
                 <Link
                   href={`/blogs/${featuredPostMiddle.slug}`}
-                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#1B5E20] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
                 >
                   Read Full Article
                   <ArrowRight
@@ -143,7 +143,7 @@ export function BlogsListSection() {
                   {featuredPostTwo.category}
                 </span>
                 <h2
-                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#219D80] transition-colors"
+                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#1B5E20] transition-colors"
                   style={{ fontFamily: "var(--font-playfair-display), serif" }}
                 >
                   {featuredPostTwo.title}
@@ -163,7 +163,7 @@ export function BlogsListSection() {
                 </div>
                 <Link
                   href={`/blogs/${featuredPostTwo.slug}`}
-                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#1B5E20] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
                 >
                   Read Full Article
                   <ArrowRight
@@ -186,7 +186,7 @@ export function BlogsListSection() {
                   {featuredPostFourth.category}
                 </span>
                 <h2
-                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#219D80] transition-colors"
+                  className="text-[26px] md:text-[32px] leading-[1.3] text-[#252A34] font-medium mb-5 group-hover:text-[#1B5E20] transition-colors"
                   style={{ fontFamily: "var(--font-playfair-display), serif" }}
                 >
                   {featuredPostFourth.title}
@@ -206,7 +206,7 @@ export function BlogsListSection() {
                 </div>
                 <Link
                   href={`/blogs/${featuredPostFourth.slug}`}
-                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#1B5E20] font-bold text-[13px] uppercase tracking-wider transition-colors group/link"
                 >
                   Read Full Article
                   <ArrowRight
@@ -233,7 +233,7 @@ export function BlogsListSection() {
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-4">
               <div className="h-[2px] w-[30px] bg-zinc-300"></div>
-              <span className="text-[#219D80] text-[13px] font-bold uppercase tracking-wider">
+              <span className="text-[#1B5E20] text-[13px] font-bold uppercase tracking-wider">
                 Latest Articles
               </span>
             </div>
@@ -273,7 +273,7 @@ export function BlogsListSection() {
                     </span>
                   </div>
 
-                  <h3 className="text-[18px] font-bold text-[#252A34] mb-3 leading-snug group-hover:text-[#219D80] transition-colors line-clamp-2 flex-1">
+                  <h3 className="text-[18px] font-bold text-[#252A34] mb-3 leading-snug group-hover:text-[#1B5E20] transition-colors line-clamp-2 flex-1">
                     {post.title}
                   </h3>
 
@@ -283,7 +283,7 @@ export function BlogsListSection() {
 
                   <Link
                     href={`/blogs/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#219D80] font-bold text-[12px] uppercase tracking-wider transition-colors mt-auto group/link"
+                    className="inline-flex items-center gap-2 text-[#252A34] hover:text-[#1B5E20] font-bold text-[12px] uppercase tracking-wider transition-colors mt-auto group/link"
                   >
                     Read More
                     <ArrowRight
