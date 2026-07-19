@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/gallery",
     "/donate",
     "/contact",
+    "/volunteer",
     "/privacy-policy",
     "/terms-of-service",
   ].map((route) => ({

@@ -29,6 +29,7 @@ export const metadata: Metadata = getSeoDefaults();
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 
 export default function RootLayout({
   children,
@@ -53,6 +54,7 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <Analytics />
+        <GoogleAnalytics />
         <SpeedInsights />
       </body>
     </html>
