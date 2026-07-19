@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import {
   getOrganizationJsonLd,
@@ -54,6 +55,7 @@ export default function RootLayout({
         <ScrollToTop />
         <Analytics />
         <GoogleAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   );
