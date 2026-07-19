@@ -10,6 +10,8 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const hasSolidHeader =
+    pathname.startsWith("/verify/") || isScrolled || isMobileMenuOpen;
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -18,6 +20,7 @@ export function Navbar() {
     { name: "Services", href: "/services" },
     { name: "Blogs", href: "/blogs" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Volunteer", href: "/volunteer" },
   ];
 
   useEffect(() => {
@@ -47,7 +50,7 @@ export function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 w-full text-white transition-all duration-300 ${
-          isScrolled || isMobileMenuOpen
+          hasSolidHeader
             ? "bg-[#252A34]/95 backdrop-blur-md shadow-lg py-2"
             : "bg-transparent py-4"
         }`}
@@ -59,20 +62,18 @@ export function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <Image
-              src={isScrolled || isMobileMenuOpen ? "/logo2.svg" : "/logo.svg"}
+              src={hasSolidHeader ? "/logo2.svg" : "/logo.svg"}
               alt="DTI Logo"
               width={250}
               height={125}
               className={`object-contain transition-all duration-300 ${
-                isScrolled || isMobileMenuOpen
-                  ? "h-[48px] w-auto"
-                  : "h-[105px] w-auto"
+                hasSolidHeader ? "h-[48px] w-auto" : "h-[105px] w-auto"
               }`}
               priority
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-10 text-[14px] font-normal">
+          <div className="hidden lg:flex items-center gap-7 text-[14px] font-normal">
             {navItems.map((item) => {
               const isActive =
                 pathname === item.href ||

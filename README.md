@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DTI Public Website
 
-## Getting Started
+Next.js website for the Developmental Theatre Initiative: organization content, projects, news, donations, contact/newsletter forms, public volunteer applications, and volunteer ID verification.
 
-First, run the development server:
+## Local setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+cp .env.example .env.local
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The complete contract is in `.env.example`:
 
-## Learn More
+- `NEXT_PUBLIC_SITE_URL` — canonical public origin
+- `NEXT_PUBLIC_API_URL` — DTI API base including `/api`
+- Paystack public/secret keys — donation checkout and server verification
+- Brevo API/list settings — contact and newsletter flows
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` — optional; analytics is disabled when omitted
 
-To learn more about Next.js, take a look at the following resources:
+## Commands
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command             | Purpose                                    |
+| ------------------- | ------------------------------------------ |
+| `pnpm dev`          | Start the local Next.js server             |
+| `pnpm lint`         | ESLint                                     |
+| `pnpm format:check` | Verify formatting                          |
+| `pnpm build`        | Production build and TypeScript validation |
+| `pnpm start`        | Run the production build                   |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Key routes
 
-## Deploy on Vercel
+- `/volunteer` — public application
+- `/verify/[volunteerId]` — limited public ID verification, marked `noindex`
+- `/donate` — Paystack donation flow
+- `/projects`, `/blogs`, `/gallery` — public program content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy the API verification endpoint before releasing QR codes that point to `/verify/...`.
