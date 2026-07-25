@@ -148,7 +148,7 @@ export function Footer() {
             <li className="flex items-center gap-4">
               <Mail className="text-[#1B5E20] shrink-0" size={20} />
               <p className="text-zinc-400 text-sm break-all">
-                developmentaltheatreinitiative@gmail.com
+                info@developmentaltheatreinitiative.com
               </p>
             </li>
           </ul>

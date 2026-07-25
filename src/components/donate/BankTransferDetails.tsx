@@ -23,10 +23,10 @@ export function BankTransferDetails() {
       <p className="text-zinc-500 text-[12px] mt-4">
         After transferring, email us at{" "}
         <a
-          href="mailto:developmentaltheatreinitiative@gmail.com"
+          href="mailto:info@developmentaltheatreinitiative.com"
           className="text-[#1B5E20] hover:underline"
         >
-          developmentaltheatreinitiative@gmail.com
+          info@developmentaltheatreinitiative.com
         </a>{" "}
         with your receipt so we can acknowledge your gift.
       </p>

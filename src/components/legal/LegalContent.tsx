@@ -46,10 +46,10 @@ export function LegalContent({
           <p className="text-[14px] leading-7 text-zinc-500">
             For questions about these terms or this policy, contact us at{" "}
             <a
-              href="mailto:developmentaltheatreinitiative@gmail.com"
+              href="mailto:info@developmentaltheatreinitiative.com"
               className="font-semibold text-[#1B5E20] hover:underline"
             >
-              developmentaltheatreinitiative@gmail.com
+              info@developmentaltheatreinitiative.com
             </a>
             .
           </p>

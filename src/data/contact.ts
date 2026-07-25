@@ -23,8 +23,8 @@ export const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "developmentaltheatreinitiative@gmail.com",
-    href: "mailto:developmentaltheatreinitiative@gmail.com",
+    value: "info@developmentaltheatreinitiative.com",
+    href: "mailto:info@developmentaltheatreinitiative.com",
   },
   {
     icon: MapPin,

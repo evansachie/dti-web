@@ -42,7 +42,7 @@ export function AboutTeamSection() {
                 <MessageCircle size={20} />
               </a>
               <a
-                href={`mailto:developmentaltheatreinitiative@gmail.com`}
+                href={`mailto:info@developmentaltheatreinitiative.com`}
                 className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-[#1B5E20] text-[#252A34] hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-150"
               >
                 <Mail size={20} />

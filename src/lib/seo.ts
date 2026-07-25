@@ -49,7 +49,7 @@ export function getOrganizationJsonLd() {
     alternateName: siteConfig.name,
     url: siteConfig.url,
     logo: absoluteUrl("/logo.png"),
-    email: "developmentaltheatreinitiative@gmail.com",
+    email: "info@developmentaltheatreinitiative.com",
     telephone: "+233247134085",
     address: {
       "@type": "PostalAddress",
