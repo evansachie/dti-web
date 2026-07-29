@@ -17,7 +17,7 @@ type PageMetadataInput = {
   noIndex?: boolean;
 };
 
-const productionSiteUrl = "https://www.theatrefordevelopmentinitiative.com";
+const productionSiteUrl = "https://www.developmentaltheatreinitiative.com";
 
 export const siteConfig: SiteConfig = {
   name: "DTI",
