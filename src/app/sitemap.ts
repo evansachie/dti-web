@@ -3,7 +3,7 @@ import { absoluteUrl } from "@/lib/seo";
 import { allBlogPosts } from "@/data/blogs";
 import { projectsData } from "@/data/projects";
 
-const siteLastModified = new Date("2026-05-22");
+const siteLastModified = new Date("2026-07-29");
 const legalLastModified = new Date("2026-05-23");
 const legalRoutes = ["/privacy-policy", "/terms-of-service"];
 

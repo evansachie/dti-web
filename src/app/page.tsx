@@ -15,6 +15,7 @@ import { CtaSection } from "@/components/home/CtaSection";
 
 export const metadata: Metadata = createPageMetadata({
   title: "DTI | Developmental Theatre Initiative",
+  absoluteTitle: true,
   description:
     "Developmental Theatre Initiative promotes sustainable development through theatre, creative arts, dialogue, advocacy, and community participation.",
   path: "/",
