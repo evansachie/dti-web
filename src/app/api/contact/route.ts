@@ -273,6 +273,27 @@ export async function POST(request: Request) {
     console.error("Brevo contact list update failed:", error);
   }
 
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (apiUrl) {
+      await fetch(`${apiUrl}/enquiries`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: payload.fullName,
+          email: payload.email,
+          phone: payload.phone || null,
+          organisation: payload.organisation || null,
+          subject: payload.subject,
+          message: payload.message,
+          newsletter: payload.newsletterOptIn ?? false,
+        }),
+      });
+    }
+  } catch (error: unknown) {
+    console.error("Failed to save enquiry to API:", error);
+  }
+
   return Response.json({
     message: "Thank you! Your message has been sent successfully.",
   });
