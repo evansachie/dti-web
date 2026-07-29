@@ -65,6 +65,49 @@ function validatePayload(payload: ContactPayload) {
   return null;
 }
 
+const LOGO_URL =
+  "https://res.cloudinary.com/ev0t7ihh/image/upload/v1784992816/logo_xvlnee.svg";
+
+function wrapTemplate(bodyHtml: string) {
+  const year = new Date().getFullYear();
+  return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;padding:0;background-color:#f0f2f5;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f0f2f5;padding:40px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+          <tr>
+            <td style="background-color:#1B5E20;padding:32px 40px;text-align:center;">
+              <img src="${LOGO_URL}" alt="DTI Logo" width="200" style="display:block;margin:0 auto 14px;" />
+              <h1 style="color:#ffffff;margin:0;font-size:20px;font-weight:700;letter-spacing:0.5px;">Developmental Theatre Initiative</h1>
+              <p style="color:#F9A825;margin:6px 0 0;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;">Using Theatre for Social Change</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:40px;">
+              ${bodyHtml}
+            </td>
+          </tr>
+          <tr>
+            <td style="border-top:1px solid #e5e7eb;padding:24px 40px;text-align:center;">
+              <p style="color:#999999;font-size:11px;margin:0 0 6px;">&copy; ${year} Developmental Theatre Initiative (DTI)</p>
+              <p style="color:#bbbbbb;font-size:11px;margin:0;">Accra, Ghana &bull; info@developmentaltheatreinitiative.com &bull; +233 24 713 4085</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
+}
+
 function buildEmailContent(payload: ContactPayload) {
   const subjectLabel = subjectLabels[payload.subject] ?? payload.subject;
   const fields = [
@@ -95,20 +138,18 @@ function buildEmailContent(payload: ContactPayload) {
     )
     .join("");
 
-  const htmlContent = `
-    <div style="font-family:Arial,sans-serif;line-height:1.6;color:#252A34;">
-      <h1 style="font-size:22px;margin:0 0 16px;">New DTI website enquiry</h1>
-      <table style="border-collapse:collapse;width:100%;max-width:680px;margin-bottom:24px;">
-        ${htmlRows}
-      </table>
-      <h2 style="font-size:16px;margin:0 0 8px;">Message</h2>
-      <p style="white-space:pre-wrap;color:#3f3f46;">${escapeHtml(payload.message)}</p>
-    </div>`;
+  const bodyHtml = `
+    <h1 style="font-size:22px;margin:0 0 16px;color:#252A34;">New DTI website enquiry</h1>
+    <table style="border-collapse:collapse;width:100%;margin-bottom:24px;">
+      ${htmlRows}
+    </table>
+    <h2 style="font-size:16px;margin:0 0 8px;color:#252A34;">Message</h2>
+    <p style="white-space:pre-wrap;color:#3f3f46;">${escapeHtml(payload.message)}</p>`;
 
   return {
     subjectLabel,
     textContent,
-    htmlContent,
+    htmlContent: wrapTemplate(bodyHtml),
   };
 }
 
@@ -127,22 +168,20 @@ function buildConfirmationEmailContent(payload: ContactPayload) {
     "Developmental Theatre Initiative",
   ].join("\n");
 
-  const htmlContent = `
-    <div style="font-family:Arial,sans-serif;line-height:1.7;color:#252A34;">
-      <h1 style="font-size:22px;margin:0 0 16px;">Thank you for contacting DTI</h1>
-      <p>Hello ${escapeHtml(payload.fullName)},</p>
-      <p>Thank you for contacting Developmental Theatre Initiative (DTI). We have received your message and our team will review it shortly.</p>
-      <p>We typically respond within 1-2 business days.</p>
-      <div style="margin:24px 0;padding:16px;border-left:4px solid #1B5E20;background:#f8fafa;">
-        <p style="margin:0 0 8px;font-weight:700;">A copy of your message:</p>
-        <p style="margin:0;white-space:pre-wrap;color:#3f3f46;">${escapeHtml(payload.message)}</p>
-      </div>
-      <p>Regards,<br />Developmental Theatre Initiative</p>
-    </div>`;
+  const bodyHtml = `
+    <h1 style="font-size:22px;margin:0 0 16px;color:#252A34;">Thank you for contacting DTI</h1>
+    <p style="color:#3f3f46;">Hello ${escapeHtml(payload.fullName)},</p>
+    <p style="color:#3f3f46;">Thank you for contacting Developmental Theatre Initiative (DTI). We have received your message and our team will review it shortly.</p>
+    <p style="color:#3f3f46;">We typically respond within 1-2 business days.</p>
+    <div style="margin:24px 0;padding:16px;border-left:4px solid #1B5E20;background:#f8fafa;">
+      <p style="margin:0 0 8px;font-weight:700;color:#252A34;">A copy of your message:</p>
+      <p style="margin:0;white-space:pre-wrap;color:#3f3f46;">${escapeHtml(payload.message)}</p>
+    </div>
+    <p style="color:#3f3f46;">Regards,<br />Developmental Theatre Initiative</p>`;
 
   return {
     textContent,
-    htmlContent,
+    htmlContent: wrapTemplate(bodyHtml),
   };
 }
 
