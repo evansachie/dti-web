@@ -30,3 +30,92 @@ export async function registerVolunteer(
 
   return res.json();
 }
+
+export interface InternshipFormValues {
+  fullName: string;
+  gender: string;
+  dateOfBirth: string;
+  nationality: string;
+  location: string;
+  phone: string;
+  email: string;
+  educationStatus: string;
+  institution: string;
+  programme: string;
+  studyLevel: string;
+  graduationYear: string;
+  areaOfInterest: string[];
+  areaOfInterestOther: string;
+  hasTheatreExperience: boolean;
+  theatreExperienceDesc: string;
+  theatreAreas: string[];
+  theatreAreasOther: string;
+  theatreProductions: string;
+  tfdInterest: string;
+  tfdSocialImpact: string;
+  hasCommunityExperience: boolean;
+  communityExperienceDesc: string;
+  volunteerWork: string;
+  skills: string[];
+  skillsOther: string;
+  duration: string;
+  availableFrom: string;
+  willingFieldWork: boolean;
+  personalStatement: string;
+  reference1Name: string;
+  reference1Position: string;
+  reference1Phone: string;
+  reference2Name: string;
+  reference2Position: string;
+  reference2Phone: string;
+  declarationName: string;
+  declarationDate: string;
+}
+
+export async function submitInternshipApplication(
+  data: InternshipFormValues,
+  files: {
+    cv?: File;
+    motivationLetter?: File;
+    portfolio?: File;
+    certificates?: File;
+    recommendationLetter?: File;
+  }
+): Promise<{ id: string; applicationNo: string; message: string }> {
+  const formData = new FormData();
+
+  Object.entries(data).forEach(([key, value]) => {
+    if (Array.isArray(value)) {
+      formData.append(key, JSON.stringify(value));
+    } else if (typeof value === "boolean") {
+      formData.append(key, String(value));
+    } else if (value !== undefined && value !== null) {
+      formData.append(key, String(value));
+    }
+  });
+
+  const fileFields = [
+    "cv",
+    "motivationLetter",
+    "portfolio",
+    "certificates",
+    "recommendationLetter",
+  ] as const;
+  fileFields.forEach((field) => {
+    if (files[field]) {
+      formData.append("files", files[field]!);
+    }
+  });
+
+  const res = await fetch(`${API_BASE_URL}/internships`, {
+    method: "POST",
+    body: formData,
+  });
+
+  if (!res.ok) {
+    const body = await res.json().catch(() => null);
+    throw new Error(body?.message ?? `Submission failed (${res.status})`);
+  }
+
+  return res.json();
+}
