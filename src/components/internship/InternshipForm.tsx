@@ -66,6 +66,8 @@ export function InternshipForm() {
       if (!form.nationality.trim()) stepErrors.nationality = "Required";
       if (!form.location.trim()) stepErrors.location = "Required";
       if (!form.phone.trim()) stepErrors.phone = "Required";
+      else if (form.phone.trim().length < 8)
+        stepErrors.phone = "Enter a valid phone number";
       if (!form.email.trim()) stepErrors.email = "Required";
       else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
         stepErrors.email = "Invalid email";
@@ -80,9 +82,17 @@ export function InternshipForm() {
       if (!form.duration) stepErrors.duration = "Required";
       if (!form.availableFrom.trim()) stepErrors.availableFrom = "Required";
     } else if (step === 5) {
+      if (!form.tfdInterest.trim()) stepErrors.tfdInterest = "Required";
+      else if (form.tfdInterest.trim().length < 10)
+        stepErrors.tfdInterest = "Too short";
+      if (!form.tfdSocialImpact.trim()) stepErrors.tfdSocialImpact = "Required";
+      else if (form.tfdSocialImpact.trim().length < 10)
+        stepErrors.tfdSocialImpact = "Too short";
       if (!form.personalStatement.trim())
         stepErrors.personalStatement = "Required";
-      else if (form.personalStatement.length > 250)
+      else if (
+        form.personalStatement.trim().split(/\s+/).filter(Boolean).length > 250
+      )
         stepErrors.personalStatement = "Max 250 words";
     } else if (step === 6) {
       if (!files.cv) stepErrors.cv = "CV is required";
