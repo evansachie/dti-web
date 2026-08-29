@@ -72,6 +72,15 @@ export function Footer() {
             </li>
             <li>
               <Link
+                href="/team"
+                className="text-zinc-400 text-sm hover:text-[#1B5E20] transition-colors flex items-center gap-2"
+              >
+                <span className="w-1 h-1 bg-[#1B5E20] rounded-full"></span> Our
+                Team
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/projects"
                 className="text-zinc-400 text-sm hover:text-[#1B5E20] transition-colors flex items-center gap-2"
               >
