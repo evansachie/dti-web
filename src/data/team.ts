@@ -58,7 +58,7 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "ohenenana-kwadwo-gyembibi-mensah-bonsu",
     name: "Ohenenana Kwadwo Gyembibi Mensah Bonsu",
-    position: "Member, Board of Directors",
+    position: "Board Member – Partnership & Resource Mobilization",
     category: "board-of-directors",
     initials: "KM",
     photo: "/team/ohenemana.jpeg",
@@ -146,7 +146,7 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "prof-yaw-delali-bensah",
     name: "Prof. Yaw Delali Bensah",
-    position: "Member, Board of Directors",
+    position: "Deputy Chairperson Board of Directors",
     category: "board-of-directors",
     initials: "YB",
     photo: "/team/prof-bensah.jpg",
