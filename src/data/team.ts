@@ -80,10 +80,10 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "dr-joseph-offie-thompson",
     name: "Dr. Joseph Offie Thompson",
-    position: "Advisory Council Member",
-    category: "advisory-council",
+    position: "Board Member",
+    category: "board-of-directors",
     initials: "JT",
-    photo: "/team/joseph-offie.jpeg",
+    photo: "/team/Joseph.jpeg",
     intro:
       "A Senior Lecturer at the University of Ghana and Research Chair of AAPG, specializing in geophysics, tectonics, and structural geology.",
     bio: "Dr. Joseph Offei Thompson is a Senior Lecturer in the Department of Earth Science at the University of Ghana and the Research Chair of the American Association of Petroleum Geologists (AAPG).\n\nHe is also the Sports Tutor of Jubilee Hall, University of Ghana.\n\nAcademic Background and Qualifications:\n• BSc – University of Ghana\n• MSc – France (University of Lille 1)\n• PhD – France (University of Rennes 1)\n\nPrimary Research Focus:\n\nDr. Thompson specializes in geophysics, tectonics, and structural geology, with research emphasis on:\n• Tectonics and Geodynamics: Passive margin formation, rift dynamics, crustal structure, and supercontinent cycles (including Rodinia–Gondwana).\n• Seismic Data Analysis: Integration of wide-angle and reflection seismic datasets to study continental crusts and deep sedimentary basins.\n• Regional Geology: Structure and evolution of continental margins in West Africa (e.g., West African Craton) and East Africa (e.g., Mozambique Margin, Limpopo Corridor).\n\nDr. Thompson has also reviewed and published a number of high impact scientific research journals.",
@@ -91,10 +91,10 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "lady-pastor-sussana-hammond",
     name: "Lady Pastor Sussana N. S. Hammond",
-    position: "Advisory Council Member",
-    category: "advisory-council",
+    position: "Board Member",
+    category: "board-of-directors",
     initials: "SH",
-    photo: "/team/lady-pastor-sussana.jpeg",
+    photo: "/team/Susanna.jpeg",
     intro:
       "An educator, children's minister, and certified counselor with decades of experience in teaching, ministry, and community service.",
     bio: "Childhood Life\n\nPs. Mrs. Sussana N. S. Hammond Atisu was born in Osu, a suburb of Accra on Wednesday, 27th December, 1972 to Mr. Alexandra A. Hammond and Mrs. Matilda Asamaniwaa Hammond (deceased). She is the first of seven (7) siblings. She gave her life to Jesus Christ in 1984; was baptized in water in 1985; and received the Holy Spirit Baptism the same time she was baptized in water. She started teaching her father's Goodnews Club at age sixteen (16) with so much love and zeal for the work of God. Her passion was to teach little children.\n\nAcademic Life\n\nShe started her early childhood education in Kumasi, Dekyemso Nursery School and later on at the Harrow International School, Abeka-Accra where she wrote the Common Entrance Examination in 1986. She had her secondary school education at the Swedru Secondary School from 1986 to 1991. She enrolled at the Akrokerri Teacher Training College in 1991 to be trained as a professional teacher. She completed in 1994 with a 3 Year Post Secondary Teachers Cert A, awarded by the University of Cape Coast. She later had admission to the University of Ghana, Legon to pursue BSc Adm. in 2009 and graduated in 2012. She gained admission to the Assemblies of God Theological Seminary (AGTS) in 2015 to prepare spiritually and theologically for ministry. She graduated with Diploma in Theology in 2018. She is also a Certified Professional Counselor from the College of Counseling and Psychology (CCP).\n\nMinistry Life\n\nAt the Training College, she and other colleague students helped Ps. Tito Adjei, now Rev. Dr. Tito Adjei (Ashanti Regional Superintendent) to start the Akrokerri Assemblies of God Church with the little children in the Akrokerri community. After her training she was posted to Ada Songoya and was the only young teacher who was interested in teaching the little children at church. She has always been with the Children's Ministry. She served the following Children's Ministries: North Kaneshie Assemblies of God Church (1991–1998); Full Life Assemblies of God Church (1998–2006); Kwabenya Central Assemblies of God Church (2006–2014); and Living Springs Assemblies of God Church (2014–date) where she now serves as the Associate Pastor In-Charge of Women and Children Ministries. She also has a deep passion for Social Work, Rural Evangelism and Missions in general.\n\nCareer Life\n\nShe worked with the Presbyterian Education Unit in the Greater Accra Region from 1994–2002. She has taught in the following schools: Ada-Songoya Presbyterian Primary School (1994–1996); La Presbyterian Primary School (1996–1999); Apenkwa Presbyterian Primary School (1999–2002); and Ghana Atomic Energy Commission (GAEC) Basic School (2002–date). She loves her job as a Lower Primary and Nursery Teacher and enjoys singing the children songs and rhymes.\n\nFamily Life\n\nShe is married to Rev. Michael Atisu and the good Lord has blessed them with three biological children (Selasie, Delali, and Aseye) and many other children. She is a family oriented person and has been a strong pillar behind the husband's ministry for the past 22 years.",
@@ -149,7 +149,7 @@ export const teamMembers: TeamMember[] = [
     position: "Deputy Chairperson Board of Directors",
     category: "board-of-directors",
     initials: "YB",
-    photo: "/team/prof-bensah.jpg",
+    photo: "/team/Delali.jpeg",
     heroPosition: "center 20%",
     intro:
       "An Associate Professor of Materials Science and Engineering at the University of Ghana, pioneering innovations in biofuels, battery energy materials, and carbon technology.",
@@ -166,6 +166,40 @@ export const teamMembers: TeamMember[] = [
     intro:
       "A Ghanaian climate and circular economy leader serving as Zero Waste Director at the Green Africa Youth Organization (GAYO).",
     bio: "Jacob Johnson Attakpah is a Ghanaian climate and circular economy leader whose work spans zero waste systems, climate policy, and sustainable urban development. He currently serves as Zero Waste Director at the Green Africa Youth Organization (GAYO), where he leads strategy, partnerships, and fundraising for zero waste programming in Ghana and across Africa.\n\nOver the past several years, he has helped design and scale city and district-level waste and climate initiatives, from Ghana to Uganda, Botswana, and most recently Benin. Jacob has represented Ghana and African civil society in major international spaces, including the Intergovernmental Negotiating Committee sessions on plastic pollution, COP processes, and zero waste conferences globally.\n\nHis work has been recognised through awards including the Ghana National Plastic Action Partnership Community Champion Award (2025) and the Earthshot Prize Clean Our Air category (2024). His work has included supporting the review of Ghana's Nationally Determined Contributions for the WASH sector and helping shape broader climate rationale and policy inputs.\n\nWith academic training in climate science, sustainable development, and geoinformation science, he brings both technical insight and practical experience to conversations on waste, plastics, and climate action.",
+  },
+  {
+    slug: "asuku-bukari-haruna",
+    name: "Asuku Bukari Haruna",
+    position: "Board Member – Finance & Audit Committee Head",
+    category: "board-of-directors",
+    initials: "AH",
+    photo: "/team/asuku.jpeg",
+    intro:
+      "A member of the Board of Directors and Head of the Finance and Audit Committee at DTI, focused on financial transparency, responsible leadership, and accountable resource management.",
+    bio: "Asuku Bukari Haruna serves as a member of the Board of Directors and Finance and Audit Committee Head for the Developmental Theatre Initiative (DTI). He is focused on financial transparency, responsible leadership, financial accountability, effective resource management, and supporting the organization's mission.",
+  },
+  {
+    slug: "kpante-mbiba-abdullah",
+    name: "Kpante Mbiba Abdullah",
+    position: "Board Member",
+    category: "board-of-directors",
+    initials: "KA",
+    photo: "/team/Kpante.jpeg",
+    intro:
+      "A former student leader at the University of Ghana with experience in parliamentary administration and academic representation, now serving on DTI's Board of Directors.",
+    bio: "Kpante Mbiba Abdullah serves as a member of the Board of Directors of the Developmental Theatre Initiative (DTI).\n\nHe previously served as a General Assembly Representative at the University of Ghana and as Clerk of the University of Ghana Parliament. He also served as Congress Speaker for the Department of Economics and Congress Speaker for the Department of Geography.\n\nHis background in parliamentary procedure, academic representation, and student governance informs his contributions to DTI's board oversight and institutional accountability.",
+  },
+  {
+    slug: "stellastina-adu-gyamfi",
+    name: "Ms. Stellastina Adu-Gyamfi",
+    position:
+      "Board Member – Partnership & Resource Mobilization Committee Head",
+    category: "board-of-directors",
+    initials: "SA",
+    photo: "/team/Stellastina.jpeg",
+    intro:
+      "A member of DTI's Board of Directors leading the Partnership and Resource Mobilization Committee, focused on building strategic partnerships and mobilizing resources to advance the organization's mission.",
+    bio: "Ms. Stellastina Adu-Gyamfi serves as a member of the Board of Directors and Head of the Partnership and Resource Mobilization Committee for the Developmental Theatre Initiative (DTI), where she focuses on building strategic partnerships and mobilizing resources to advance the organization's mission.",
   },
 ];
 
