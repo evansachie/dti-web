@@ -76,6 +76,25 @@ export function ProjectsListSection() {
         "Community Dialogue",
       ],
     },
+    {
+      slug: "working-but-not-working",
+      title: "Working But Not Working",
+      subtitle:
+        "Exploring Youth Employment Reality Through Theatre for Development",
+      category: "Youth Development",
+      location: "Madina, Greater Accra (Pilot)",
+      duration: "September – December 2026",
+      status: "Upcoming",
+      description:
+        "A Theatre for Development project exploring youth employment, underemployment, and meaningful work. Through participatory research, storytelling, and theatre, the project brings young people together to examine the gap between being employed and experiencing meaningful, dignified, and adequate employment — culminating in a public performance and structured community dialogue.",
+      image:
+        "https://images.unsplash.com/photo-1573167691330-597fd91bc6c7?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      highlights: [
+        "Youth Employment Research",
+        "Eight Participatory TfD Sessions",
+        "Public Performance & Dialogue",
+      ],
+    },
   ];
 
   return (
