@@ -7,10 +7,11 @@ export function ProjectsListSection() {
     {
       slug: "clean-earth-clear-future",
       title: "Clean Earth, Clear Future",
-      subtitle: "Assin Foso, Central Region (Pilot) / Nationwide",
+      subtitle:
+        "A Theatre for Development Approach to Environmental Hygiene in Ghana",
       category: "Health & Sanitation",
-      location: "Assin Foso, Central Region",
-      duration: "Upcoming (Pilot Phase)",
+      location: "Nationwide",
+      duration: "Upcoming",
       status: "Upcoming",
       description:
         "Environmental Hygiene Awareness Project is focused on educating communities on proper sanitation practices through theatre performances, health walks, clean-up exercises, and demonstration of proper waste disposal.",
@@ -27,8 +28,8 @@ export function ProjectsListSection() {
       title: "School Theatre Workshop",
       subtitle: "Empowering Students Through Participatory Theatre",
       category: "Youth Development",
-      location: "Assin Foso, Central Region (Pilot)",
-      duration: "Upcoming (Pilot Phase)",
+      location: "Nationwide",
+      duration: "Upcoming",
       status: "Upcoming",
       description:
         "A school-based programme visiting 3–5 schools to train students in participatory theatre, develop short plays, and build confidence, creativity, and leadership skills among young people.",
@@ -64,7 +65,7 @@ export function ProjectsListSection() {
       title: "Dialogue on the Stage",
       subtitle: "Navigating Tradition and Modernity in Marriage",
       category: "Culture & Development",
-      location: "Assin Foso, Central Region",
+      location: "Central Region, Ghana",
       duration: "17th May 2025",
       status: "Previous",
       description:

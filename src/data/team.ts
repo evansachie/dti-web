@@ -201,6 +201,17 @@ export const teamMembers: TeamMember[] = [
       "A member of DTI's Board of Directors leading the Partnership and Resource Mobilization Committee, focused on building strategic partnerships and mobilizing resources to advance the organization's mission.",
     bio: "Ms. Stellastina Adu-Gyamfi serves as a member of the Board of Directors and Head of the Partnership and Resource Mobilization Committee for the Developmental Theatre Initiative (DTI), where she focuses on building strategic partnerships and mobilizing resources to advance the organization's mission.",
   },
+  {
+    slug: "grace-afetsrom",
+    name: "Grace Afetsrom",
+    position: "Board Member – Secretary to the Board",
+    category: "board-of-directors",
+    initials: "GA",
+    photo: "/team/grace-afetsrom.jpeg",
+    intro:
+      "A graduate of the University of Ghana in Information Studies and Theatre Arts, with practical theatre production experience and a background in student leadership within the performing arts.",
+    bio: "Grace Afetsrom is a graduate of the University of Ghana, where she obtained a Bachelor of Arts degree in Information Studies and Theatre Arts in 2025. Her academic background has developed her knowledge in communication, research, information management, and theatre and creative arts.\n\nShe has participated in several theatrical productions, gaining practical experience and firsthand knowledge of theatre production, performance, and creative collaboration. During her time at the University of Ghana, she served as Deputy General Secretary of the Association of Performing Arts (ASPA), where she supported the planning and implementation of projects and programmes and worked closely with lecturers and senior members of the School.",
+  },
 ];
 
 export function getMemberBySlug(slug: string): TeamMember | undefined {

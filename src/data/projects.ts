@@ -36,8 +36,8 @@ export const projectsData: ProjectDetail[] = [
     subtitle:
       "A Theatre for Development Approach to Environmental Hygiene in Ghana",
     category: "Health & Sanitation",
-    location: "Assin Foso, Central Region (Pilot) / Nationwide",
-    duration: "3 months (Pilot) / 12 months (Full Scale)",
+    location: "Nationwide",
+    duration: "12 months",
     status: "Upcoming",
     description:
       "Environmental Hygiene Awareness Project is focused on educating communities on proper sanitation practices through theatre performances, health walks, clean-up exercises, and demonstration of proper waste disposal.",
@@ -77,11 +77,11 @@ export const projectsData: ProjectDetail[] = [
         "Market women and traders",
       ],
       geographicScope:
-        "Clean Earth, Clear Future operates nationwide but will begin with a pilot phase in Assin Foso and surrounding communities in the Central Region of Ghana, with planned expansion to other regions based on pilot learnings.",
+        "Clean Earth, Clear Future is designed as a nationwide programme from the outset, with implementation phased across communities and regions based on ongoing learnings.",
       implementationStrategy: {
         phase1: [
-          "Programme leadership, coordination, and field implementation (Assin Foso pilot)",
-          "School environmental education and engagement in selected pilot schools",
+          "Programme leadership, coordination, and nationwide field implementation",
+          "School environmental education and engagement in selected schools nationwide",
         ],
         phase2: [
           "Community environmental advocacy, clean-up campaigns, and Theatre for Development performances",
@@ -125,8 +125,8 @@ export const projectsData: ProjectDetail[] = [
     title: "School Theatre Workshop",
     subtitle: "Empowering Students Through Participatory Theatre",
     category: "Youth Development",
-    location: "Assin Foso, Central Region (Pilot) / Nationwide",
-    duration: "3 months (Pilot) / 12 months (Full Scale)",
+    location: "Nationwide",
+    duration: "12 months",
     status: "Upcoming",
     description:
       "A school-based Theatre for Development programme that visits schools to train students in participatory theatre, develop short plays, and build confidence, creativity, and leadership skills among young people.",
@@ -158,10 +158,10 @@ export const projectsData: ProjectDetail[] = [
         "Educational institutions nationwide",
       ],
       geographicScope:
-        "The programme will begin with a pilot phase in 3–5 schools in Assin Foso and surrounding communities in the Central Region, with plans to scale to other regions.",
+        "The programme is designed to run nationwide, beginning with an initial phase in 3–5 schools before scaling to additional schools and regions.",
       implementationStrategy: {
         phase1: [
-          "Partner with 3–5 schools in the pilot area",
+          "Partner with 3–5 schools nationwide",
           "Conduct baseline assessments of student needs and interests",
         ],
         phase2: [
@@ -285,7 +285,7 @@ export const projectsData: ProjectDetail[] = [
     title: "Dialogue on the Stage",
     subtitle: "Navigating Tradition and Modernity in Marriage",
     category: "Culture & Development",
-    location: "Assin Foso, Central Region, Ghana",
+    location: "Central Region, Ghana",
     duration: "17th May 2025",
     status: "Previous",
     description:
@@ -316,7 +316,7 @@ export const projectsData: ProjectDetail[] = [
         "Religious leaders",
         "General community members",
       ],
-      geographicScope: "Assin Foso, Central Region, Ghana",
+      geographicScope: "Central Region, Ghana",
       implementationStrategy: {
         phase1: [
           "Engagement with community members to identify key concerns",

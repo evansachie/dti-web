@@ -134,7 +134,7 @@ export const testimonialsData = [
     quote:
       "The environmental hygiene play staged here was an absolute eye-opener. It didn't just entertain us; it directly mobilized our entire community to take action. The massive cleanup exercise that followed is definitive proof of DTI's remarkable impact.",
     name: "Municipal Chief Executive",
-    title: "Assin Foso Municipality",
+    title: "Municipal Assembly, Ghana",
     avatarLetter: "M",
   },
   {

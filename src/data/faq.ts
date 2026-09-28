@@ -18,7 +18,7 @@ export const faqData: FaqItem[] = [
     question:
       "Are your projects restricted only to the Greater Accra and Central Regions?",
     answer:
-      "No. While projects like our 'Clean Earth, Clear Future' pilot began in Assin Foso and 'Love Beyond Romance' started at the University of Ghana, DTI is a national initiative. We are actively scaling our programs and are open to partnerships that allow us to deploy our teams to any region across Ghana.",
+      "No. While projects like 'Love Beyond Romance' started at the University of Ghana and 'Working But Not Working' is piloting in Madina, Greater Accra, our 'Clean Earth, Clear Future' campaign was designed as a nationwide initiative from the start. DTI is a national initiative overall, and we are actively scaling our programs and are open to partnerships that allow us to deploy our teams to any region across Ghana.",
   },
   {
     question: "Can I join DTI as an actor, facilitator, or volunteer?",
