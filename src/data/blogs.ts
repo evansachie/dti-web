@@ -216,10 +216,10 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1598387846148-47e82ee120cc?w=800&q=80",
   },
   {
-    title: "From Cleanup to Policy: How One Performance Changed Assin Foso",
+    title: "From Cleanup to Policy: How One Performance Changed a Community",
     category: "Impact",
     date: "January 15, 2026",
-    slug: "from-cleanup-to-policy-how-one-performance-changed-assin-foso",
+    slug: "from-cleanup-to-policy-how-one-performance-changed-a-community",
     readTime: "8 min read",
     excerpt:
       "The remarkable story of how a single DTI theatre performance on environmental hygiene led to a community-wide cleanup and a municipal government commitment.",

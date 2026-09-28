@@ -22,7 +22,7 @@ export function AboutTeamSection() {
         <div className="max-w-[400px] mx-auto">
           <div className="relative w-full aspect-4/5 bg-zinc-100 mb-6 group overflow-hidden shadow-md">
             <Image
-              src="/gallery/founder.jpg"
+              src="/gallery/founder.jpeg"
               alt="Enoch Aggrey"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
