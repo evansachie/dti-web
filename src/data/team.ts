@@ -122,6 +122,17 @@ export const teamMembers: TeamMember[] = [
     bio: "Osman Dauda is a Ghanaian educator, writer, school administrator, and emerging entrepreneur with a strong passion for education, personal development, creativity, and community impact. He holds a Bachelor of Education in JHS Education, with a specialization in Ghanaian Language (Asante Twi) and English, from Foso College of Education.\n\nHe has experience in teaching, academic coordination, school administration, home tutoring, writing, and youth-focused initiatives. Osman is dedicated to creating opportunities that empower young people and contribute meaningfully to society.\n\nHe also has a keen interest in entrepreneurship, digital skills, educational technology, and creative projects that translate ideas into practical, impactful solutions.",
   },
   {
+    slug: "fredrick-damyiweh",
+    name: "Fredrick Damyiweh",
+    position: "Social Development Professional",
+    category: "executive-management-team",
+    initials: "FD",
+    photo: "/team/fred.jpeg",
+    intro:
+      "A social development professional committed to building stronger, healthier communities through social work, creative engagement, and people-centred problem solving.",
+    bio: "Fredrick Damyiweh is a social development professional with a Bachelor of Arts in Social Work and Sociology from the University of Ghana. His studies gave him a strong grounding in community development, social research, and people-centred problem solving.\n\nFredrick is committed to building stronger, healthier communities. He combines his social work skills with creative engagement to raise awareness and inspire people to take action on environmental and social issues.",
+  },
+  {
     slug: "patricia-mensah",
     name: "Patricia Mensah",
     position: "Creative & Design Team Head",
