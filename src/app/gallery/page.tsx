@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { GalleryGridSection } from "@/components/gallery/GalleryGridSection";
 import { CtaSection } from "@/components/home/CtaSection";
+import { fetchGalleryImages } from "@/lib/api";
 
 import { createPageMetadata } from "@/lib/seo";
 
@@ -12,11 +13,13 @@ export const metadata: Metadata = createPageMetadata({
   path: "/gallery",
 });
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const images = await fetchGalleryImages();
+
   return (
     <div className="flex flex-col min-h-screen bg-white font-sans">
       <PageHero title="Impact In Pictures" breadcrumb="Gallery" />
-      <GalleryGridSection />
+      <GalleryGridSection images={images} />
       <CtaSection />
     </div>
   );

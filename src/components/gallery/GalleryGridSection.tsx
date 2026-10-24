@@ -2,34 +2,48 @@
 
 import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Images } from "lucide-react";
 import { Pagination } from "@/components/ui/Pagination";
-import { galleryData } from "@/data/gallery";
+import type { GalleryImage } from "@/lib/api";
 
-export function GalleryGridSection() {
+function formatCategory(category: string): string {
+  return category
+    .toLowerCase()
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+export function GalleryGridSection({ images }: { images: GalleryImage[] }) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   const itemsPerPage = 9;
-  const totalPages = Math.ceil(galleryData.length / itemsPerPage);
-  const pagedData = galleryData.slice(
+  const totalPages = Math.ceil(images.length / itemsPerPage);
+  const pagedData = images.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
-  const handlePrevious = useCallback((e?: React.MouseEvent) => {
-    if (e) e.stopPropagation();
-    setSelectedIndex((prev) =>
-      prev !== null ? (prev === 0 ? galleryData.length - 1 : prev - 1) : null
-    );
-  }, []);
+  const handlePrevious = useCallback(
+    (e?: React.MouseEvent) => {
+      if (e) e.stopPropagation();
+      setSelectedIndex((prev) =>
+        prev !== null ? (prev === 0 ? images.length - 1 : prev - 1) : null
+      );
+    },
+    [images.length]
+  );
 
-  const handleNext = useCallback((e?: React.MouseEvent) => {
-    if (e) e.stopPropagation();
-    setSelectedIndex((prev) =>
-      prev !== null ? (prev === galleryData.length - 1 ? 0 : prev + 1) : null
-    );
-  }, []);
+  const handleNext = useCallback(
+    (e?: React.MouseEvent) => {
+      if (e) e.stopPropagation();
+      setSelectedIndex((prev) =>
+        prev !== null ? (prev === images.length - 1 ? 0 : prev + 1) : null
+      );
+    },
+    [images.length]
+  );
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -42,8 +56,7 @@ export function GalleryGridSection() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [selectedIndex, handlePrevious, handleNext]);
 
-  const selectedImage =
-    selectedIndex !== null ? galleryData[selectedIndex] : null;
+  const selectedImage = selectedIndex !== null ? images[selectedIndex] : null;
 
   return (
     <section className="py-24 px-6 bg-[#f8fafa] w-full">
@@ -73,57 +86,71 @@ export function GalleryGridSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {pagedData.map((item, localIndex) => {
-            const globalIndex = (currentPage - 1) * itemsPerPage + localIndex;
-            return (
-              <div
-                key={item.id}
-                className="group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
-                onClick={() => setSelectedIndex(globalIndex)}
-              >
-                <div className="relative aspect-4/5 overflow-hidden">
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
+        {images.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-24 text-center">
+            <Images className="h-14 w-14 text-zinc-300" />
+            <p className="mt-6 text-[18px] text-zinc-500">
+              New photos are on the way — check back soon.
+            </p>
+          </div>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {pagedData.map((item, localIndex) => {
+                const globalIndex =
+                  (currentPage - 1) * itemsPerPage + localIndex;
+                return (
+                  <div
+                    key={item.id}
+                    className="group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer"
+                    onClick={() => setSelectedIndex(globalIndex)}
+                  >
+                    <div className="relative aspect-4/5 overflow-hidden">
+                      <Image
+                        src={item.imageUrl}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
 
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <span className="text-[#1B5E20] text-[10px] font-bold uppercase tracking-[0.2em] mb-2 block">
-                        {item.category}
-                      </span>
-                      <h3
-                        className="text-white text-[20px] font-medium mb-1"
-                        style={{
-                          fontFamily: "var(--font-playfair-display), serif",
-                        }}
-                      >
-                        {item.title}
-                      </h3>
-                      <p className="text-white/60 text-[12px] font-medium uppercase tracking-wider flex items-center gap-2">
-                        <span className="w-4 h-px bg-[#1B5E20]"></span>
-                        {item.location}
-                      </p>
+                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                          <span className="text-[#1B5E20] text-[10px] font-bold uppercase tracking-[0.2em] mb-2 block">
+                            {formatCategory(item.category)}
+                          </span>
+                          <h3
+                            className="text-white text-[20px] font-medium mb-1"
+                            style={{
+                              fontFamily: "var(--font-playfair-display), serif",
+                            }}
+                          >
+                            {item.title}
+                          </h3>
+                          {item.location && (
+                            <p className="text-white/60 text-[12px] font-medium uppercase tracking-wider flex items-center gap-2">
+                              <span className="w-4 h-px bg-[#1B5E20]"></span>
+                              {item.location}
+                            </p>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+                );
+              })}
+            </div>
 
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={(page) => {
-            setCurrentPage(page);
-            window.scrollTo({ top: 400, behavior: "smooth" });
-          }}
-        />
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={(page) => {
+                setCurrentPage(page);
+                window.scrollTo({ top: 400, behavior: "smooth" });
+              }}
+            />
+          </>
+        )}
 
         {selectedImage && (
           <div
@@ -137,7 +164,7 @@ export function GalleryGridSection() {
               <X size={32} />
             </button>
 
-            {galleryData.length > 1 && (
+            {images.length > 1 && (
               <button
                 onClick={handlePrevious}
                 className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-all z-101"
@@ -152,7 +179,7 @@ export function GalleryGridSection() {
             >
               <div className="relative w-full h-[60vh] sm:h-[75vh]">
                 <Image
-                  src={selectedImage.src}
+                  src={selectedImage.imageUrl}
                   alt={selectedImage.title}
                   fill
                   className="object-contain"
@@ -161,7 +188,7 @@ export function GalleryGridSection() {
               </div>
               <div className="mt-8 text-center px-4">
                 <span className="text-[#1B5E20] text-[12px] font-bold uppercase tracking-[0.3em] mb-3 block">
-                  {selectedImage.category}
+                  {formatCategory(selectedImage.category)}
                 </span>
                 <h3
                   className="text-white text-[28px] sm:text-[36px] font-medium mb-2"
@@ -169,13 +196,15 @@ export function GalleryGridSection() {
                 >
                   {selectedImage.title}
                 </h3>
-                <p className="text-white/40 text-[14px] uppercase tracking-widest">
-                  {selectedImage.location}
-                </p>
+                {selectedImage.location && (
+                  <p className="text-white/40 text-[14px] uppercase tracking-widest">
+                    {selectedImage.location}
+                  </p>
+                )}
               </div>
             </div>
 
-            {galleryData.length > 1 && (
+            {images.length > 1 && (
               <button
                 onClick={handleNext}
                 className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-all z-101"
