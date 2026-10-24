@@ -14,6 +14,51 @@ export async function fetchTeams(): Promise<Team[]> {
   return res.json();
 }
 
+export interface GalleryImage {
+  id: string;
+  title: string;
+  category: string;
+  location: string | null;
+  takenOn: string | null;
+  imageUrl: string;
+  createdAt: string;
+}
+
+interface GalleryListResponse {
+  data: GalleryImage[];
+  meta: { total: number; page: number; limit: number; totalPages: number };
+}
+
+// Public gallery listing, cached for 5 minutes. Fetches every page so the
+// client-side grid can show the full archive (ordered newest-first by the
+// API, so concatenated pages stay stable). Returns whatever loaded — or an
+// empty list on failure — so a down API never breaks the page or the build.
+export async function fetchGalleryImages(limit = 60): Promise<GalleryImage[]> {
+  const all: GalleryImage[] = [];
+  try {
+    let page = 1;
+    let totalPages = 1;
+    const maxPages = 20; // safety cap: 1,200 images
+
+    do {
+      const res = await fetch(
+        `${API_BASE_URL}/gallery?page=${page}&limit=${limit}`,
+        { next: { revalidate: 300 } }
+      );
+      if (!res.ok) break;
+      const body: GalleryListResponse = await res.json();
+      all.push(...(body.data ?? []));
+      totalPages = body.meta?.totalPages ?? 1;
+      page += 1;
+    } while (page <= totalPages && page <= maxPages);
+  } catch {
+    // A failure mid-loop keeps whatever was already loaded; a first-request
+    // failure simply returns the empty list.
+    return all;
+  }
+  return all;
+}
+
 export async function registerVolunteer(
   data: VolunteerFormValues
 ): Promise<{ volunteerId: string; id: string }> {
