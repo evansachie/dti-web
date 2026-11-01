@@ -2,6 +2,11 @@ import { type VolunteerFormValues } from "./volunteer-schema";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
+// The gallery page fetches at build time, so these requests must never hang a
+// build: skip them without an API URL (e.g. in CI) and give up on a slow or
+// sleeping API after 10s.
+const GALLERY_FETCH_TIMEOUT_MS = 10_000;
+
 export interface Team {
   id: string;
   name: string;
@@ -35,6 +40,7 @@ interface GalleryListResponse {
 // empty list on failure — so a down API never breaks the page or the build.
 export async function fetchGalleryImages(limit = 60): Promise<GalleryImage[]> {
   const all: GalleryImage[] = [];
+  if (!API_BASE_URL) return all;
   try {
     let page = 1;
     let totalPages = 1;
@@ -43,7 +49,10 @@ export async function fetchGalleryImages(limit = 60): Promise<GalleryImage[]> {
     do {
       const res = await fetch(
         `${API_BASE_URL}/gallery?page=${page}&limit=${limit}`,
-        { next: { revalidate: 300 } }
+        {
+          next: { revalidate: 300 },
+          signal: AbortSignal.timeout(GALLERY_FETCH_TIMEOUT_MS),
+        }
       );
       if (!res.ok) break;
       const body: GalleryListResponse = await res.json();
@@ -54,6 +63,52 @@ export async function fetchGalleryImages(limit = 60): Promise<GalleryImage[]> {
   } catch {
     // A failure mid-loop keeps whatever was already loaded; a first-request
     // failure simply returns the empty list.
+    return all;
+  }
+  return all;
+}
+
+export interface GalleryVideo {
+  id: string;
+  title: string;
+  category: string;
+  description: string | null;
+  videoUrl: string;
+  posterUrl: string;
+  durationSec: number | null;
+  createdAt: string;
+}
+
+interface GalleryVideoListResponse {
+  data: GalleryVideo[];
+  meta: { total: number; page: number; limit: number; totalPages: number };
+}
+
+// Public gallery video listing with the same caching and paging behavior
+// as fetchGalleryImages.
+export async function fetchGalleryVideos(limit = 60): Promise<GalleryVideo[]> {
+  const all: GalleryVideo[] = [];
+  if (!API_BASE_URL) return all;
+  try {
+    let page = 1;
+    let totalPages = 1;
+    const maxPages = 20;
+
+    do {
+      const res = await fetch(
+        `${API_BASE_URL}/gallery/videos?page=${page}&limit=${limit}`,
+        {
+          next: { revalidate: 300 },
+          signal: AbortSignal.timeout(GALLERY_FETCH_TIMEOUT_MS),
+        }
+      );
+      if (!res.ok) break;
+      const body: GalleryVideoListResponse = await res.json();
+      all.push(...(body.data ?? []));
+      totalPages = body.meta?.totalPages ?? 1;
+      page += 1;
+    } while (page <= totalPages && page <= maxPages);
+  } catch {
     return all;
   }
   return all;

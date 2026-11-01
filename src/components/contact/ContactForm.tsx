@@ -135,6 +135,7 @@ export function ContactForm() {
             <input
               type="text"
               name="fullName"
+              maxLength={120}
               required
               value={formData.fullName}
               onChange={handleChange}
@@ -166,6 +167,7 @@ export function ContactForm() {
             <input
               type="tel"
               name="phone"
+              maxLength={30}
               value={formData.phone}
               onChange={handleChange}
               placeholder="+233 XX XXX XXXX"
@@ -179,6 +181,7 @@ export function ContactForm() {
             <input
               type="text"
               name="organisation"
+              maxLength={120}
               value={formData.organisation}
               onChange={handleChange}
               placeholder="e.g. NGO, School, Company"
@@ -214,6 +217,7 @@ export function ContactForm() {
           </label>
           <textarea
             name="message"
+            maxLength={5000}
             rows={5}
             required
             value={formData.message}

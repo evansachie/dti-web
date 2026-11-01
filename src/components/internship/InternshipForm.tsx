@@ -8,6 +8,7 @@ import {
   type InternshipFormValues,
 } from "@/lib/api";
 import { INITIAL_FORM, STEPS } from "./internship-constants";
+import { countWords } from "./internship-form-utils";
 import { PersonalInfoStep } from "./steps/PersonalInfoStep";
 import { EducationStep } from "./steps/EducationStep";
 import { InterestStep } from "./steps/InterestStep";
@@ -85,14 +86,16 @@ export function InternshipForm() {
       if (!form.tfdInterest.trim()) stepErrors.tfdInterest = "Required";
       else if (form.tfdInterest.trim().length < 10)
         stepErrors.tfdInterest = "Too short";
+      else if (countWords(form.tfdInterest) > 200)
+        stepErrors.tfdInterest = "Max 200 words";
       if (!form.tfdSocialImpact.trim()) stepErrors.tfdSocialImpact = "Required";
       else if (form.tfdSocialImpact.trim().length < 10)
         stepErrors.tfdSocialImpact = "Too short";
+      else if (countWords(form.tfdSocialImpact) > 200)
+        stepErrors.tfdSocialImpact = "Max 200 words";
       if (!form.personalStatement.trim())
         stepErrors.personalStatement = "Required";
-      else if (
-        form.personalStatement.trim().split(/\s+/).filter(Boolean).length > 250
-      )
+      else if (countWords(form.personalStatement) > 250)
         stepErrors.personalStatement = "Max 250 words";
     } else if (step === 6) {
       if (!files.cv) stepErrors.cv = "CV is required";
