@@ -2,15 +2,18 @@ import type { MetadataRoute } from "next";
 import { absoluteUrl } from "@/lib/seo";
 import { allBlogPosts } from "@/data/blogs";
 import { projectsData } from "@/data/projects";
+import { teamMembers } from "@/data/team";
 
 const siteLastModified = new Date("2026-07-29");
 const legalLastModified = new Date("2026-05-23");
+const teamLastModified = new Date("2026-10-11");
 const legalRoutes = ["/privacy-policy", "/terms-of-service"];
 
 const projectLastModified: Record<string, Date> = {
   "clean-earth-clear-future": new Date("2026-05-22"),
   "love-beyond-romance": new Date("2026-03-31"),
   "dialogue-on-the-stage": new Date("2025-05-17"),
+  "working-but-not-working": new Date("2026-09-20"),
 };
 
 function parsePostDate(date: string) {
@@ -26,6 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services",
     "/blogs",
     "/gallery",
+    "/team",
+    "/intern",
     "/donate",
     "/contact",
     "/volunteer",
@@ -49,6 +54,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const teamRoutes = teamMembers.map((member) => ({
+    url: absoluteUrl(`/team/${member.slug}`),
+    lastModified: teamLastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
   const blogRoutes = allBlogPosts.map((post) => ({
     url: absoluteUrl(`/blogs/${post.slug}`),
     lastModified: parsePostDate(post.date),
@@ -56,5 +68,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...routes, ...projectRoutes, ...blogRoutes];
+  return [...routes, ...projectRoutes, ...teamRoutes, ...blogRoutes];
 }

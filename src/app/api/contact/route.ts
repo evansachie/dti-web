@@ -62,6 +62,14 @@ function validatePayload(payload: ContactPayload) {
     return "Please enter a valid email address.";
   if (!payload.subject) return "Please select a subject.";
   if (!payload.message) return "Please enter your message.";
+  // Mirror the DTI API's enquiry limits so accepted messages always sync.
+  if (payload.fullName.length > 120)
+    return "Please keep your name under 120 characters.";
+  if (payload.phone.length > 30) return "Please enter a shorter phone number.";
+  if (payload.organisation.length > 120)
+    return "Please keep your organisation under 120 characters.";
+  if (payload.message.length > 5000)
+    return "Please keep your message under 5,000 characters.";
   return null;
 }
 
@@ -315,7 +323,7 @@ export async function POST(request: Request) {
   try {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     if (apiUrl) {
-      await fetch(`${apiUrl}/enquiries`, {
+      const res = await fetch(`${apiUrl}/enquiries`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -328,6 +336,13 @@ export async function POST(request: Request) {
           newsletter: payload.newsletterOptIn ?? false,
         }),
       });
+      // fetch only throws on network errors; surface API rejections too.
+      if (!res.ok) {
+        console.error(
+          `Failed to save enquiry to API (${res.status}):`,
+          await res.text().catch(() => "")
+        );
+      }
     }
   } catch (error: unknown) {
     console.error("Failed to save enquiry to API:", error);

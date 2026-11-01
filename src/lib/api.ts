@@ -59,6 +59,48 @@ export async function fetchGalleryImages(limit = 60): Promise<GalleryImage[]> {
   return all;
 }
 
+export interface GalleryVideo {
+  id: string;
+  title: string;
+  category: string;
+  description: string | null;
+  videoUrl: string;
+  posterUrl: string;
+  durationSec: number | null;
+  createdAt: string;
+}
+
+interface GalleryVideoListResponse {
+  data: GalleryVideo[];
+  meta: { total: number; page: number; limit: number; totalPages: number };
+}
+
+// Public gallery video listing with the same caching and paging behavior
+// as fetchGalleryImages.
+export async function fetchGalleryVideos(limit = 60): Promise<GalleryVideo[]> {
+  const all: GalleryVideo[] = [];
+  try {
+    let page = 1;
+    let totalPages = 1;
+    const maxPages = 20;
+
+    do {
+      const res = await fetch(
+        `${API_BASE_URL}/gallery/videos?page=${page}&limit=${limit}`,
+        { next: { revalidate: 300 } }
+      );
+      if (!res.ok) break;
+      const body: GalleryVideoListResponse = await res.json();
+      all.push(...(body.data ?? []));
+      totalPages = body.meta?.totalPages ?? 1;
+      page += 1;
+    } while (page <= totalPages && page <= maxPages);
+  } catch {
+    return all;
+  }
+  return all;
+}
+
 export async function registerVolunteer(
   data: VolunteerFormValues
 ): Promise<{ volunteerId: string; id: string }> {

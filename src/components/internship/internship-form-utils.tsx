@@ -37,6 +37,10 @@ export function Field({
   );
 }
 
+export function countWords(text: string) {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
 export function inputClass(error?: string) {
   return cn(
     "w-full px-4 py-2.5 rounded-lg border text-sm transition-colors",

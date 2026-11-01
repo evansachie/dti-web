@@ -1,5 +1,5 @@
 import type { StepProps } from "../internship-form-utils";
-import { Field, inputClass } from "../internship-form-utils";
+import { Field, countWords, inputClass } from "../internship-form-utils";
 
 export function StatementReferencesStep({ form, set, errors }: StepProps) {
   return (
@@ -20,6 +20,9 @@ export function StatementReferencesStep({ form, set, errors }: StepProps) {
             rows={4}
             placeholder="150-200 words"
           />
+          <p className="text-xs text-gray-400 mt-1">
+            {countWords(form.tfdInterest)} / 200 words
+          </p>
         </Field>
         <Field
           label="How can theatre contribute to solving social challenges in Ghana?"
@@ -31,7 +34,11 @@ export function StatementReferencesStep({ form, set, errors }: StepProps) {
             onChange={(e) => set("tfdSocialImpact", e.target.value)}
             className={inputClass(errors.tfdSocialImpact)}
             rows={4}
+            placeholder="150-200 words"
           />
+          <p className="text-xs text-gray-400 mt-1">
+            {countWords(form.tfdSocialImpact)} / 200 words
+          </p>
         </Field>
       </div>
 
@@ -52,8 +59,7 @@ export function StatementReferencesStep({ form, set, errors }: StepProps) {
             placeholder="250 words maximum"
           />
           <p className="text-xs text-gray-400 mt-1">
-            {form.personalStatement.split(/\s+/).filter(Boolean).length} / 250
-            words
+            {countWords(form.personalStatement)} / 250 words
           </p>
         </Field>
       </div>
